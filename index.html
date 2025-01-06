@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta name="description" content="Entertainment_YH的个人网站">
+    <meta name="author" content="Entertainment_YH">
+    <meta name="keywords" content="Entertainment_YH,YH,YH Community,娱乐之神,YH娱乐之神,">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Entertainment_YH的个人网站_索引</title>
+    <style>
+        body,
+        title,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, system-ui, -apple-system, BlinkMac SystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            background-color: rgb(172, 229, 236);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgb(172, 229, 236);
+            overflow: hidden;
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+
+            #title {
+                text-align: center;
+                font-size: x-large;
+                color: black;
+            }
+
+            p {
+                font-size: small;
+            }
+
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            body {
+                font-size: 16px;
+            }
+
+            #title {
+                text-align: center;
+                font-size: xx-large;
+                color: black;
+            }
+
+            p {
+                font-size: medium;
+            }
+
+            .container {
+                width: 90%;
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+            body {
+                font-size: 18px;
+            }
+
+            #title {
+                text-align: center;
+                font-size: xxx-large;
+                color: black;
+            }
+
+            p {
+                font-size: large;
+            }
+
+            .container {
+                width: 75%;
+            }
+        }
+
+        #title-desc {
+            text-align: center;
+            font: large;
+            color: black;
+        }
+
+        #time-container {
+            text-align: center;
+        }
+
+        #translation select {
+            color: rgb(0, 0, 0);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: powderblue;
+            box-shadow: inset 0 1px 3px rgba(57, 57, 57, 0.2);
+            appearance: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="translation">
+            <select v-model="$i18n.locale">
+                <option disabled value="">LANGUAGE SELECTOR</option>
+                <option value="en">英文/English(US)</option>
+                <option value="zh-CN">简体中文/Simplified Chinese</option>
+                <option value="zh-TW">繁体中文/Traditional Chinese</option>
+                <option value="uy">ئۇيغۇرچە/维吾尔语/Uighur</option>
+            </select>
+
+            <div id="title">
+                {{ $t('title') }}
+            </div>
+
+            <p id="title-desc" v-html="titleDescWithHtml"></p>
+
+            <div id="time-container">
+                <h2 id="real-time">
+                    {{ $t('time') }} {{ currentTime }}
+                    {{ $t('greeting.' + greetingKey) }}
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-i18n@9"></script>
+    <script>
+        const { createApp } = Vue;
+        const { createI18n } = VueI18n;
+
+        const messages = {
+            en: {
+                title: "Entertainment_YH's Personal Website: Index",
+                titleDesc: "This website is Entertainment_YH's personal website, helping more people get to know me quickly.",
+                titleDescAddi: "You can select different languages in the upper left corner, currently supported: English, Chinese Simplified, Chinese Traditional, Uyghur.",
+                time: "The current time is:",
+                greeting: {
+                    midnight: "Go to bed early~ Staying up late is not good for your health!",
+                    morning: "Good morning, have a nice day!",
+                    AM: "Good morning, what to eat at noon?",
+                    noon: "Good afternoon, it is recommended to take a nap to maintain energy~",
+                    afternoon: "Good afternoon, the night is getting cooler, watch out for the temperature change!",
+                    evening: "Good evening, take care!"
+                }
+            },
+            'zh-CN': {
+                title: "Entertainment_YH的个人网站：索引",
+                titleDesc: "此网站是Entertainment_YH的个人网站，用于帮助更多的人快速了解我本人。",
+                titleDescAddi: "您可以在左上角选择不同的语言，目前支持：英语、简体中文、繁体中文、维吾尔语。",
+                time: "当前时间是：",
+                greeting: {
+                    midnight: "早点睡吧~熬夜对身体不好！",
+                    morning: "早上好，祝你有美好的一天！",
+                    AM: "上午好，中午准备吃什么？",
+                    noon: "中午好，建议睡午觉来维持精力~",
+                    afternoon: "下午好，夜晚转凉，注意温度变化哦！",
+                    evening: "晚上好，早睡早起身体好~"
+                }
+            },
+            'zh-TW': {
+                title: 'Entertainment_YH的個人網站：索引',
+                titleDesc: '此網站是Entertainment_YH的個人網站，用於幫助更多的人快速了解我本人。',
+                titleDescAddi: '您可以在左上角選擇不同的語言，目前支援：英語、簡體中文、繁體中文、維吾爾文',
+                time: '當前時間是：',
+                greeting: {
+                    midnight: '早點睡吧~熬夜對身體不好！',
+                    morning: '早上好，祝你有美好的一天！',
+                    AM: '上午好，中午準備吃什麼',
+                    noon: '中午好，建議睡午覺來維持精力~',
+                    afternoon: '下午好，夜晚轉涼，注意溫度變化哦！',
+                    evening: '晚上好，早睡早起身體好~'
+                }
+            },
+            uy: {
+                title: 'Entertainment_YHنىڭ شەخسىي تور بېكىتى: ئىندېكس',
+                titleDesc: 'بۇ تور بەتكۈچى Entertainment_YH نىڭ شەخسىي تور بەتكۈچى بولۇپ، كۆپرەك ئادەسكە مەن ھەققىدە تېز چۈشەنچە بەرۈش ئۈچۈن ئىشلىتىلىدۇ.',
+                titleDescAddi: 'سىز سول ئۈستى بۈلەكتىن خىل خىل تىلنى تاللاشقا بولىدۇ، ھازىر قوللايدىغان تىللار: ئىنگلىز تىلى، سادىلەشتۈرۈلگەن خەنزۇ تىلى، قىياسلاشتۇرۇلغان خەنزۇ تىلى، ئۇيغۇر تىلى.',
+                time: 'ھازىر ۋاقىت:',
+                greeting: {
+                    midnight: 'ئالدىن يات! كەچتە ئۇخلاش ساغلاملىققا يامان!',
+                    morning: 'ياخشىمۇسىز، سىزگە بەھتلىك كۈندە تەلەپ قىلىمەن!',
+                    AM: 'ياخشىمۇسىز، چۈشتىن بۇرۇن نېمە يېمەكنى پىلانلاۋاتىسىز؟',
+                    noon: 'ئەتىرلىك، چۈشتىن بۇرۇنكى قۇۋۋىتىڭىزنى ساقلاش ئۈچۈن چۈشتىن كىيىن ياتماقنى تەۋسىيە قىلىمەن~',
+                    afternoon: 'ئەتىرگەي، كەچىلىك سۇسلاپ كىتىدۇ، ئىسسىقلىق ئوخشاشلىقىغا دىققىتىڭىزنى بەرڭ!',
+                    evening: 'ياخشى كەچ، ئەرلىكتە ياتساڭىز، بىخەتەر بويىغا چىقىسىز~'
+                }
+            },
+        };
+
+        const i18n = createI18n({
+            locale: 'zh-CN', // 默认语言
+            messages
+        });
+
+        createApp({
+            data() {
+                return {
+                    currentTime: '',
+                    greetingKey: 'morning'
+                };
+            },
+            computed: {
+                titleDescWithHtml() {
+                    return `${this.$t('titleDesc')}<br /><em>${this.$t('titleDescAddi')}</em>`;
+                }
+            },
+            methods: {
+                updateTime() {
+                    const now = new Date();
+                    const hours = now.getHours();
+                    const pad = (n) => (n < 10 ? '0' + n : n);
+
+                    this.currentTime = `${pad(hours)}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+
+                    if (hours < 5) this.greetingKey = 'midnight';
+                    else if (hours < 8) this.greetingKey = 'morning';
+                    else if (hours < 12) this.greetingKey = 'AM';
+                    else if (hours < 14) this.greetingKey = 'noon';
+                    else if (hours < 19) this.greetingKey = 'afternoon';
+                    else this.greetingKey = 'evening';
+                }
+            },
+            mounted() {
+                this.updateTime();
+                setInterval(this.updateTime, 1000);
+            }
+        })
+            .use(i18n)
+            .mount('#app');
+    </script>
+</body>
+
+</html>
