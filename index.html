@@ -11,6 +11,7 @@
     <title>Entertainment_YH的个人网站_索引</title>
     <style>
         body,
+        title,
         p {
             margin: 0;
             padding: 0;
@@ -30,15 +31,16 @@
             overflow: hidden;
         }
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 830px) {
             body {
-                font-size: 14px;
+                font-size: 10px; /*我不确定这条代码是否真的有用，希望有好心人指导一下*/
             }
 
             #title {
                 text-align: center;
-                font-size: x-large;
+                font-size: large;
                 color: black;
+                font-weight: bold;
             }
 
             p {
@@ -51,7 +53,7 @@
             }
         }
 
-        @media screen and (min-width: 601px) and (max-width: 1024px) {
+        @media screen and (min-width: 831px) and (max-width: 1200px) {
             body {
                 font-size: 16px;
             }
@@ -71,7 +73,7 @@
             }
         }
 
-        @media screen and (min-width: 1025px) {
+        @media screen and (min-width: 1201px) {
             body {
                 font-size: 18px;
             }
@@ -132,6 +134,7 @@
             <div id="time-container">
                 <h2 id="real-time">
                     {{ $t('time') }} {{ currentTime }}
+                    <br>
                     {{ $t('greeting.' + greetingKey) }}
                 </h2>
             </div>
@@ -148,7 +151,7 @@
             en: {
                 title: "Entertainment_YH's Personal Website: Index",
                 titleDesc: "This website is Entertainment_YH's personal website, helping more people get to know me quickly.",
-                titleDescAddi: "You can select different languages in the upper left corner, currently supported: English, Chinese Simplified, Chinese Traditional, Uyghur.",
+                titleDescAddi: "You can select different languages in the upper left corner, currently supported: English, Chinese Simplified, Chinese Traditional, Uyghur.(LOCALIZATION IN PROGRESS)",
                 time: "The current time is:",
                 greeting: {
                     midnight: "Go to bed early~ Staying up late is not good for your health!",
@@ -162,7 +165,7 @@
             'zh-CN': {
                 title: "Entertainment_YH的个人网站：索引",
                 titleDesc: "此网站是Entertainment_YH的个人网站，用于帮助更多的人快速了解我本人。",
-                titleDescAddi: "您可以在左上角选择不同的语言，目前支持：英语、简体中文、繁体中文、维吾尔语。",
+                titleDescAddi: "您可以在左上角选择不同的语言，目前支持：英语、简体中文、繁体中文、维吾尔语。(各语言本地化进行中)",
                 time: "当前时间是：",
                 greeting: {
                     midnight: "早点睡吧~熬夜对身体不好！",
@@ -176,12 +179,12 @@
             'zh-TW': {
                 title: 'Entertainment_YH的個人網站：索引',
                 titleDesc: '此網站是Entertainment_YH的個人網站，用於幫助更多的人快速了解我本人。',
-                titleDescAddi: '您可以在左上角選擇不同的語言，目前支援：英語、簡體中文、繁體中文、維吾爾文',
+                titleDescAddi: '您可以在左上角選擇不同的語言，目前支援：英語、簡體中文、繁體中文、維吾爾文(本地化進行中)',
                 time: '當前時間是：',
                 greeting: {
                     midnight: '早點睡吧~熬夜對身體不好！',
                     morning: '早上好，祝你有美好的一天！',
-                    AM: '上午好，中午準備吃什麼',
+                    AM: '上午好，中午準備吃什麼?',
                     noon: '中午好，建議睡午覺來維持精力~',
                     afternoon: '下午好，夜晚轉涼，注意溫度變化哦！',
                     evening: '晚上好，早睡早起身體好~'
@@ -190,7 +193,7 @@
             uy: {
                 title: 'Entertainment_YHنىڭ شەخسىي تور بېكىتى: ئىندېكس',
                 titleDesc: 'بۇ تور بەتكۈچى Entertainment_YH نىڭ شەخسىي تور بەتكۈچى بولۇپ، كۆپرەك ئادەسكە مەن ھەققىدە تېز چۈشەنچە بەرۈش ئۈچۈن ئىشلىتىلىدۇ.',
-                titleDescAddi: 'سىز سول ئۈستى بۈلەكتىن خىل خىل تىلنى تاللاشقا بولىدۇ، ھازىر قوللايدىغان تىللار: ئىنگلىز تىلى، سادىلەشتۈرۈلگەن خەنزۇ تىلى، قىياسلاشتۇرۇلغان خەنزۇ تىلى، ئۇيغۇر تىلى.',
+                titleDescAddi: 'سول تەرەپ ئۈستى بۇرجىكىدە ئوخشىمىغان تىللارنى تاللىيالايسىز، ھازىر قوللايدۇ: ئىنگلىزچە، خەنزۇچە ئاددىيلاشتۇرۇلغان، خەنزۇچە ئەنئەنىۋى، ئۇيغۇرچە. (يەرلىكلەشتۈرۈش ئىلگىرى سۈرۈلۈۋاتىدۇ)',
                 time: 'ھازىر ۋاقىت:',
                 greeting: {
                     midnight: 'ئالدىن يات! كەچتە ئۇخلاش ساغلاملىققا يامان!',
