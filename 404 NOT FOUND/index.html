@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!--这个文件 是 404 NOT FOUND 的-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="404 NOT FOUND">
+    <meta name="author" content="Entertainment_YH">
+    <link rel="stylesheet" href="/styles/eva-01.css">
+    <title>404 NOT FOUND</title>
+    <style>
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            background-color: rgb(204, 53, 53);
+        }
+
+        #LanguageSelector {
+            color: rgb(0, 0, 0);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: rgb(172, 229, 236);
+            box-shadow: inset 0 1px 3px rgba(57, 57, 57, 0.2);
+            appearance: none;
+        }
+
+        @media screen and (max-width: 830px) {
+            body {
+                font-size: 10px;
+            }
+
+            #title {
+                text-align: center;
+                font-size: large;
+                color: black;
+                font-weight: bold;
+            }
+
+            #description {
+                text-align: center;
+                font-size: medium;
+            }
+
+            .Subtitle {
+                text-align: center;
+                font-size: medium;
+                margin: 2%;
+            }
+
+            .report {
+                text-align: center;
+                font-size: small;
+            }
+
+            .solution {
+                text-align: center;
+                font-size: small;
+                display: block;
+            }
+
+            #contact {
+                text-align: center;
+                font-size: medium;
+                margin: 2%; 
+            }
+
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+
+        @media screen and (min-width: 831px) and (max-width: 1200px) {
+            body {
+                font-size: 13px;
+            }
+
+            #title {
+                text-align: center;
+                font-size: xx-large;
+                color: black;
+            }
+
+            #description {
+                text-align: center;
+                font-size: x-large;
+            }
+
+            .Subtitle {
+                text-align: center;
+                font-size: x-large;
+                margin: 2%;
+            }
+
+            .report {
+                text-align: center;
+                font-size: large;
+            }
+
+            .solution {
+                text-align: center;
+                font-size: large;
+                display: block;
+            }
+
+            #contact {
+                text-align: center;
+                font-size: x-large;
+                margin: 2%;
+            }
+
+            .container {
+                width: 90%;
+            }
+        }
+
+        @media screen and (min-width: 1201px) {
+            body {
+                font-size: 18px;
+            }
+
+            #title {
+                text-align: center;
+                font-size: xxx-large;
+                color: black;
+                font-weight: bold;
+            }   
+
+            #description {
+                text-align: center;
+                font-size: xx-large;
+            }
+
+            .Subtitle {
+                text-align: center;
+                font-size: xx-large;
+                margin: 2%;
+            }
+
+            .report {
+                text-align: center;
+                font-size: x-large;
+            }
+
+            .solution {
+                text-align: center;
+                font-size: x-large;
+                display: block;
+            }
+
+            #contact {
+                text-align: center;
+                font-size: xx-large;
+                margin: 2%;
+            }
+
+            .container {
+                width: 75%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="head">
+            <div id="translation">
+                <label for="LanguageSelector">{{ $t('LangSele') }}</label>
+                <select id="LanguageSelector" v-model="selectedLanguage" @change="changeLanguage">
+                    <option disabled value="">LANGUAGE SELECTOR</option>
+                    <option value="en">英文/English(US)</option>
+                    <option value="zh-CN">简体中文/Simplified Chinese</option>
+                    <option value="zh-TW">繁体中文/Traditional Chinese</option>
+                    <option value="uy">ئۇيغۇرچە/维吾尔语/Uighur</option>
+                </select>
+            </div>
+        </div>
+
+        <!--来看看下面这一堆屎！哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈-->
+
+        <div id="title">
+            {{ $t('title') }}
+        </div>
+
+        <div id="description">
+            {{ $t('description') }}
+        </div>
+
+        <div class="Subtitle">
+            {{ $t('report') }}
+        </div>
+
+        <div class="report">
+            {{ $t('report_1') }}
+        </div>
+
+        <div class="report">
+            {{ $t('report_2') }}
+        </div>
+
+        <div class="report">
+            {{ $t('report_3') }}
+        </div>
+
+        <div class="report">
+            {{ $t('report_4') }}
+        </div>
+
+        <div class="report">
+            {{ $t('report_5') }}
+        </div>
+
+        <div class="Subtitle">
+            {{ $t('solution') }}
+        </div>
+
+        <div class="solution">
+            {{ $t('solution_1') }}
+        </div>
+
+        <a class="solution" href="../index.html">
+            {{ $t('solution_2') }}
+        </a>
+
+        <div class="solution">
+            {{ $t('solution_3') }}
+        </div>
+
+        <div id="contact">
+            {{ $t('contact') }}
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-i18n@9"></script>
+    <script>
+        const { createApp } = Vue;
+        const { createI18n } = VueI18n;
+
+        const messages = {
+            'zh-CN': {
+                LangSele: '您的所选语言：',
+                title: '请注意：404 NOT FOUND',
+                description: '您在正常情况下不会看到此页面，此页面的呈现表明了您正在访问一个不存在或已删除的页面。这些错误会对网站的正常访问造成影响，请确认您输入的网址是否正确。如您确认网址无误，请联系网站管理员并报告此错误。',
+                report: '可能有如下原因导致了错误：',
+                report_1: '1. 您输入的URL地址有误。',
+                report_2: '2. 此页面已被删除或移动。',
+                report_3: '3. 您从外部访问的链接有误。',
+                report_4: '4. 服务器配置有误。',
+                report_5: '5. 您访问的页面暂时不可用。',
+                solution: '您可以尝试以下方法解决可能出现的问题：',
+                solution_1: '1. 确认您输入的URL地址是否正确。',
+                solution_2: '2. 点击此处返回首页。',
+                solution_3: '3. 当您确认您的操作无误后，请联系网站管理员并报告此错误。',
+                contact: '您可以通过<EMAIL:3329261270@qq.com>联系网站管理员。'
+            },
+            'zh-TW': {
+                LangSele: '您的所選語言：',
+                title: '請注意：404 NOT FOUND',
+                description: '您正常情況下不會看到此頁面，此頁面的呈現表明您正在訪問一個不存在或已刪除的頁面。這些錯誤會影響網站正常訪問，請確認您輸入的網址是否正確。如您確認網址正確，請聯繫網站管理員並回報此錯誤。',
+                report: '可能有如下原因導致錯誤：',
+                report_1: '1. 您輸入的URL地址有誤。',
+                report_2: '2. 此頁面已被刪除或移動。',
+                report_3: '3. 您從外部連結點擊的鏈接有誤。',
+                report_4: '4. 伺服器配置有誤。',
+                report_5: '5. 您訪問的頁面暫時無法使用。',
+                solution: '您可以嘗試以下方法解決可能出現的問題：',
+                solution_1: '1. 確認您輸入的URL地址是否正確。',
+                solution_2: '2. 點擊此處返回首頁。',
+                solution_3: '3. 當您確認您的操作無誤後，請聯繫網站管理員並回報此錯誤。',
+                contact: '您可以聯繫網站管理員<EMAIL:3329261270@qq.com>。'
+            },
+            'en': {
+                LangSele: 'Your selected language:',
+                title: 'ATTENTION: 404 NOT FOUND',
+                description: 'You will not see this page normally, this page shows that you are visiting a non-existent or deleted page. These errors will affect the normal access of the website, please confirm that the URL you entered is correct. If you confirm that the URL is correct, please contact the website administrator and report this error. ',
+                report: 'Possible reasons for the error:',
+                report_1: '1. The URL you entered is incorrect.',
+                report_2: '2. This page has been deleted or moved.',
+                report_3: '3. The link you clicked from external sites is incorrect.',
+                report_4: '4. Server configuration is incorrect.',
+                report_5: '5. The page you are visiting is temporarily unavailable.',
+                solution: 'You can try the following methods to solve the problem:',
+                solution_1: '1. Confirm that the URL you entered is correct.',
+                solution_2: '2. Click here to return to the home page.',
+                solution_3: '3. When you confirm your operation is correct, please contact the website administrator and report this error.',
+                contact: 'You can contact the website administrator at <EMAIL:3329261270@qq.com>.'
+            },
+            'uy': {
+                LangSele: 'ھەمبەئۇيغۇرچە قىلىشىمۇ :',
+                title: 'يېنىقىلاۋاتىلاۋ: 404 NOT FOUND',
+                description: 'سىز ئادەتتە بۇ بەتنى كۆرмәйسىز، بۇ بەتنىڭ كۆرۈنۈشى سىزنىڭ بولمىغان ياكى ئۆچۈرۈلگەن بەتكە كىرىۋاتقانلىقىڭىزنى بىلدۈرىدۇ. بۇ خاتالىقلار تور بېكىتىنىڭ ئادەتتىكى كىرىشىگە تەسىر كۆرسىتىشى مۇمكىن، سىز كىرگۈزگەن تور ئادرىسىنىڭ توغرا ئىكەنلىكىنى جەزملەشتۈرۈڭ. ئەگەر تور ئادرىسى توغرا بولسا، تور بېكەت باشقۇرغۇچىسى بىلەن ئالاقىلىشىپ، بۇ خاتالىقنى دوكلات قىلىڭ.',
+                report: 'خاتا بولۇشقا تۆۋەندىكى سەۋەبلەر سەۋەپ بولغان بولۇشى مۇمكىن:',
+                report_1: '1. سىز كىرگۈزگەن URL ئادرىسى خاتا.',
+                report_2: '2. بۇ بەت ئۆچۈرلۈپ ياكى كۆچۈرۈلگەن.',
+                report_3: '3. سىزنىڭ تاشقىدىن زىيارەت قىلغان ئۇلانمىڭىز خاتا.',
+                report_4: '4. سەۋرۋەر كونفىگۇرۇراسى خاتا.',
+                report_5: '5. سىز زىيارەت قىلغان بەت مۇۋاپىقەتتە قوللىنىشقا يارىمايدۇ.',
+                solution: 'سىز مۇمكىن بولغان مەسىلىلەرنى HAL قىلىش ئۈچۈن تۆۋەندىكى ئۇسۇللارنى سىناپ باقسىڭىز بولىدۇ:',
+                solution_1: '1. كىرگۈزگەن URL ئادرىسىڭىز توغرا ئىكەنلىكىنى جەزملەشتۈرۈڭ.',
+                solution_2: '2. بۇ يەرگە بېسىپ باش بەتكە قايتىڭ.',
+                solution_3: '3. سىزنىڭ ھەرىكەتلىرىڭىزنىڭ توغرا ئىكەنلىكىنى جەزملەشتۈرگەندىن كېيىن، بەرپاچىلار بىلەن ئالاقىلىشىپ، بۇ خاتا توغرىسىدا خەۋەر بېرىڭ.',
+                contact: 'سىز تور بەت باشقۇرغۇچىسى بىلەن <EMAIL:3329261270@qq.com> ئارقىلىق ئالاقىلىشىشىڭىز مۇمكىن.'
+            }
+        };
+
+        // 自动检测浏览器语言偏好
+        const browserLang = navigator.language || navigator.userLanguage;
+        const defaultLang = browserLang in messages ? browserLang : 'zh-CN';
+
+        const i18n = createI18n({
+            locale: defaultLang,
+            messages
+        });
+
+        const app = createApp({
+            data() {
+                return {
+                    selectedLanguage: defaultLang
+                };
+            },
+            methods: {
+                changeLanguage() {
+                    if (this.selectedLanguage) {
+                        this.$i18n.locale = this.selectedLanguage;
+                    }
+                }
+            }
+        });
+
+        app.use(i18n);
+        app.mount('#app');
+    </script>
+</body>
+
+</html>
