@@ -34,10 +34,16 @@
                 font-weight: bold;
             }
 
-            .  title-desc {
+            #title-desc {
                 text-align: center;
                 font-size: small;
                 color: black;
+            }
+
+            #agreement {
+                display: block;
+                text-align: center;
+                font-size: large;
             }
         }
 
@@ -50,10 +56,16 @@
                font-weight: bold;
            }
 
-            .title-desc {
+            #title-desc {
                 text-align: center;
                 font-size: large;
                 color: black;
+            }
+
+            #agreement {
+                display: block;
+                text-align: center;
+                font-size: x-large;
             }
         }
 
@@ -66,10 +78,16 @@
                 font-weight: bold;
             }
 
-            .title-desc {
+            #title-desc {
                 text-align: center;
                 font-size: x-large;
                 color: black;
+            }
+
+            #agreement {
+                display: block;
+                text-align: center;
+                font-size: xx-large;
             }
         }
     </style>
@@ -94,11 +112,13 @@
             {{ $t('title') }}
         </div>
 
-        <div class="title-desc">
+        <div id="title-desc">
             {{ $t('desc') }}
         </div>
 
-        <a id="agreement" href="../Agreement/index.html">{{ $t('agreement') }}</a>
+        <a id="agreement" href="../Agreement/index.html">
+            {{ $t('agreement') }}
+        </a>
     </div>
 
     <script src="https://unpkg.com/vue@3"></script>
@@ -110,13 +130,13 @@
         const messages = {
             'zh-CN': {
                 LangSele: '您的所选语言：',
-                title: 'Entertainment_YH的个人网站_讨论区',
+                title: 'Entertainment_YH的个人网站:讨论区',
                 desc: '欢迎来到Entertainment_YH的个人网站的讨论区，这里你可以提出你的问题，或者与其他用户交流。',
                 agreement: '在您发表任何内容之前，请您务必仔细阅读本站的相关条款。'
             },
             'zh-TW': {
                 LangSele: '您的所選語言：',
-                title: 'Entertainment_YH的個人網站_討論區',
+                title: 'Entertainment_YH的個人網站:討論區',
                 desc: '歡迎來到Entertainment_YH的個人網站的討論區，這裡你可以提出你的問題，或者與其他用戶交流。'
             },
             'en': {
