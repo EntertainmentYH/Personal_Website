@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+    <!--这个文件 是 根目录的-->
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Language" content="zh-CN">
-    <meta name="description" content="Entertainment_YH的个人网站">
-    <meta name="author" content="Entertainment_YH">
-    <meta name="keywords" content="Entertainment_YH,YH,YH Community,娱乐之神,YH娱乐之神,娱乐,个人网站,网站,个人,Personal Website,Entertainment,_,Entertainment_,God of Entertainment,123YHawa,123,awa,qwq,Entertainment_YH的个人网站,娱乐之神的个人网站,娱乐之神的网站">
+    <meta charset="UTF-8" />
+    <meta name="description" content="Entertainment_YH的个人网站" />
+    <meta name="author" content="Entertainment_YH" />
+    <meta name="keywords" content="Entertainment_YH,YH,YH的网站,YH Community,娱乐之神,YH娱乐之神,娱乐,个人网站,网站,个人,Entertainment,_,Entertainment_YH,God of Entertainment,Entertainment_YH个人网站,娱乐之神的个人网站,娱乐之神的网站" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Entertainment_YH的个人网站_索引</title>
     <style>
         body,
-        title,
         p {
             margin: 0;
             padding: 0;
@@ -30,10 +30,7 @@
             overflow: hidden;
         }
 
-        @media screen and (max-width: 830px) {
-            body {
-                font-size: 10px;
-            }
+        @media screen and (max-width: 768px) {
 
             #title {
                 text-align: center;
@@ -52,10 +49,7 @@
             }
         }
 
-        @media screen and (min-width: 831px) and (max-width: 1200px) {
-            body {
-                font-size: 16px;
-            }
+        @media screen and (min-width: 769px) and (max-width: 1280px) {
 
             #title {
                 text-align: center;
@@ -72,10 +66,7 @@
             }
         }
 
-        @media screen and (min-width: 1201px) {
-            body {
-                font-size: 18px;
-            }
+        @media screen and (min-width: 1281px) {
 
             #title {
                 text-align: center;
@@ -116,8 +107,14 @@
             font-size: large;
         }
 
+        #TEST404 {
+            text-align: center;
+            font-size: xxx-large;
+            display: block;
+        }
     </style>
 </head>
+
 <body>
     <div id="app">
         <div id="translation">
@@ -127,7 +124,7 @@
                 <option value="en">英文/English(US)</option>
                 <option value="zh-CN">简体中文/Simplified Chinese</option>
                 <option value="zh-TW">繁体中文/Traditional Chinese</option>
-                <option value="uy">ئۇيغۇرچە/维吾尔语/Uighur</option>
+                <option style="color:red;" value="uy">ئۇيغۇرچە/维吾尔语/Uighur(停止服务/unavailable)</option>
             </select>
         </div>
 
@@ -145,10 +142,16 @@
         <div id="time-container">
             <h2 id="real-time">
                 {{ $t('time') }} {{ currentTime }}
-                <br>  
+                <br>
                 {{ $t('greeting.' + greetingKey) }}
             </h2>
         </div>
+
+        <a id="TEST404" href="./404 NOT FOUND/index.html">
+            测试: 404 NOT FOUND (记得删除)
+        </a>
+
+        
 
     </div>
 
@@ -163,7 +166,7 @@
                 LangSele: 'Your selected language:',
                 title: "Entertainment_YH's Personal Website: Index",
                 titleDesc: "This website is Entertainment_YH's personal website, helping more people get to know me quickly.",
-                titleDescAddi: "You can select different languages in the upper left corner, currently supported: English, Chinese Simplified, Chinese Traditional, Uyghur.(LOCALIZATION IN PROGRESS)",
+                titleDescAddi: "You can select different languages in the upper left corner, currently supported: English, Chinese Simplified, Chinese Traditional, Uyghur(unavailable).(LOCALIZATION IN PROGRESS)",
                 time: "The current time is:",
                 L10N: "Click here to view localization translation progress",
                 greeting: {
@@ -179,7 +182,7 @@
                 LangSele: '您的所选语言:',
                 title: "Entertainment_YH的个人网站：索引",
                 titleDesc: "此网站是Entertainment_YH的个人网站，用于帮助更多的人快速了解我本人。",
-                titleDescAddi: "您可以在左上角选择不同的语言，目前支持：英语、简体中文、繁体中文、维吾尔语。(本地化翻译进行中)",
+                titleDescAddi: "您可以在左上角选择不同的语言，目前支持：英语、简体中文、繁体中文、维吾尔语。注：维吾尔语已停止服务。(本地化翻译进行中)",
                 time: "当前时间是：",
                 L10N: "点击此处查看本地化翻译进度",
                 greeting: {
@@ -191,20 +194,20 @@
                     evening: "晚上好，早睡早起身体好~"
                 }
             },
-            'zh-TW': {
-                LangSele: '您的選擇語言:',
-                title: 'Entertainment_YH的個人網站：索引',
-                titleDesc: '此網站是Entertainment_YH的個人網站，用於幫助更多的人快速了解我本人。',
-                titleDescAddi: '您可以在左上角選擇不同的語言，目前支援：英語、簡體中文、繁體中文、維吾爾文(本地化翻譯進行中)',
-                time: '當前時間是：',
-                L10N: '點擊此處查看本地化翻譯進度',
-                greeting: {
-                    midnight: '早點睡吧~熬夜對身體不好！',
-                    morning: '早上好，祝你有美好的一天！',
-                    AM: '上午好，中午準備吃什麼?',
-                    noon: '中午好，建議睡午覺來維持精力~',
-                    afternoon: '下午好，夜晚轉涼，注意溫度變化哦！',
-                    evening: '晚上好，早睡早起身體好~'
+            "zh-TW": {
+                "LangSele": "您所選擇的語言：",
+                "title": "Entertainment_YH的個人網站：索引",
+                "titleDesc": "這個網站是Entertainment_YH的個人網站，用來幫助更多人快速認識我。",
+                "titleDescAddi": "您可以在左上角選擇不同的語言，目前支援：英文、簡體中文、繁體中文、維吾爾語。注：維吾爾語已停止服務。（本地化翻譯進行中）",
+                "time": "目前的時間是：",
+                "L10N": "點這裡查看本地化翻譯進度",
+                "greeting": {
+                    "midnight": "早點睡吧～熬夜對身體不好！",
+                    "morning": "早安，祝你有美好的一天！",
+                    "AM": "上午好，中午準備吃什麼？",
+                    "noon": "中午好，建議睡午覺來保持精力～",
+                    "afternoon": "下午好，夜晚轉涼，注意溫度變化哦！",
+                    "evening": "晚上好，早睡早起身體好～"
                 }
             },
             uy: {
@@ -276,4 +279,5 @@
             .mount('#app');
     </script>
 </body>
+
 </html>

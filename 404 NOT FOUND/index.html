@@ -25,10 +25,7 @@
             appearance: none;
         }
 
-        @media screen and (max-width: 830px) {
-            body {
-                font-size: 10px;
-            }
+        @media screen and (max-width: 768px) {
 
             #title {
                 text-align: center;
@@ -71,15 +68,13 @@
             }
         }
 
-        @media screen and (min-width: 831px) and (max-width: 1200px) {
-            body {
-                font-size: 13px;
-            }
+        @media screen and (min-width: 769px) and (max-width: 1280px) {
 
             #title {
                 text-align: center;
                 font-size: xx-large;
                 color: black;
+                font-weight: bold;
             }
 
             #description {
@@ -115,10 +110,7 @@
             }
         }
 
-        @media screen and (min-width: 1201px) {
-            body {
-                font-size: 18px;
-            }
+        @media screen and (min-width: 1281px) {
 
             #title {
                 text-align: center;
@@ -140,7 +132,7 @@
 
             .report {
                 text-align: center;
-                font-size: x-large;
+                font-size: x-large;   
             }
 
             .solution {
@@ -174,7 +166,7 @@
                     <option value="en">英文/English(US)</option>
                     <option value="zh-CN">简体中文/Simplified Chinese</option>
                     <option value="zh-TW">繁体中文/Traditional Chinese</option>
-                    <option value="uy">ئۇيغۇرچە/维吾尔语/Uighur</option>
+                    <option style="color: red;" value="uy">ئۇيغۇرچە/维吾尔语/Uighur(停止服务/unavailable)</option>
                 </select>
             </div>
         </div>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!--这个文件 是 Agreement 的-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="用户协议 Entertainment_YH">
+    <meta name="author" content="Entertainment_YH">
+    <title>Entertainment_YH的个人网站_用户协议</title>
+    <style>
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            background-color: rgb(173, 229, 236);
+        }
+
+        #LanguageSelector {
+            color: rgb(0, 0, 0);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: powderblue;
+            box-shadow: inset 0 1px 3px rgba(57, 57, 57, 0.2);
+            appearance: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            #title {
+                text-align: center;
+                font-size: large;
+                color: black;
+                font-weight: bold;
+            }
+
+            .subtitle {
+                font-size: medium;
+                font-weight: bold;
+                margin: 5%;
+            }
+
+            .text {
+                font-size: small;
+            }
+
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            #description {
+                font-size: small;
+            }
+
+            .signature{
+                font-size: medium;
+                font-weight: bold;
+                margin: 5%;
+            }
+
+            .option {
+                font-size: medium;
+                font-weight: bold;
+                margin: 5%;
+            }
+        }
+
+        @media screen and (min-width: 769px) and (max-width: 1280px) {
+
+            #title {
+                text-align: center;
+                font-size: xx-large;
+                color: black;
+            }
+
+            .subtitle {
+                font-size: large;
+                font-weight: bold;
+                margin: 5%;
+            }
+
+            .text {
+                font-size: medium;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            #description {
+                font-size: medium;
+            }
+
+            #signature {
+                font-size: large;
+                font-weight: bold;
+                margin: 5%;
+            }
+
+            .option {
+                font-size: large;
+                font-weight: bold;
+                margin: 5%;
+            }
+        }
+
+        @media screen and (min-width: 1281px) {
+
+            #title {
+                text-align: center;
+                font-size: xxx-large;
+                color: black;
+            }
+
+            .subtitle {
+                font-size: xx-large;
+                font-weight: bold;
+                margin: 2%;
+            }
+
+            .text {
+                font-size: x-large;
+            }
+
+            .container {
+                width: 75%;
+            }
+
+            #description {
+                font-size: large;
+            }
+
+            .signature {
+                font-size: x-large;
+                font-weight: bold;
+                margin: 2%;
+            }
+
+            .option {
+                font-size: xx-large;
+                font-weight: bold;
+                margin: 2%;
+            }
+        }    
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="head">
+            <div id="translation">
+                <label for="LanguageSelector">{{ $t('LangSele') }}</label>
+                <select id="LanguageSelector" v-model="selectedLanguage" @change="changeLanguage">
+                    <option disabled value="">LANGUAGE SELECTOR</option>
+                    <option value="en">英文/English(US)</option>
+                    <option value="zh-CN">简体中文/Simplified Chinese</option>
+                    <option value="zh-TW">繁体中文/Traditional Chinese</option>
+                    <option style="color: red;" value="uy">ئۇيغۇرچە/维吾尔语/Uighur(停止服务/unavailable)</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="title">
+            {{ $t('title') }}
+        </div>
+
+        <div id="description">
+            {{ $t('description') }}
+        </div>
+
+        <div class="subtitle">
+            {{ $t('subtitle_1') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_1') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_2') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_3') }}
+        </div>
+
+        <div class="subtitle">
+            {{ $t('subtitle_2') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_4') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_5') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_6') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_7') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_8') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_9') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_10') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_11') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_12') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_13') }}
+        </div>
+
+        <div class="subtitle">
+            {{ $t('subtitle_3') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_14') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_15') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_16') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_17') }}
+        </div>
+
+        <div class="subtitle">
+            {{ $t('subtitle_4') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_18') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_19') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_20') }}
+        </div>
+
+        <div class="subtitle">
+            {{ $t('subtitle_5') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_21') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_22') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_23') }}
+        </div>
+
+        <div class="subtitle">
+            {{ $t('subtitle_6') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_24') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_25') }}
+        </div>
+
+        <div class="text">
+            {{ $t('text_26') }}
+        </div>
+
+        <div class="signature">
+            {{ $t('signature_ID') }}
+        </div>
+
+        <div class="signature">
+            {{ $t('signature_Date') }}
+        </div>
+
+        <a href="../Discussion/index.html" class="option">
+            {{ $t('option_positive') }}
+        </a>
+
+        <a href="/index.html" class="option">
+            {{ $t('option_negative') }}
+        </a>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-i18n@9"></script>
+    <script>
+        const { createApp } = Vue;
+        const { createI18n } = VueI18n;
+
+        const messages = {
+            'zh-CN': {
+                LangSele: '您的所选语言：',
+                title: '用户协议 version 1.0',
+                description: '欢迎您使用 Entertainment_YH的个人网站 讨论区！为维护良好的网络环境，保障用户权益，请您在使用讨论区前仔细阅读并同意本协议。本协议是您与 Entertainment_YH的个人网站 提供的服务所签订的。当您开始使用讨论区时，即您已同意本协议。(注明：本协议中正文提到的Entertainment_YH的个人网站 将以“本网站”代指；《用户协议》将以“本协议”代指；因翻译问题，若有歧义，以简体中文原文为准。) ',
+                subtitle_1: '一、 总则',
+                text_1: '1.1 本协议是您与本网站之间关于使用讨论区服务所订立的协议。',
+                text_2: '1.2 您在使用讨论区服务时，应当遵守本协议及国家相关法律法规。',
+                text_3: '1.3 本网站有权依据法律法规的变化及运营需要，随时修改本协议，并在讨论区予以公告。若您继续使用讨论区服务，即表示您同意修改后的协议。',
+                subtitle_2: '二、 用户行为规范',
+                text_4: '2.1 您承诺在使用讨论区服务时遵守以下规范：',
+                text_5: '* 遵守中华人民共和国法律法规，不得发布任何违反国家法律法规、危害国家安全、破坏民族团结、破坏国家宗教政策、破坏社会稳定、侮辱、诽谤、淫秽、暴力、恐怖、赌博、欺诈等违法信息；',
+                text_6: '* 遵守社会主义制度，不得发布任何损害国家荣誉和利益、煽动民族仇恨、民族歧视、破坏民族团结、破坏国家宗教政策、宣扬邪教和封建迷信等不良信息；',
+                text_7: '* 遵守社会公德，不得发布任何扰乱社会秩序、破坏社会稳定、低俗、庸俗、媚俗等不良信息；',
+                text_8: '* 尊重他人合法权益，不得发布任何侵犯他人知识产权、名誉权、肖像权、隐私权等合法权益的信息；',
+                text_9: '* 文明用语，理性发言，不得发布任何含有辱骂、恐吓、威胁、人身攻击等不友善内容的信息；',
+                text_10: '* 不得发布任何广告、垃圾信息、恶意刷屏等干扰正常讨论秩序的信息；',
+                text_11: '* 不得利用讨论区进行任何商业活动；',
+                text_12: '* 不得从事任何危害计算机网络安全的行为，包括但不限于：使用未经许可的数据或进入未经许可的服务器/帐户；未经允许进入公众计算机网络或者他人计算机系统并删除、修改、增加存储信息；未经许可，企图探查、扫描、测试本“软件”系统或网络的弱点或其它实施破坏网络安全的行为；企图干涉、破坏本“软件”系统或网站的正常运行，故意传播恶意程序或病毒以及其他破坏干扰正常网络信息服务的行为；伪造TCP/IP数据包名称或部分名称。',
+                text_13: '2.2 您理解并同意，本网站有权对您使用讨论区服务的情况进行审查和监督，若发现您违反本协定，本网站有权依据本协议采取相应措施，包括但不限于删除、屏蔽相关内容、限制、暂停或终止您使用讨论区服务，并保留追究您法律责任的权利。',
+                subtitle_3: '三、 用户权利与义务',
+                text_14: '3.1 您有权在遵守本协议的前提下，使用讨论区服务进行合法的信息发布和交流活动。',
+                text_15: '3.2 您应妥善保管您的账号和密码，并对您账号下的所有行为承担法律责任。',
+                text_16: '3.3 您应保证您发布的信息真实、准确、完整、合法有效，并独立承担由此产生的一切法律责任。',
+                text_17: '3.4 您不得将您的账号、密码转让或出借予他人使用。如发现他人使用您的账号或密码，您应立即通知本网站，要求本网站暂停该账号的相关服务，对于未及时采取措施的，本网站有权拒绝向该用户提供服务。',
+                subtitle_4: '四、本网站的权利与义务',
+                text_18: '4.1 本网站有权根据法律法规、政策变化及运营需要，调整讨论区服务内容，并保留修改，中断或终止部分或全部服务的权利。',
+                text_19: '4.2 本网站应按照本协议约定向您提供讨论区服务，并努力维护服务的正常运行。',
+                text_20: '4.3 本网站尊重并保护用户的个人信息，未经用户同意，不会向任何第三方披露用户的个人信息，法律法规另有规定的除外。',
+                subtitle_5: '五、 免责声明',
+                text_21: '5.1 您理解并同意，本网站仅提供信息储存空间服务，用户在使用讨论区服务时发布的内容仅代表其个人观点，与本网站无关。',
+                text_22: '5.2 您理解并同意，使用讨论区服务存在风险，本网站不保证服务不会中断，也不保证服务的及时性、安全性、准确性。',
+                text_23: '5.3您理解并同意，对于因不可抗力或本网站不能控制的原因造成的服务中断或其他缺陷，本网站不承担任何责任。',
+                subtitle_6: '六、 其他',
+                text_24: '6.1 本协议的解释权及修改权归本网站所有。',
+                text_25: '6.2 本协议自创建之日起生效。',
+                text_26: '** 请您务必审慎阅读、充分理解本协议各条款内容，特别是免除或限制责任的条款。您点击“同意”或“接受”本协议，即视为您已阅读并接受本协议的全部内容。',
+                signature_ID: 'Entertainment_YH & Entertainment_YH的个人网站 版权所有',
+                signature_Date: '2025年2月2日（北京时间）',
+                option_positive: '我已阅读并同意《用户协议》',
+                option_negative: '我不同意《用户协议》(返回首页)',
+                
+                },
+            'zh-TW': {
+                LangSele: '您的所選語言：',
+                title: '使用者協議 version 1.0',
+                description: '歡迎您使用 Entertainment_YH的個人網站 討論區！為維護良好的網路環境，保障用戶權益，請您在使用討論區前仔細閱讀並同意本協議。本協議是您與 Entertainment_YH的個人網站 提供的服務所簽訂的。當您開始使用討論區時，即您已同意本協議。(註明：本協議中正文提到的Entertainment_YH的個人網站 將以“本網站”代指；《使用者協議》將以“本協議”代指；因翻譯問題，若有困難，以簡體中文原文為準。) ',
+                subtitle_1: '一、總則',
+                text_1: '1.1 本協議是您與本網站之間關於使用討論區服務所訂立之協議。',
+                text_2: '1.2 您在使用討論區服務時，應當遵守本協議及國家相關法律法規。',
+                text_3: '1.3 本網站有權依法律法規的變更及運營需要，隨時修改本協議，並在討論區予以公告。若您繼續使用討論區服務，即表示您同意修改後之協議。',
+                subtitle_2: '二、用戶行為準則',
+                text_4: '2.1 您承諾在使用討論區服務時遵守以下規範：',
+                text_5: '* 遵守中華人民共和國法律法規，不得發佈任何違反國家法律法規、危害國家安全、破壞民族團結、破壞國家宗教政策、破壞社會穩定、侮辱、誹謗、淫穢、暴力、恐怖、賭博、欺詐等違法資訊; ',
+                text_6: '* 遵守社會主義制度，不得發佈任何損害國家榮譽和利益、煽動民族仇恨、民族歧視、破壞民族團結、破壞國家宗教政策、宣揚邪教和封建迷信等不良資訊; ',
+                text_7: '* 遵守社會公德，不得發佈任何擾亂社會秩序、破壞社會穩定、低俗、庸俗、媚俗等不良資訊; ',
+                text_8: '* 尊重他人合法權益，不得發佈任何侵犯他人智慧財產權、名譽權、肖像權、隱私權等合法權益的資訊; ',
+                text_9: '* 文明用語，理性發言，不得發佈任何含有辱駡、恐嚇、威脅、人身攻擊等不友善內容的資訊; ',
+                text_10: '* 不得發佈任何廣告、垃圾資訊、恐慌刷屏等干擾正常討論秩序的資訊; ',
+                text_11: '* 不得利用討論區進行任何商業活動。',
+                text_12: '* 不得從事任何危害電腦網路安全的行為，包括但不限於：使用未經許可的資料或進入未經許可的伺服器/帳戶；未經許可進入公眾電腦網路或者他人電腦系統並刪除、修改、增加儲存資訊；未經許可，企圖探測、掃描、測試本“軟件”系統或網路的弱點或其它實施破壞網路安全的行為；故意傳播惡意程式或病毒以及其他破壞正常網路資訊服務的行為；偽造TCP/IP數據包名稱或部分名稱。',
+                text_13: '2.2 您理解並同意，本網站有權對您使用討論區服務的情況進行審查和監督，如發現您違反本協議，本網站有權依據本協議採取相應措施，包括但不限於刪除、屏蔽相關內容、限制、暫停或終止您使用討論區服務，並保留追究您法律責任的權利。',
+                subtitle_3: '三、 用戶權利與責任',
+                text_14: '3.1 您有權在遵守本協議的前提下，使用討論區服務進行合法的資訊發佈及交流活動。',
+                text_15: '3.2 您應妥善保管您的帳號和密碼，並對您帳號下的所有行為承擔法律責任。',
+                text_16: '3.3 您應保證您發佈的資訊真實、準確、完整、合法有效，並獨立承擔由此產生的一切法律責任。',
+                text_17: '3.4 您不得將您的帳號、密碼轉讓或出借予他人使用。如發現他人使用您的帳號或密碼，您應立即通知本網站，請求本網站暫停該帳號的相關服務，對未及時採取處置的，本網站有權拒絕向該用戶提供服務。',
+                subtitle_4: '四、本網站的權利與責任',
+                text_18: '4.1 本網站有權根據法律法規、政策變更及運營需要，調整討論區服務內容，並保留修改、暫停或終止部分或全部服務的權利。',
+                text_19: '4.2 本網站應按照本協議約定向您提供討論區服務，並努力維護服務的正常運行。 ',
+                text_20: '4.3 本網站尊重並保護用戶的個人資訊，未經用戶同意，不會向任何第三方披露用戶的個人資訊，法律法規另有規定的除外。',
+                subtitle_5: '五、 免責聲明',
+                text_21: '5.1 您理解並同意，本網站僅提供資訊儲存空間服務，使用者在使用討論區服務時發佈的內容僅代表其個人觀點，與本網站無關。 ',
+                text_22: '5.2 您理解並同意，使用討論區服務存在風險，本網站不保證服務不會中斷，也不保證服務的及時性、安全性、準確性。 ',
+                text_23: '您理解並同意，對於因不可抗力或本網站不能控制的原因造成的服務中斷或其他缺陷，本網站不承擔任何責任。 ',
+                subtitle_6: '六、 其他',
+                text_24: '6.1 本協議的解釋權及修改權歸本網站所有。 ',
+                text_25: '6.2 本協定自創建之日起生效。 ',
+                text_26: '** 請您務必審慎閱讀、充分理解本協定各條款內容，特別是免除或限制責任的條款。 您點擊“同意”或“接受”本協定，即視為您已閱讀並接受本協定的全部內容。 ',
+                signature_ID: 'Entertainment_YH & Entertainment_YH的個人網站 版權所有',
+                signature_Date: '2025年2月2日（北京時間）',
+                option_positive:'我已閱讀並同意《用戶協定》',
+                option_negative:'我不同意《用戶協定》（返回首頁）',
+            },
+            'en': {
+                LangSele: 'Your selected language:',
+                title: 'USER AGREEMENT version 1.0',
+                description: 'Welcome to the Entertainment_YH personal website discussion forum! To maintain a good network environment, safeguard user rights, please read and agree to this agreement before using the discussion forum. This agreement is between you and Entertainment_YH personal website and is the contract for the services provided by Entertainment_YH personal website. When you start using the discussion forum, you have agreed to this agreement. (Note: In this agreement, "Entertainment_YH personal website" will be referred to as "this website" and "USER AGREEMENT" will be referred to as "THIS AGREEMENT". In case of any translation issues, the original Chinese Simplified text will be used.) ',
+                subtitle_1: 'I. General',
+                text_1: '1.1 This agreement is between you and this website and is entered into by you and Entertainment_YH personal website to use the discussion forum service. ',
+                text_2: '1.2 You should comply with this agreement and relevant laws and regulations in your use of the discussion forum service. ',
+                text_3: '1.3 This website may modify this agreement at any time in accordance with relevant laws and regulations. If you continue to use the discussion forum service, you agree to the modified agreement. ',
+                subtitle_2: 'II. User Behavior',
+                text_4: '2.1 You undertake to comply with the following specifications when using the Discussion Forum service:',
+                text_5: '* Abide by the laws and regulations of the PRC, and shall not publish any illegal information that violates national laws and regulations, endangers national security, undermines national unity, undermines national religious policies, undermines social stability, insults, defamation, obscenity, violence, terrorism, gambling, fraud and other illegal information; ',
+                text_6: '* Abide by the socialist system, and shall not publish any bad information that damages the honor and interests of the state, incites ethnic hatred, ethnic discrimination, undermines national unity, undermines national religious policies, and advocates cults and feudal superstitions; ',
+                text_7: '* Abide by social morality, and shall not publish any bad information that disturbs social order, undermines social stability, is vulgar, vulgar, kitsch, etc.; ',
+                text_8: '* Respect the legitimate rights and interests of others, and shall not publish any information that infringes on the legitimate rights and interests of others, such as intellectual property rights, reputation rights, portrait rights, privacy rights, etc.; ',
+                text_9: '* Use civilized language, speak rationally, and do not publish any information that contains unfriendly content such as abuse, intimidation, threats, personal attacks, etc.; ',
+                text_10: '* Do not publish any advertisements, spam, or disturbing information that interferes with normal discussion order; ',
+                text_11: '* Do not engage in any commercial activity using the Discussion Forum. ',
+                text_12: '* Do not engage in any behavior that violates computer network security, including but not limited to: using unauthorized data or entering unauthorized servers/accounts; unauthorized access to public computer networks or other computer systems and delete, modify, or add information; unauthorized access, attempts to probe, scan, or test the security of this "software" system or network, intentionally spread malicious programs or viruses and other actions that interfere with normal network information services; falsely impersonating TCP/IP packet names or partial names. ',
+                text_13: '2.2 You understand and agree that this website has the right to review and monitor your use of the Discussion Forum service, and if you violate this agreement, this website may take appropriate measures, including but not limited to deleting, blocking, restricting, suspending or terminating your use of the Discussion Forum service, and the right to seek legal responsibility. ',
+                subtitle_3: 'III. User Rights and Obligations',
+                text_14: '3.1 You have the right to use the Discussion Forum service for legitimate information dissemination and communication activities under the compliance with this agreement. ',
+                text_15: '3.2 You are responsible for safeguarding your account and password and be liable for all activities under your account. ',
+                text_16: '3.3 You shall ensure that the information you publish is true, accurate, complete, legal and valid, and independently assume all legal liabilities arising therefrom. ',
+                text_17: '3.4 You may not transfer or lend your account number and password to others. If you find that others are using your account or password, you should immediately notify this website and request this website to suspend the relevant services of the account, and this website has the right to refuse to provide services to the user if measures are not taken in time.',
+                subtitle_4: 'IV. Rights and Obligations of the Website',
+                text_18: '4.1 This website has the right to use any information provided by you in any way it deems fit, including but not limited to publishing, distributing, and copying the information on the website, and using the information for any purpose. ',
+                text_19: '4.2 This website has the right to modify, suspend or terminate the Discussion Forum service at any time in accordance with relevant laws and regulations. ',
+                text_20: '4.3 This website respects and protects the users personal information, and will not disclose the users personal information to any third party without the users consent, except as otherwise provided by laws and regulations. ',
+                subtitle_5: 'V. Disclaimer',
+                text_21: '5.1 You understand and agree that this website only provides information storage space services, and the content posted by users when using the discussion forum service only represents their personal views and has nothing to do with this website. ',
+                text_22: '5.2 You understand and agree that there are risks associated with the use of the discussion forum service, and this website does not guarantee that the service will not be interrupted, nor does it guarantee the timeliness, security and accuracy of the service. ',
+                text_23: 'You understand and agree that this website will not be liable for service interruption or other defects caused by force majeure or reasons beyond the control of this website. ',
+                subtitle_6: 'VI. Other',
+                text_24: '6.1 The right to interpret and modify this Agreement belongs to this website. ',
+                text_25: '6.2 This Agreement shall come into force on the date of creation. ',
+                text_26: '** Please carefully read and fully understand the terms of this Agreement, especially the clauses on exemption or limitation of liability. By clicking "Agree" or "Accept" this Agreement, you are deemed to have read and accepted all the contents of this Agreement. ',
+                signature_ID: 'Entertainment_YH & Entertainment_YHs personal website All rights reserved',
+                signature_Date: 'February 2, 2025 (Beijing Time)',
+                option_positive:'I have read and agree to the User Agreement',
+                option_negative:'I do not agree to the User Agreement (back to the index page)',
+            },
+            'uy': {
+                LangSele: 'ھەمبەئۇيغۇرچە قىلىشىمۇ :',
+            }
+        };
+
+        // 自动检测浏览器语言偏好
+        const browserLang = navigator.language || navigator.userLanguage;
+        const defaultLang = browserLang in messages ? browserLang : 'zh-CN';
+
+        const i18n = createI18n({
+            locale: defaultLang,
+            messages
+        });
+
+        const app = createApp({
+            data() {
+                return {
+                    selectedLanguage: defaultLang
+                };
+            },
+            methods: {
+                changeLanguage() {
+                    if (this.selectedLanguage) {
+                        this.$i18n.locale = this.selectedLanguage;
+                    }
+                }
+            }
+        });
+
+        app.use(i18n);
+        app.mount('#app');
+    </script>
+</body>
+
+</html>
