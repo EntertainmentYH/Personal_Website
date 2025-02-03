@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <!--这个文件 是 Template 的-->
+    <!-- 此文件为模板文件 供给快速创建一个新的页面或对照 -->
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="关于维吾尔语的停止翻译">
+    <meta name="author" content="Entertainment_YH">
+    <meta name="keywords"
+        content="Entertainment_YH,Entertainment_YH,YH,YH Community,娱乐之神,YH娱乐之神,娱乐,个人网站,网站,个人,Personal Website,Entertainment,_,Entertainment_,God of Entertainment,123YHawa,Entertainment_YH的个人网站,娱乐之神的个人网站,娱乐之神的网站,">
+    <meta name="theme-color" content="rgb(172, 229, 236)">
+    <title>关于维吾尔语的停止翻译</title>
+    <style>
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            background-color: rgb(173, 229, 236);
+        }
+
+        #LanguageSelector {
+            color: rgb(0, 0, 0);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: powderblue;
+            box-shadow: inset 0 1px 3px rgba(57, 57, 57, 0.2);
+            appearance: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            #title {
+                text-align: center;
+                font-size: large;
+                color: black;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: small;
+            }
+
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+
+        @media screen and (min-width: 769px) and (max-width: 1280px) {
+
+            #title {
+                text-align: center;
+                font-size: xx-large;
+                color: black;
+            }
+
+            p {
+                font-size: medium;
+            }
+
+            .container {
+                width: 90%;
+            }
+        }
+
+        @media screen and (min-width: 1281px) {
+
+            #title {
+                text-align: center;
+                font-size: xxx-large; 
+                color: black;
+            }
+
+            p {
+                font-size: large;
+            }
+
+            .container {
+                width: 75%;
+            }
+        }
+    </style>
+</head> 
+<body>
+    <div id="app">
+        <div id="head">
+            <div id="translation">
+                <label for="LanguageSelector">{{ $t('LangSele') }}</label>
+                <select id="LanguageSelector" v-model="selectedLanguage" @change="changeLanguage">
+                    <option disabled value="">LANGUAGE SELECTOR</option>
+                    <option value="en">英文/English(US)</option>
+                    <option value="zh-CN">简体中文/Simplified Chinese</option>
+                    <option value="zh-TW">繁体中文/Traditional Chinese</option>
+                    <option style="color: red;" value="uy">ئۇيغۇرچە/维吾尔语/Uighur(停止服务/unavailable)</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="title">
+            {{ $t('title') }}
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue-i18n@9"></script>
+    <script>
+        const { createApp } = Vue;
+        const { createI18n } = VueI18n;
+
+        const messages = {
+            'zh-CN': {
+                LangSele: '您的所选语言：',
+                title: '关于维吾尔语的停止翻译',
+            },
+            'zh-TW': {
+                LangSele: '您的所選語言：',
+                title: '關於維吾爾語的停止翻譯',
+            },
+            'en': {
+                LangSele: 'Your selected language:',
+                title: 'About Uyghur Translation Problem',
+            },
+            'uy': {
+                LangSele: 'ھەمبەئۇيغۇرچە قىلىشىمۇ :',
+                title: 'ئۇيغۇرچە يېقىنىشىمۇ',
+            }
+        };
+
+        // 自动检测浏览器语言偏好
+        const browserLang = navigator.language || navigator.userLanguage;
+        const defaultLang = browserLang in messages ? browserLang : 'zh-CN';
+
+        const i18n = createI18n({
+            locale: defaultLang, 
+            messages
+        });
+
+        const app = createApp({ 
+            data() {
+                return {
+                    selectedLanguage: defaultLang 
+                };
+            },
+            methods: {
+                changeLanguage() {
+                    if (this.selectedLanguage) {
+                        this.$i18n.locale = this.selectedLanguage;
+                    }
+                }
+            }
+        });
+
+        app.use(i18n);
+        app.mount('#app');
+    </script>
+</body>
+</html>

@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <!--这个文件 是 Discussion 的-->
+    <!--这个文件 是 Template 的-->
+    <!-- 此文件为模板文件 供给快速创建一个新的页面或对照 -->
 
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="讨论区 Entertainment_YH">
+    <meta name="description" content="">
     <meta name="author" content="Entertainment_YH">
-    <meta name="keywords" content="Entertainment_YH,Discussion,讨论区,Entertainment,YH,问题,回答，解答,问题解答">
-    <title>Entertainment_YH的个人网站_讨论区</title>
+    <meta name="keywords"
+        content="Entertainment_YH,Entertainment_YH,YH,YH Community,娱乐之神,YH娱乐之神,娱乐,个人网站,网站,个人,Personal Website,Entertainment,_,Entertainment_,God of Entertainment,123YHawa,Entertainment_YH的个人网站,娱乐之神的个人网站,娱乐之神的网站,">
+    <meta name="theme-color" content="rgb(172, 229, 236)">
+    <title></title>
     <style>
         body {
             font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
-            background-color: rgb(172, 229, 236);
+            background-color: rgb(173, 229, 236);
         }
 
         #LanguageSelector {
             color: rgb(0, 0, 0);
             border: 1px solid #ccc;
             border-radius: 4px;
-            background-color: rgb(172, 229, 236);
+            background-color: powderblue;
             box-shadow: inset 0 1px 3px rgba(57, 57, 57, 0.2);
             appearance: none;
         }
 
         @media screen and (max-width: 768px) {
-            
             #title {
                 text-align: center;
                 font-size: large;
@@ -34,65 +36,51 @@
                 font-weight: bold;
             }
 
-            #title-desc {
-                text-align: center;
+            p {
                 font-size: small;
-                color: black;
             }
 
-            #agreement {
-                display: block;
-                text-align: center;
-                font-size: large;
+            .container {
+                width: 100%;
+                padding: 10px;
             }
         }
 
         @media screen and (min-width: 769px) and (max-width: 1280px) {
-           
-            #title {
-               text-align: center;
-               font-size: xx-large;
-               color: black;
-               font-weight: bold;
-           }
 
-            #title-desc {
+            #title {
                 text-align: center;
-                font-size: large;
+                font-size: xx-large;
                 color: black;
             }
 
-            #agreement {
-                display: block;
-                text-align: center;
-                font-size: x-large;
+            p {
+                font-size: medium;
+            }
+
+            .container {
+                width: 90%;
             }
         }
 
         @media screen and (min-width: 1281px) {
-            
+
             #title {
                 text-align: center;
-                font-size: xxx-large;
-                color: black;
-                font-weight: bold;
-            }
-
-            #title-desc {
-                text-align: center;
-                font-size: x-large;
+                font-size: xxx-large; 
                 color: black;
             }
 
-            #agreement {
-                display: block;
-                text-align: center;
-                font-size: xx-large;
+            p {
+                font-size: large;
+            }
+
+            .container {
+                width: 75%;
             }
         }
     </style>
-</head>
-
+</head> 
 <body>
     <div id="app">
         <div id="head">
@@ -107,18 +95,6 @@
                 </select>
             </div>
         </div>
-
-        <div id="title">
-            {{ $t('title') }}
-        </div>
-
-        <div id="title-desc">
-            {{ $t('desc') }}
-        </div>
-
-        <a id="agreement" href="../Agreement/index.html">
-            {{ $t('agreement') }}
-        </a>
     </div>
 
     <script src="https://unpkg.com/vue@3"></script>
@@ -130,19 +106,12 @@
         const messages = {
             'zh-CN': {
                 LangSele: '您的所选语言：',
-                title: 'Entertainment_YH的个人网站:讨论区',
-                desc: '欢迎来到Entertainment_YH的个人网站的讨论区，这里你可以提出你的问题，或者与其他用户交流。',
-                agreement: '在您发表任何内容之前，请您务必仔细阅读本站的相关条款。'
             },
             'zh-TW': {
                 LangSele: '您的所選語言：',
-                title: 'Entertainment_YH的個人網站:討論區',
-                desc: '歡迎來到Entertainment_YH的個人網站的討論區，這裡你可以提出你的問題，或者與其他用戶交流。'
             },
             'en': {
                 LangSele: 'Your selected language:',
-                title: 'Entertainment_YH\'s Personal Website_Discussion',
-                desc: 'Welcome to Entertainment_YH\'s Personal Website Discussion, here you can ask questions, or communicate with other users.'
             },
             'uy': {
                 LangSele: 'ھەمبەئۇيغۇرچە قىلىشىمۇ :',
@@ -176,6 +145,5 @@
         app.use(i18n);
         app.mount('#app');
     </script>
-
 </body>
 </html>
