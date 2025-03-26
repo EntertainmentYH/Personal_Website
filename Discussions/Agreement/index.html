@@ -37,7 +37,7 @@
                 font-weight: bold;
                 margin: 5%;
             }
-
+       
             .text {
                 font-size: small;
             }
@@ -49,6 +49,12 @@
 
             #description {
                 font-size: small;
+            }
+
+            #AInote {
+                text-align: center;
+                font-size: small;
+                font-weight: bold;
             }
 
             .signature{
@@ -90,6 +96,12 @@
                 font-size: medium;
             }
 
+            #AInote {
+                text-align: center;
+                font-size: medium;
+                font-weight: bold;
+            }
+
             #signature {
                 font-size: large;
                 font-weight: bold;
@@ -112,6 +124,7 @@
             }
 
             .subtitle {
+                display: flex;
                 font-size: xx-large;
                 font-weight: bold;
                 margin: 2%;
@@ -127,6 +140,12 @@
 
             #description {
                 font-size: large;
+            }
+
+            #AInote {
+                text-align: center;
+                font-size: large;
+                font-weight: bold;
             }
 
             .signature {
@@ -165,6 +184,10 @@
 
         <div id="description">
             {{ $t('description') }}
+        </div>
+
+        <div id="AInote">
+            {{ $t('AInote') }}
         </div>
 
         <div class="subtitle">
@@ -323,6 +346,7 @@
                 LangSele: '您的所选语言：',
                 title: '用户协议 V1.0',
                 description: '欢迎您使用 Entertainment_YH的个人网站 讨论区！为维护良好的网络环境，保障用户权益，请您在使用讨论区前仔细阅读并同意本协议。本协议是您与 Entertainment_YH的个人网站 提供的服务所签订的。当您开始使用讨论区时，即您已同意本协议。(注明：本协议中正文提到的Entertainment_YH的个人网站 将以“本网站”代指；《用户协议》将以“本协议”代指；因翻译问题，若有歧义，以简体中文原文为准。) ',
+                AInote: '注明：此条目为AI编写，并修改部分。',
                 subtitle_1: '一、 总则',
                 text_1: '1.1 本协议是您与本网站之间关于使用讨论区服务所订立的协议。',
                 text_2: '1.2 您在使用讨论区服务时，应当遵守本协议及国家相关法律法规。',
@@ -365,6 +389,7 @@
                 LangSele: '您的所選語言：',
                 title: '使用者協議 V1.0',
                 description: '歡迎您使用 Entertainment_YH的個人網站 討論區！為維護良好的網路環境，保障用戶權益，請您在使用討論區前仔細閱讀並同意本協議。本協議是您與 Entertainment_YH的個人網站 提供的服務所簽訂的。當您開始使用討論區時，即您已同意本協議。(註明：本協議中正文提到的Entertainment_YH的個人網站 將以“本網站”代指；《使用者協議》將以“本協議”代指；因翻譯問題，若有困難，以簡體中文原文為準。) ',
+                AInote: '註明：此項目為AI編寫，並修訂部分。',
                 subtitle_1: '一、總則',
                 text_1: '1.1 本協議是您與本網站之間關於使用討論區服務所訂立之協議。',
                 text_2: '1.2 您在使用討論區服務時，應當遵守本協議及國家相關法律法規。',
@@ -406,6 +431,7 @@
                 LangSele: 'Your selected language:',
                 title: 'USER AGREEMENT V1.0',
                 description: 'Welcome to the Entertainment_YH personal website discussion forum! To maintain a good network environment, safeguard user rights, please read and agree to this agreement before using the discussion forum. This agreement is between you and Entertainment_YH personal website and is the contract for the services provided by Entertainment_YH personal website. When you start using the discussion forum, you have agreed to this agreement. (Note: In this agreement, "Entertainment_YH personal website" will be referred to as "this website" and "USER AGREEMENT" will be referred to as "THIS AGREEMENT". In case of any translation issues, the original Chinese Simplified text will be used.) ',
+                AInote: 'Note: This entry was written by AI and modified in part.',
                 subtitle_1: 'I. General',
                 text_1: '1.1 This agreement is between you and this website and is entered into by you and Entertainment_YH personal website to use the discussion forum service. ',
                 text_2: '1.2 You should comply with this agreement and relevant laws and regulations in your use of the discussion forum service. ',
@@ -444,7 +470,7 @@
                 option_negative:'I do not agree to the User Agreement (back to the index page)',
             },
             'uy': {
-                LangSele: 'ھەمبەئۇيغۇرچە قىلىشىمۇ :',
+                LangSele: 'ھەمبەئۇيغۇرچە قىلىشىمۇ :',                
             }
         };
 
