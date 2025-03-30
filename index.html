@@ -11,6 +11,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Entertainment_YH的个人网站</title>
     <style> 
+    /* 响应式设计 */
+
+    /* 小屏幕(0px-767px) */
+    @media screen and (max-width: 767px) {
+
+        #title {
+            font-size: 27px; /* 字体大小 27px */
+            font-weight: bold; /*字体加粗 */
+        }
+
+        #title-description {
+            font-size: 13px; /* 字体大小 13px */
+        }
+
+        .subtitle {
+            font-size: 21px; /* 字体大小 21px */
+        }
+
+        .text {
+            font-size: 10px; /* 字体大小 10px */
+            margin-bottom: 16px; /* 底部留白 16px */
+        }
+    }
+
+    /* 中等屏幕(768px-1280px) */
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+
+       #title {
+       font-size: 40px; /* 字体大小 40px */
+       font-weight: bold; /*字体加粗 */
+       }
+
+        #title-description {
+            font-size: 24px; /* 字体大小 24px */
+       }
+
+       .subtitle {
+            font-size: 32px; /* 字体大小 32px */
+        }
+
+        .text {
+            font-size: 19px; /* 字体大小 16px */
+            margin-bottom: 8px; /* 底部留白 8px */
+        }
+    }
+    
+    /* 超大屏幕(最窄1281px) */
+    @media screen and (min-width: 1281px) {
+
+        #title {
+            font-size: 48px; /* 字体大小 48px */
+            font-weight: bold; /*字体加粗 */
+        }
+
+        #title-description {
+            font-size: 27px; /* 字体大小 27px */
+        }
+
+        .subtitle {
+            font-size: 36px; /* 字体大小 36px */
+        }
+
+       .text {
+            font-size: 23px; /* 字体大小 18px */
+        }
+    }
+
     /* 全局样式 */
     body {
         background-color: #f3e5f5; /* 我的背景是淡紫色！！！不是纯白！！！！！！！！！ */
@@ -27,8 +94,6 @@
     
     /* 主标题 */
     #title {
-        font-size: 48px; /* 字体大小 48px */
-        font-weight: bold; /*字体加粗 */
         text-align: center; /* 文字居中 */
         padding-top: 2%; /* 顶部留白 2% */
         z-index: 1; /* 最高层级 */
@@ -37,9 +102,9 @@
 
     /* 标题下方的描述 */
     #title-description {
-        font-size: 27px; /* 字体大小 27px */
         text-align: left; /* 文字居左 */
         padding-top: 2%; /* 顶部留白 2% */
+        padding-bottom: 2%;
         z-index: 1; /* 最高层级 */
         padding-left: 23%; /* 左侧留白 23% */
         padding-right: 23%; /* 右侧留白 23% */
@@ -58,20 +123,21 @@
         background-color:   rgba(212, 181, 212, 0.781); /* 背景颜色 */
         border-radius: 20px; /* 圆角 20px */
         padding: 2%; /* 内边距 2% */
+        padding-top: 5px; /* 顶部留白 5px */
         z-index: -1; /* 最底层背景 */
     }
 
     /* 子标题 */
     .subtitle {
-        font-size: 25px; /* 字体大小 31px */
         font-weight: bold; /* 字体加粗 */
+        position: relative; /* 相对定位 */
+        top: 5px; /* 上边距 5px */
     }
 
     /* 正文 */
     .text {
-        font-size: 18px; /* 字体大小 18px */
         position: relative; /* 相对定位 */
-        top: 12px;
+        top: 24px; /* 上边距 24px */
     }
     </style>
 </head>
@@ -102,6 +168,15 @@
             <div class="text">
                 &emsp;&emsp;这个网站是我于2025年3月30日创建的，我希望它能成为一个有趣的地方，记录我生活中的点点滴滴，以及让更多人了解关于我的基本信息。同时，我随时欢迎各位的反馈，我会不断更新网站内容，让它越来越好，欢迎大家来访问！
             </div>
+        </div>
+
+        <!-- 你知道吗？-->
+        <div class="subtitle" style="margin-top: 30px;">
+            你知道吗？
+        </div>
+
+        <div class="text">
+            &emsp;&emsp;这个网站其实支持维吾尔语的哦！！你可以点击这里来切换到维吾尔语哦！(这里放置维吾尔语翻译)作者做维吾尔语的初衷是想让新疆的朋友们也可以一起浏览哦！
         </div>
     </div>
 </body>
