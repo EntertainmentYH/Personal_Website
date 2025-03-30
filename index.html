@@ -12,7 +12,7 @@
     <title>Entertainment_YH的个人网站</title>
     <style> 
     /* 全局样式 */
-    * {
+    body {
         background-color: #f3e5f5; /* 我的背景是淡紫色！！！不是纯白！！！！！！！！！ */
         z-index: -1; /* 最底层背景 */
     }
@@ -21,45 +21,88 @@
     #title-background {
         background: linear-gradient(90deg, rgba(191,182,236,1) 1%, rgba(230,221,214,1) 17%, rgba(230,207,153,1) 44%, rgba(91,200,210,1) 91%, rgba(0,212,255,1) 100%); /*渐变标题背景 */
         width: 100%; /* 宽度 100% */
-        height: 270px; /* 高度 270px */
-        position:fixed; /* 固定定位 */
-        top:0; /* 顶部 */
-        left:0; /* 左侧 */
+        height: auto; /* 高度 auto */
+        border-radius: 20px; /* 圆角 20px */
     }
     
     /* 主标题 */
     #title {
-        background: linear-gradient(90deg, rgba(191,182,236,1) 1%, rgba(230,221,214,1) 17%, rgba(230,207,153,1) 44%, rgba(91,200,210,1) 91%, rgba(0,212,255,1) 100%); /*渐变背景颜色 */
         font-size: 48px; /* 字体大小 48px */
         font-weight: bold; /*字体加粗 */
         text-align: center; /* 文字居中 */
         padding-top: 2%; /* 顶部留白 2% */
         z-index: 1; /* 最高层级 */
+        background-color: rgba(0,0,0,0); /* 背景透明 */
     }
 
     /* 标题下方的描述 */
     #title-description {
-        background: linear-gradient(90deg, rgba(191,182,236,1) 1%, rgba(230,221,214,1) 17%, rgba(230,207,153,1) 44%, rgba(91,200,210,1) 91%, rgba(0,212,255,1) 100%); /* 渐变背景颜色 */  
         font-size: 27px; /* 字体大小 27px */
         text-align: left; /* 文字居左 */
         padding-top: 2%; /* 顶部留白 2% */
         z-index: 1; /* 最高层级 */
         padding-left: 23%; /* 左侧留白 23% */
         padding-right: 23%; /* 右侧留白 23% */
+        background-color: rgba(0,0,0,0); /* 背景透明 */
+    }
+
+    /* 内容 */
+    #content {
+        margin-top: 1%; /* 顶部留白 1% */
+        width: 67%; /* 宽度 67% */
+        height: auto; /* 高度 100% */
+        z-index: 1; /* 最高层级 */
+        position: relative; /* 相对定位 */
+        left: 15.45%; /* 左侧留白 15.45% */
+        right: 15.45%; /* 右侧留白 15.45% */
+        background-color:   rgba(212, 181, 212, 0.781); /* 背景颜色 */
+        border-radius: 20px; /* 圆角 20px */
+        padding: 2%; /* 内边距 2% */
+        z-index: -1; /* 最底层背景 */
+    }
+
+    /* 子标题 */
+    .subtitle {
+        font-size: 25px; /* 字体大小 31px */
+        font-weight: bold; /* 字体加粗 */
+    }
+
+    /* 正文 */
+    .text {
+        font-size: 18px; /* 字体大小 18px */
+        position: relative; /* 相对定位 */
+        top: 12px;
     }
     </style>
 </head>
 
 <!-- 主!体!内容 -->
 <body>
-    <!-- 标题背景 -->
-    <div id="title-background"></div>
-
     <!-- 标题 -->
-    <div id="title">Entertainment_YH</div>
+    <div id="title-background">
 
-    <!-- 标题下方的描述 -->
-    <div id="title-description">你好，我是Entertainment_YH，或称“恩特忒门特杠外诶吃”，亦或“YH”，此网站是娱乐之神的个人网站，用于更多人了解我，分享我，以及与我交流。欢迎来到我的网站！</div>
+        <div id="title">Entertainment_YH</div>
+
+        <div id="title-description">
+            你好，我是Entertainment_YH，或称“恩特忒门特杠外诶吃”，亦或“YH”，此网站是娱乐之神的个人网站，用于更多人了解我，分享我，以及与我交流。欢迎来到我的网站！
+        </div>
     
+    </div>
+
+    <!-- 内容 -->
+    <div id="content">
+
+        <!-- 介绍 -->
+        <div id="introduction">
+            <div class="subtitle">
+                关于这个网站
+            </div>
+
+            <!-- 正文 -->
+            <div class="text">
+                &emsp;&emsp;这个网站是我于2025年3月30日创建的，我希望它能成为一个有趣的地方，记录我生活中的点点滴滴，以及让更多人了解关于我的基本信息。同时，我随时欢迎各位的反馈，我会不断更新网站内容，让它越来越好，欢迎大家来访问！
+            </div>
+        </div>
+    </div>
 </body>
 </html>
