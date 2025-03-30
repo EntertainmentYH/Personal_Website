@@ -11,77 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Entertainment_YH的个人网站</title>
     <style> 
-    /* 响应式设计 */
 
-    /* 小屏幕(0px-767px) */
-    @media screen and (max-width: 767px) {
-
-        #title {
-            font-size: 27px; /* 字体大小 27px */
-            font-weight: bold; /*字体加粗 */
-        }
-
-        #title-description {
-            font-size: 13px; /* 字体大小 13px */
-        }
-
-        .subtitle {
-            font-size: 21px; /* 字体大小 21px */
-        }
-
-        .text {
-            font-size: 10px; /* 字体大小 10px */
-            margin-bottom: 16px; /* 底部留白 16px */
-        }
-    }
-
-    /* 中等屏幕(768px-1280px) */
-    @media screen and (min-width: 768px) and (max-width: 1280px) {
-
-       #title {
-       font-size: 40px; /* 字体大小 40px */
-       font-weight: bold; /*字体加粗 */
-       }
-
-        #title-description {
-            font-size: 24px; /* 字体大小 24px */
-       }
-
-       .subtitle {
-            font-size: 32px; /* 字体大小 32px */
-        }
-
-        .text {
-            font-size: 19px; /* 字体大小 16px */
-            margin-bottom: 8px; /* 底部留白 8px */
-        }
-    }
-    
-    /* 超大屏幕(最窄1281px) */
-    @media screen and (min-width: 1281px) {
-
-        #title {
-            font-size: 48px; /* 字体大小 48px */
-            font-weight: bold; /*字体加粗 */
-        }
-
-        #title-description {
-            font-size: 27px; /* 字体大小 27px */
-        }
-
-        .subtitle {
-            font-size: 36px; /* 字体大小 36px */
-        }
-
-       .text {
-            font-size: 23px; /* 字体大小 18px */
-        }
-    }
 
     /* 全局样式 */
     body {
         background-color: #f3e5f5; /* 我的背景是淡紫色！！！不是纯白！！！！！！！！！ */
-        z-index: -1; /* 最底层背景 */
     }
     
     /* 标题背景 */
@@ -113,18 +47,14 @@
 
     /* 内容 */
     #content {
-        margin-top: 1%; /* 顶部留白 1% */
         width: 67%; /* 宽度 67% */
         height: auto; /* 高度 100% */
         z-index: 1; /* 最高层级 */
         position: relative; /* 相对定位 */
         left: 15.45%; /* 左侧留白 15.45% */
         right: 15.45%; /* 右侧留白 15.45% */
-        background-color:   rgba(212, 181, 212, 0.781); /* 背景颜色 */
+        background-color:   rgba(238, 197, 238, 0.781); /* 背景颜色 */
         border-radius: 20px; /* 圆角 20px */
-        padding: 2%; /* 内边距 2% */
-        padding-top: 5px; /* 顶部留白 5px */
-        z-index: -1; /* 最底层背景 */
     }
 
     /* 子标题 */
@@ -137,7 +67,94 @@
     /* 正文 */
     .text {
         position: relative; /* 相对定位 */
-        top: 24px; /* 上边距 24px */
+    }
+
+
+    /* 响应式设计 */
+
+    /* 小屏幕(0px-767px) */
+    @media screen and (max-width: 767px) {
+
+        #title {
+            font-size: 27px; /* 字体大小 27px */
+            font-weight: bold; /*字体加粗 */
+        }
+
+        #title-description {
+            font-size: 14px; /* 字体大小 14px */
+        }
+
+        #content {
+            margin-top: -30px;
+            padding: 0 10px 10px 10px;
+        }
+
+        .subtitle {
+            font-size: 16px; /* 字体大小 16px */
+            margin-top: 35px; /* 上边距 35px */
+            padding-top: 10px;
+        }
+
+        .text {
+            font-size: 12px; /* 字体大小 12px */
+            margin: 10px 0px 6px 0px;
+        }
+    }
+
+    /* 中等屏幕(768px-1280px) */
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+
+       #title {
+       font-size: 36px; /* 字体大小 36px */
+       font-weight: bold; /*字体加粗 */
+       }
+
+       #title-description {
+           font-size: 22px; /* 字体大小 22px */
+       }
+
+       #content {
+            padding: 10px 20px 30px 20px;
+            margin-top: 10px;
+        }
+
+       .subtitle {
+            font-size: 28px; /* 字体大小 28px */
+        }
+
+        .text {
+            font-size: 18px; /* 字体大小 18px */
+            margin-bottom: 8px; /* 底部留白 8px */
+            top: 12px; /* 上边距 12px */
+        }
+    }
+    
+    /* 超大屏幕(最窄1281px) */
+    @media screen and (min-width: 1281px) {
+
+        #title {
+            font-size: 3rem; /* 字体大小 48px */
+            font-weight: bold; /*字体加粗 */
+        }
+
+        #title-description {
+            font-size: 26px; /* 字体大小 26px */
+        }
+
+        #content {
+            padding: 10px 20px 60px 20px;
+            margin-top: 10px;
+        }
+
+        .subtitle {
+            font-size: 32px; /* 字体大小 32px */
+            margin-top: 20px; /* 上边距 40px */
+        }
+
+       .text {
+            font-size: 19px; /* 字体大小 19px */
+            top: 24px; /* 上边距 24px */
+        }
     }
     </style>
 </head>
@@ -171,12 +188,12 @@
         </div>
 
         <!-- 你知道吗？-->
-        <div class="subtitle" style="margin-top: 30px;">
+        <div class="subtitle" style="margin-top: 50px;">
             你知道吗？
         </div>
 
         <div class="text">
-            &emsp;&emsp;这个网站其实支持维吾尔语的哦！！你可以点击这里来切换到维吾尔语哦！(这里放置维吾尔语翻译)作者做维吾尔语的初衷是想让新疆的朋友们也可以一起浏览哦！
+            &emsp;&emsp;<a href="index-zh-uy.html">这个网站其实支持维吾尔语的哦！！你可以点击这里来切换到维吾尔语哦！<br \>(بۇ تورە ئەمەلىيەتتە ئۇيغۇرچىنى قوللايدۇﯪ!! ئۇيغۇرچە نۇسخىسىغا ئالماشتۇرۇش ئۈچۈن مۇشۇ جەرياننى بېسىڭ)</a> <br \>作者做维吾尔语的初衷是想让新疆的朋友们也可以一起浏览哦！
         </div>
     </div>
 </body>
