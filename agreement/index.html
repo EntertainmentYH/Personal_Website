@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <!-- 这个文件是 模板文件，所有页面将沿用此文件的设计风格 -->
+
+<!-- 头部信息 -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Entertainment_YH的个人网站" />
+    <meta name="author" content="Entertainment_YH" />
+    <!-- <meta name="keywords" content="Entertainment_YH,YH,YH的网站,YH Community,娱乐之神,YH娱乐之神,娱乐,个人网站,网站,个人,Entertainment,_,Entertainment_YH,God of Entertainment,Entertainment_YH个人网站,娱乐之神的个人网站,娱乐之神的网站" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>用户协议V1.0</title>
+    <link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png">
+    <link rel="android-touch-icon" href="/favicon_io/android-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon_io/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon_io/favicon-16x16.png" sizes="16x16">
+    <style> 
+
+
+    /* 全局样式 */
+    body {
+        background-color: #f3e5f5; /* 我的背景是淡紫色！！！不是纯白！！！！！！！！！ */
+    }
+
+    #icon-img {
+        position: absolute;
+        top: 5%;
+        left: 4%;
+        border-radius: 50%;
+    }
+    
+    /* 标题背景 */
+    #title-background {
+        background: linear-gradient(90deg, rgba(191,182,236,1) 1%, rgba(230,221,214,1) 17%, rgba(230,207,153,1) 44%, rgba(91,200,210,1) 91%, rgba(0,212,255,1) 100%); /*渐变标题背景 */
+        width: 100%; /* 宽度 100% */
+        height: auto; /* 高度 auto */
+        border-radius: 20px; /* 圆角 20px */
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    /* 主标题 */
+    #title {
+        text-align: center; /* 文字居中 */
+        padding-top: 2%; /* 顶部留白 2% */
+        background-color: rgba(0,0,0,0); /* 背景透明 */
+    }
+
+    /* 标题下方的描述 */
+    #title-description {
+        text-align: left; /* 文字居左 */
+        padding-top: 2%; /* 顶部留白 2% */
+        padding-bottom: 2%;
+        padding-left: 23%; /* 左侧留白 23% */
+        padding-right: 23%; /* 右侧留白 23% */
+        background-color: rgba(0,0,0,0); /* 背景透明 */
+    }
+
+    /* 内容 */
+    #content {
+        width: 67%; /* 宽度 67% */
+        margin: auto;
+        background-color:   rgba(238, 197, 238, 0.781); /* 背景颜色 */
+        border-radius: 20px; /* 圆角 20px */
+    }
+
+    /* 子标题 */
+    .subtitle {
+        font-weight: bold; /* 字体加粗 */
+        margin-top: 5px;
+    }
+
+    /* 正文 */
+    .text {
+        position: relative; /* 相对定位 */
+    }
+
+
+    /* 响应式设计 */
+
+    /* 小屏幕(0px-767px) */
+    @media screen and (max-width: 767px) {
+
+        #icon-img {
+            width: 74px;
+            height: 74px;
+        }
+
+        #title {
+            font-size: 27px; /* 字体大小 27px */
+            font-weight: bold; /*字体加粗 */
+        }
+
+        #title-description {
+            font-size: 14px; /* 字体大小 14px */
+        }
+
+        #content {
+            margin-top: -30px;
+            padding: 0 10px 10px 10px;
+        }
+
+        .subtitle {
+            font-size: 16px; /* 字体大小 16px */
+            margin-top: 35px; /* 上边距 35px */
+            padding-top: 10px;
+        }
+
+        .text {
+            font-size: 12px; /* 字体大小 12px */
+            margin: 10px 0px 6px 0px;
+        }
+    }
+
+    /* 中等屏幕(768px-1280px) */
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+
+        #icon-img {
+            width: 114px;
+            height: 114px;
+        }
+
+        #title {
+            font-size: 36px; /* 字体大小 36px */
+            font-weight: bold; /*字体加粗 */
+        }
+
+        #title-description {
+           font-size: 22px; /* 字体大小 22px */
+        }
+
+        #content {
+            padding: 10px 20px 30px 20px;
+            margin-top: 10px;
+        }
+
+       .subtitle {
+            font-size: 28px; /* 字体大小 28px */
+        }
+
+        .text {
+            font-size: 18px; /* 字体大小 18px */
+            margin-bottom: 8px; /* 底部留白 8px */
+            top: 12px; /* 上边距 12px */
+        }
+    }
+    
+    /* 超大屏幕(最窄1281px) */
+    @media screen and (min-width: 1281px) {
+
+        #icon-img {
+            width: 186px;
+            height: 186px;
+        }
+
+        #title {
+            font-size: 3rem; /* 字体大小 48px */
+            font-weight: bold; /*字体加粗 */
+        }
+
+        #title-description {
+            font-size: 26px; /* 字体大小 26px */
+        }
+
+        #content {
+            padding: 10px 20px 60px 20px;
+            margin-top: 10px;
+        }
+
+        .subtitle {
+            font-size: 32px; /* 字体大小 32px */
+            margin-top: 20px; /* 上边距 40px */
+        }
+
+       .text {
+            font-size: 19px; /* 字体大小 19px */
+            top: 24px; /* 上边距 24px */
+        }
+    }
+    </style>
+</head>
+
+<!-- 主!体!内容 -->
+<body>
+
+    <!-- 头像 -->
+    <div>
+        <img src="/icons/icon.jpg" id="icon-img" alt="Entertainment_YH的头像">
+    </div>
+    
+    <!-- 标题 -->
+    <div id="title-background">
+
+        <div id="title">用户协议V1.0</div>
+
+        <div id="title-description">
+            请您仔细阅读用户协议，只有在您接受本协议所有条款，才能使用本网站提供的服务。请您务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款，并选择接受或不接受。在您使用讨论区后，将视为您已阅读并同意本协议的全部内容。如您不同意本协议或其中任何条款，请您停止使用讨论区。 (注明：本协议中正文提到的Entertainment_YH的个人网站 将以“本网站”代指；《用户协议》将以“本协议”代指；因翻译问题，若有歧义，以简体中文原文为准。此条目由生成式AI编写，并修改部分。)
+        </div>
+    
+    </div>
+
+    <!-- 内容 -->
+    <div id="content">
+
+        <!-- 介绍 -->
+        <div class="subtitle">
+            一、总则
+        </div>
+
+        <!-- 正文 -->
+        <div class="text">
+            &emsp;&emsp;1.1 本协议是您与本网站之间关于使用讨论区服务所订立的协议。 <br \>
+            &emsp;&emsp;1.2 您在使用讨论区服务时，应当遵守本协议及国家相关法律法规。 <br \>
+            &emsp;&emsp;1.3 本网站有权依据法律法规的变化及运营需要，随时修改本协议，并在讨论区予以公告。若您继续使用讨论区服务，即表示您同意修改后的协议。
+        </div>
+
+        <div class="subtitle" style="margin-top: 50px;">
+            二、 用户行为规范
+        </div>
+
+        <div class="text">
+            &emsp;&emsp;2.1 您承诺在使用讨论区服务时遵守以下规范
+            <li class="text">
+                遵守中华人民共和国法律法规，不得发布任何违反国家法律法规、危害国家安全、破坏民族团结、破坏国家宗教政策、破坏社会稳定、侮辱、诽谤、淫秽、暴力、恐怖、赌博、欺诈等违法信息；<br \>
+            </li>
+            <li class="text">
+                遵守社会主义制度，不得发布任何损害国家荣誉和利益、煽动民族仇恨、民族歧视、破坏民族团结、破坏国家宗教政策、宣扬邪教和封建迷信等不良信息；<br \>
+            </li>
+            <li class="text">
+                遵守社会公德，不得发布任何扰乱社会秩序、破坏社会稳定、低俗、庸俗、媚俗等不良信息；<br \>
+            </li>
+            <li class="text">
+                尊重他人合法权益，不得发布任何侵犯他人知识产权、名誉权、肖像权、隐私权等合法权益的信息；<br \>
+            </li>
+            <li class="text">
+                文明用语，理性发言，不得发布任何含有辱骂、恐吓、威胁、人身攻击等不友善内容的信息；<br \>
+            </li>
+            <li class="text">
+                不得发布任何广告、垃圾信息、恶意刷屏等干扰正常讨论秩序的信息；<br \>
+            </li>
+            <li class="text">
+                不得利用讨论区进行任何商业活动；<br \>
+            </li>
+            <li class="text">
+                不得从事任何危害计算机网络安全的行为，包括但不限于：使用未经许可的数据或进入未经许可的服务器/帐户；未经允许进入公众计算机网络或者他人计算机系统并删除、修改、增加存储信息；未经许可，企图探查、扫描、测试本“软件”系统或网络的弱点或其它实施破坏网络安全的行为；企图干涉、破坏本“软件”系统或网站的正常运行，故意传播恶意程序或病毒以及其他破坏干扰正常网络信息服务的行为；伪造TCP/IP数据包名称或部分名称。<br \>
+            </li> 
+            <br \>
+            <br \>
+            &emsp;&emsp;2.2 您理解并同意，本网站有权对您使用讨论区服务的情况进行审查和监督，若发现您违反本协定，本网站有权依据本协议采取相应措施，包括但不限于删除、屏蔽相关内容、限制、暂停或终止您使用讨论区服务，并保留追究您法律责任的权利。
+        </div>
+
+        <div class="subtitle" style="margin-top: 50px;">
+            三、 用户权利与义务
+        </div>
+
+        <div class="text">
+            &emsp;&emsp;3.1 您有权在遵守本协议的前提下，使用讨论区服务进行合法的信息发布和交流活动。<br \>
+            &emsp;&emsp;3.2 您应妥善保管您的邮箱账号和密码，并对您账号下的所有行为承担法律责任。<br \>
+            &emsp;&emsp;3.3 您应保证您发布的信息真实、准确、完整、合法有效，并独立承担由此产生的一切法律责任。<br \>
+            &emsp;&emsp;3.4 您有权要求本网站作者暂停对您的账号服务及删除您发布的文章。如发现他人使用您的账号或密码，并尝试发布违反法律法规或本协议的文章，您应立即通知本网站，要求本网站暂停该账号的相关服务，对于未及时采取措施的，并造成您的损失，本网站无需承担任何责任；如您因您的行为导致本网站遭受任何损失，您应向本网站赔偿损失。
+        </div>
+
+        <div class="subtitle" style="margin-top: 50px;">
+            四、本网站的权利与义务
+        </div>
+
+        <div class="text">
+            &emsp;&emsp;4.1 本网站有权根据法律法规、政策变化及运营需要，调整讨论区服务内容，并保留修改，中断或终止部分或全部服务的权利。<br \>
+            &emsp;&emsp;4.2 本网站应按照本协议约定向您提供讨论区服务，并努力维护服务的正常运行。<br \>
+            &emsp;&emsp;4.3 本网站尊重并保护用户的个人信息，未经用户同意，不会向任何第三方披露用户的个人信息，法律法规另有规定的除外。
+        </div>
+
+        <div class="subtitle" style="margin-top: 50px;">
+            五、免责声明
+        </div>
+
+        <div class="text">
+            &emsp;&emsp;5.1 您理解并同意，本网站仅提供信息储存空间服务，用户在使用讨论区服务时发布的内容仅代表其个人观点，与本网站无关。 <br \>
+            &emsp;&emsp;5.2 您理解并同意，使用讨论区服务存在风险，本网站不保证服务不会中断，也不保证服务的及时性、安全性、准确性。 <br \>
+            &emsp;&emsp;5.3 您理解并同意，对于因不可抗力或本网站不能控制的原因造成的服务中断或其他缺陷，本网站不承担任何责任。<br \>
+        </div>
+
+        <div class="subtitle" style="margin-top: 50px;">
+            六、其他
+        </div>
+
+        <div class="text">
+            &emsp;&emsp;6.1 本协议的解释权及修改权归本网站所有<br \>
+            &emsp;&emsp;6.2 本协议自创建之日起生效。
+        </div>
+
+        <div class="text" style="margin-top: 50px;">
+            2025年4月2日
+        </div>
+
+        <div class="subtitle" style="margin-top: 50px;">
+            <a href="/discussion/index.html">我同意并理解《用户协议 V1.0》</a>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <!-- 这个文件是 模板文件，所有页面将沿用此文件的设计风格 -->
+
+<!-- 头部信息 -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Entertainment_YH的个人网站" />
+    <meta name="author" content="Entertainment_YH" />
+    <!-- <meta name="keywords" content="Entertainment_YH,YH,YH的网站,YH Community,娱乐之神,YH娱乐之神,娱乐,个人网站,网站,个人,Entertainment,_,Entertainment_YH,God of Entertainment,Entertainment_YH个人网站,娱乐之神的个人网站,娱乐之神的网站" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>讨论区</title>
+    <link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png">
+    <link rel="android-touch-icon" href="/favicon_io/android-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon_io/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon_io/favicon-16x16.png" sizes="16x16">
+    <style> 
+
+
+    /* 全局样式 */
+    body {
+        background-color: #f3e5f5; /* 我的背景是淡紫色！！！不是纯白！！！！！！！！！ */
+    }
+
+    #icon-img {
+        position: absolute;
+        top: 5%;
+        left: 4%;
+        border-radius: 50%;
+    }
+    
+    /* 标题背景 */
+    #title-background {
+        background: linear-gradient(90deg, rgba(191,182,236,1) 1%, rgba(230,221,214,1) 17%, rgba(230,207,153,1) 44%, rgba(91,200,210,1) 91%, rgba(0,212,255,1) 100%); /*渐变标题背景 */
+        width: 100%; /* 宽度 100% */
+        height: auto; /* 高度 auto */
+        border-radius: 20px; /* 圆角 20px */
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    /* 主标题 */
+    #title {
+        text-align: center; /* 文字居中 */
+        padding-top: 2%; /* 顶部留白 2% */
+        background-color: rgba(0,0,0,0); /* 背景透明 */
+    }
+
+    /* 标题下方的描述 */
+    #title-description {
+        text-align: left; /* 文字居左 */
+        padding-top: 2%; /* 顶部留白 2% */
+        padding-bottom: 2%;
+        padding-left: 23%; /* 左侧留白 23% */
+        padding-right: 23%; /* 右侧留白 23% */
+        background-color: rgba(0,0,0,0); /* 背景透明 */
+    }
+
+    /* 内容 */
+    #content {
+        width: 67%; /* 宽度 67% */
+        margin: auto;
+        background-color:   rgba(238, 197, 238, 0.781); /* 背景颜色 */
+        border-radius: 20px; /* 圆角 20px */
+    }
+
+    /* 子标题 */
+    .subtitle {
+        font-weight: bold; /* 字体加粗 */
+        margin-top: 5px;
+    }
+
+    /* 正文 */
+    .text {
+        position: relative; /* 相对定位 */
+    }
+
+
+    /* 响应式设计 */
+
+    /* 小屏幕(0px-767px) */
+    @media screen and (max-width: 767px) {
+
+        #icon-img {
+            width: 74px;
+            height: 74px;
+        }
+
+        #title {
+            font-size: 27px; /* 字体大小 27px */
+            font-weight: bold; /*字体加粗 */
+        }
+
+        #title-description {
+            font-size: 14px; /* 字体大小 14px */
+        }
+
+        .back {
+            font-size: 18px; /* 字体大小 18px */
+            margin-top: -10px; /* 上边距 10px */
+            text-align: center; /* 文字居中 */
+        }
+
+        #content {
+            margin-top: -30px;
+            padding: 0 10px 10px 10px;
+        }
+
+        .subtitle {
+            font-size: 16px; /* 字体大小 16px */
+            margin-top: 35px; /* 上边距 35px */
+            padding-top: 10px;
+        }
+
+        .text {
+            font-size: 12px; /* 字体大小 12px */
+            margin: 10px 0px 6px 0px;
+        }
+
+        #submission {
+            width: 90%;
+        }
+    }
+
+    /* 中等屏幕(768px-1280px) */
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+
+        #icon-img {
+            width: 114px;
+            height: 114px;
+        }
+
+        #title {
+            font-size: 36px; /* 字体大小 36px */
+            font-weight: bold; /*字体加粗 */
+        }
+
+        #title-description {
+           font-size: 22px; /* 字体大小 22px */
+        }
+
+        .back {
+            font-size: 26px; /* 字体大小 26px */
+            margin-top: -20px; /* 上边距 20px */
+            text-align: center; /* 文字居中 */
+        }
+
+        #content {
+            padding: 10px 20px 30px 20px;
+            margin-top: 10px;
+        }
+
+       .subtitle {
+            font-size: 28px; /* 字体大小 28px */
+        }
+
+        .text {
+            font-size: 18px; /* 字体大小 18px */
+            margin-bottom: 8px; /* 底部留白 8px */
+            top: 12px; /* 上边距 12px */
+        }
+
+        #submission {
+            width: 70%;
+        }
+    }
+    
+    /* 超大屏幕(最窄1281px) */
+    @media screen and (min-width: 1281px) {
+
+        #icon-img {
+            width: 186px;
+            height: 186px;
+        }
+
+        #title {
+            font-size: 3rem; /* 字体大小 48px */
+            font-weight: bold; /*字体加粗 */
+        }
+
+        #title-description {
+            font-size: 26px; /* 字体大小 26px */
+        }
+
+        .back {
+            font-size: 32px; /* 字体大小 32px */
+            margin-top: -20px; /* 上边距 20px */
+            text-align: center; /* 文字居中 */
+        }
+
+        #content {
+            padding: 10px 20px 60px 20px;
+            margin-top: 10px;
+        }
+
+        .subtitle {
+            font-size: 32px; /* 字体大小 32px */
+            margin-top: 20px; /* 上边距 40px */
+        }
+
+       .text {
+            font-size: 19px; /* 字体大小 19px */
+            top: 24px; /* 上边距 24px */
+        }
+
+        #submission {
+            width: 50%;
+        }
+    }
+
+    </style>
+</head>
+
+<!-- 主!体!内容 -->
+<body>
+
+    <!-- 头像 -->
+    <div>
+        <img src="/icons/icon.jpg" id="icon-img" alt="Entertainment_YH的头像">
+    </div>
+    
+    <!-- 标题 -->
+    <div id="title-background">
+
+        <div id="title">讨论区</div>
+
+        <div id="title-description">
+            在您使用讨论区前，请您确保您理解并同意我们的<a href="/agreement/index.html">《用户协议》</a>。 <br \>
+            讨论区负责托管及呈现用户投稿的内容，您可以查看教程投稿您的文章，发表您的评论以及阅读    他人的文章。
+        </div>
+
+        <div class="back">
+            <a href="/index.html">返回首页</a>
+        </div>
+    </div>
+
+    <!-- 内容 -->
+    <div id="content">
+
+        <!-- 介绍 -->
+        <div class="subtitle">
+               如何投稿？
+        </div>
+
+        <!-- 正文 -->
+        <div class="text">
+            如图所示。（实例以Outlook邮箱页面为例）<br \>
+            注意事项：<br \>
+            1. 发送时，您需要留下您的可用联系方式，以便作者联系您，或匿名，届时，您的文章将无法被长久保存（一个月后清除）。 <br \>
+            2. 如您不希望您的文章被长久保存，请另加一行：期望的保存期限：（时间）。 <br \>
+            3. 如您不希望您的信息被公开，请另加一行：我不希望我的个人信息被公开。 <br \>
+            4. 非匿名请注明您的网名（如：创作者Entertainment_YH），否则创作者部分将呈现您所使用的邮箱。 <br \>
+            如您除此以外无特殊要求，将以正常形式呈现您的文章。（即会正常显示您的网名、标题、正文等）。 <br \>
+
+             <img id="submission" src="/images/PixPin_2025-04-01_22-26-56.png">
+        </div>
+
+        <div class="subtitle" style="margin-top: 50px;">
+            投稿文章
+        </div>
+
+        <div class="text">
+            示例文章1 <br \>
+            示例文章2 <br \>
+            示例文章3 <br \>
+            示例文章4 <br \>
+            示例文章5 <br \>
+            示例文章6 <br \>
+            示例文章7 <br \>
+            示例文章8 <br \>
+            示例文章9 <br \>
+            示例文章10 <br \>
+            示例文章11 <br \>
+            示例文章12 <br \>
+            示例文章13 <br \>
+            示例文章14 <br \>
+            示例文章15 <br \>
+            示例文章16 <br \>
+            示例文章17 <br \>
+            示例文章18 <br \>
+            示例文章19 <br \>
+            示例文章20 <br \>
+            示例文章21 <br \>
+            示例文章22 <br \>
+            示例文章23 <br \>
+            示例文章24 <br \>
+            示例文章25 <br \>
+            示例文章26 <br \>
+            示例文章27 <br \>
+            示例文章28 <br \>
+            示例文章29 <br \>
+            示例文章30 <br \>
+            示例文章31 <br \>
+            示例文章32 <br \>
+            示例文章33 <br \>
+            示例文章34 <br \>
+            示例文章35 <br \>
+            示例文章36 <br \>
+            示例文章37 <br \>
+            示例文章38 <br \>
+            示例文章39 <br \>
+            示例文章40 <br \>
+            示例文章41 <br \>
+            示例文章42 <br \>
+            示例文章43 <br \>
+            示例文章44 <br \>
+            示例文章45 <br \>
+            示例文章46 <br \>
+            示例文章47 <br \>
+            示例文章48 <br \>
+            示例文章49 <br \>
+            示例文章50 <br \>
+            示例文章51 <br \>
+            示例文章52 <br \>
+            示例文章53 <br \>
+            示例文章54 <br \>
+            示例文章55 <br \>
+            示例文章56 <br \>
+            示例文章57 <br \>
+            示例文章58 <br \>
+            示例文章59 <br \>
+            示例文章60 <br \>
+            示例文章61 <br \>
+            示例文章62 <br \>
+            示例文章63 <br \>
+            示例文章64 <br \>
+            示例文章65 <br \>
+            示例文章66 <br \>
+            示例文章67 <br \>
+            示例文章68 <br \>
+            示例文章69 <br \>
+            示例文章70 <br \>
+            示例文章71 <br \>
+            示例文章72 <br \>
+            示例文章73 <br \>
+            示例文章74 <br \>
+            示例文章75 <br \>
+            示例文章76 <br \>
+            示例文章77 <br \>
+            示例文章78 <br \>
+            示例文章79 <br \>
+            示例文章80 <br \>
+            示例文章81 <br \>
+            示例文章82 <br \>
+            示例文章83 <br \>
+            示例文章84 <br \>
+            示例文章85 <br \>
+            示例文章86 <br \>
+            示例文章87 <br \>
+            示例文章88 <br \>
+            示例文章89 <br \>
+            示例文章90 <br \>
+            示例文章91 <br \>
+            示例文章92 <br \>
+            示例文章93 <br \>
+            示例文章94 <br \>
+            示例文章95 <br \>
+            示例文章96 <br \>
+            示例文章97 <br \>
+            示例文章98 <br \>
+            示例文章99 <br \>
+            示例文章100 <br \>
+            示例文章101 <br \>
+            示例文章102 <br \>
+            示例文章103 <br \>
+            示例文章104 <br \>
+            示例文章105 <br \>
+            示例文章106 <br \>
+            示例文章107 <br \>
+            示例文章108 <br \>
+            示例文章109 <br \>
+            示例文章110 <br \>
+            示例文章111 <br \>
+            示例文章112 <br \>
+            示例文章113 <br \>
+            示例文章114 <br \>
+            示例文章115 <br \>
+            示例文章116 <br \>
+            示例文章117 <br \>
+            示例文章118 <br \>
+            示例文章119 <br \>
+            示例文章120 <br \>
+            示例文章121 <br \>
+            示例文章122 <br \>
+            示例文章123 <br \>
+            示例文章124 <br \>
+            示例文章125 <br \>
+            示例文章126 <br \>
+            示例文章127 <br \>
+            示例文章128 <br \>
+            示例文章129 <br \>
+            示例文章130 <br \>
+            示例文章131 <br \>
+            示例文章132 <br \>
+            示例文章133 <br \>
+            示例文章134 <br \>
+            示例文章135 <br \>
+            示例文章136 <br \>
+            示例文章137 <br \>
+            示例文章138 <br \>
+            示例文章139 <br \>
+            示例文章140 <br \>
+            示例文章141 <br \>
+            示例文章142 <br \>
+            示例文章143 <br \>
+            示例文章144 <br \>
+            示例文章145 <br \>
+            示例文章146 <br \>
+            示例文章147 <br \>
+            示例文章148 <br \>
+            示例文章149 <br \>
+            示例文章150 <br \>  
+            示例文章151 <br \>
+            示例文章152 <br \>
+            示例文章153 <br \>
+            示例文章154 <br \>
+            示例文章155 <br \>
+            示例文章156 <br \>
+            示例文章157 <br \>
+            示例文章158 <br \>
+            示例文章159 <br \>
+            示例文章160 <br \>
+            示例文章161 <br \>
+            示例文章162 <br \>
+            示例文章163 <br \>
+            示例文章164 <br \>
+            示例文章165 <br \>
+            示例文章166 <br \>
+            示例文章167 <br \>
+            示例文章168 <br \>
+            示例文章169 <br \> 
+            示例文章170 <br \>
+            示例文章171 <br \>
+            示例文章172 <br \>
+            示例文章173 <br \>
+            示例文章174 <br \>
+            示例文章175 <br \>
+            示例文章176 <br \>
+            示例文章177 <br \>
+            示例文章178 <br \>
+            示例文章179 <br \>
+            示例文章180 <br \>
+            示例文章181 <br \>
+            示例文章182 <br \>
+            示例文章183 <br \>
+            示例文章184 <br \>
+            示例文章185 <br \>
+            示例文章186 <br \>
+            示例文章187 <br \>
+            示例文章188 <br \>
+            示例文章189 <br \>
+            示例文章190 <br \>
+            示例文章191 <br \>
+            示例文章192 <br \>
+            示例文章193 <br \>
+            示例文章194 <br \>
+            示例文章195 <br \>
+            示例文章196 <br \>
+            示例文章197 <br \>
+            示例文章198 <br \>
+            示例文章199 <br \>
+            示例文章200 <br \>
+            示例文章201 <br \>
+            示例文章202 <br \>
+            示例文章203 <br \>
+            示例文章204 <br \>
+            示例文章205 <br \>
+            示例文章206 <br \>
+            示例文章207 <br \>
+            示例文章208 <br \>
+            示例文章209 <br \>
+            示例文章210 <br \>
+            示例文章211 <br \>
+            示例文章212 <br \>
+            示例文章213 <br \>
+            示例文章214 <br \>
+            示例文章215 <br \>
+            示例文章216 <br \>
+            示例文章217 <br \>
+            示例文章218 <br \>
+            示例文章219 <br \>
+            示例文章220 <br \>
+            示例文章221 <br \>
+            示例文章222 <br \>
+            示例文章223 <br \>
+            示例文章224 <br \>
+            示例文章225 <br \>
+            示例文章226 <br \>
+            示例文章227 <br \>
+            示例文章228 <br \>
+            示例文章229 <br \>
+            示例文章230 <br \>
+            示例文章231 <br \>
+            示例文章232 <br \>
+            示例文章233 <br \>
+            示例文章234 <br \>
+            示例文章235 <br \>
+            示例文章236 <br \>
+            示例文章237 <br \>
+            示例文章238 <br \>
+            示例文章239 <br \>
+            示例文章240 <br \>
+            示例文章241 <br \>
+            示例文章242 <br \>
+            示例文章243 <br \>
+            示例文章244 <br \>
+            示例文章245 <br \>
+            示例文章246 <br \>
+            示例文章247 <br \>
+            示例文章248 <br \>
+            示例文章249 <br \>
+            示例文章250 <br \>
+            示例文章251 <br \>
+            示例文章252 <br \>
+            示例文章253 <br \>
+            示例文章254 <br \>
+            示例文章255 <br \>
+            示例文章256 <br \>
+            示例文章257 <br \>
+            示例文章258 <br \>
+            示例文章259 <br \>
+            示例文章260 <br \>
+            虽然我也不知道写这么多示例文章和编号有啥用......
+        </div>
+
+    </div>
+</body>
+</html>
