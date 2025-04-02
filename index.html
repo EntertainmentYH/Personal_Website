@@ -36,8 +36,6 @@
         width: 100%; /* 宽度 100% */
         height: auto; /* 高度 auto */
         border-radius: 20px; /* 圆角 20px */
-        display: inline-block;
-        vertical-align: middle;
     }
     
     /* 主标题 */
@@ -60,7 +58,7 @@
     /* 内容 */
     #content {
         width: 67%; /* 宽度 67% */
-        margin: auto;
+        margin: auto; /* 居中 */
         background-color:   rgba(238, 197, 238, 0.781); /* 背景颜色 */
         border-radius: 20px; /* 圆角 20px */
     }
@@ -68,7 +66,6 @@
     /* 子标题 */
     .subtitle {
         font-weight: bold; /* 字体加粗 */
-        margin-top: 5px;
     }
 
     /* 正文 */
@@ -76,6 +73,14 @@
         position: relative; /* 相对定位 */
     }
 
+    #additional-information-background {
+        width: auto;
+        margin: auto;
+        background-color: rgba(238, 197, 238, 0.781);
+        border-radius: 20px;
+        padding: 10px 20px;
+        margin-top: 60px;
+    }
 
     /* 响应式设计 */
 
@@ -111,6 +116,20 @@
             font-size: 12px; /* 字体大小 12px */
             margin: 10px 0px 6px 0px;
         }
+
+        .additional-information-subtitle {
+            font-size: 16px; /* 字体大小 16px */
+            margin-top: 35px; /* 上边距 35px */
+            padding-top: 10px; /* 上边距 10px */
+            text-align: center; /* 居中 */
+            font-weight: bold; /* 字体加粗 */
+        }
+        
+        .additional-information-text {
+            font-size: 12px; /* 字体大小 12px */
+            margin-top: 16px;
+            text-align: center; /* 居中 */
+        }
     }
 
     /* 中等屏幕(768px-1280px) */
@@ -137,6 +156,7 @@
 
        .subtitle {
             font-size: 28px; /* 字体大小 28px */
+            margin-top: 40px; /* 上边距 40px */
         }
 
         .text {
@@ -144,6 +164,20 @@
             margin-bottom: 8px; /* 底部留白 8px */
             top: 12px; /* 上边距 12px */
         }
+
+        .additional-information-subtitle {
+            font-size: 28px; /* 字体大小 28px */
+            margin-top: 40px; /* 上边距 40px */
+            text-align: center; /* 居中 */
+            font-weight: bold; /* 字体加粗 */
+        }
+
+        .additional-information-text {
+            font-size: 18px; /* 字体大小 18px */
+            margin-top: 20px; /* 上边距 20px */
+            text-align: center; /* 居中 */
+        }
+
     }
     
     /* 超大屏幕(最窄1281px) */
@@ -177,6 +211,19 @@
             font-size: 19px; /* 字体大小 19px */
             top: 24px; /* 上边距 24px */
         }
+
+        .additional-information-subtitle {
+            font-size: 32px; /* 字体大小 32px */
+            margin-top: 20px; /* 上边距 20px */
+            text-align: center; /* 居中 */
+            font-weight: bold; /* 字体加粗 */
+        }
+
+        .additional-information-text {
+            font-size: 19px; /* 字体大小 19px */
+            margin-top: 24px; /* 上边距 24px */
+            text-align: center; /* 居中 */
+        }
     }
     </style>
 </head>
@@ -195,7 +242,7 @@
         <div id="title">Entertainment_YH</div>
 
         <div id="title-description">
-            你好，我是Entertainment_YH，或称“恩特忒门特杠外诶吃”，亦或“YH”，此网站是娱乐之神的个人网站，用于更多人了解我，分享我，以及与我交流。欢迎来到我的网站！
+            你好，我是Entertainment_YH，或称“恩特忒门特杠外诶吃”，亦或“YH”，此网站是YH的个人网站，用于更多人了解我，分享我，以及与我交流。欢迎来到我的网站！
         </div>
     
     </div>
@@ -248,6 +295,7 @@
             完善维吾尔语翻译及其本地化
         </li>
 
+        <!-- 讨论区 -->
         <div class="subtitle" style="margin-top: 50px;">
             讨论区
         </div>
@@ -256,7 +304,68 @@
             <a href="/discussion/index.html">您是否想找一个托管文章的地方？或是发表自己的评论看法？欢迎加入讨论区！(点此前往讨论区)</a>
         </div>
 
-        <div class="subtitle"></div>
+        <div class="subtitle" style="margin-top: 50px;">
+            此板块会续写更多内容......
+        </div>
+
+        <div class="text">
+            敬请期待......
+        </div>
+    </div>
+
+    <div id="additional-information-background">
+        <div class="additional-information-subtitle">
+            联系方式
+        </div>
+
+        <div class="additional-information-text">
+            <br \>
+            我的QID: 123YHawa
+            <br \>
+            我的邮箱: 3329261270@qq.com 或 EntertainmentYH@outlook.com
+            <br \>
+            我的GitHub: <a href="https://github.com/Entertainment-YH">点此前往GitHub仓库</a>
+            <br \>
+            我的BiliBili: <a href="https://space.bilibili.com/1977333915?spm_id_from=333.1007.0.0">点此前往BiliBili主页</a>
+            <br \>
+            网站问题反馈: 发送至此邮箱3892136258@qq.com 或 在GitHub上提交issue
+        </div>
+
+        <div class="additional-information-subtitle">
+            特别鸣谢及友情链接
+        </div>
+
+        <div class="additional-information-text">
+            网站团队成员：
+            <br \>
+            Entertainment_YH
+            <br \>
+            Ringeal007
+            <br \>
+            <br \>
+            友情链接：
+            <br \>
+            <a href="https://ringeal007.netlify.app">Ringeal007的个人网站</a>
+            <br \>
+            <a href="https://www.runoob.com">菜鸟教程</a>
+            <br \>
+            <a href="https://developer.mozilla.org/zh-CN/">MDN Web Docs</a>
+            <br \>
+            <br \>
+            特别鸣谢
+            <br \>
+            Ringeal007
+            <br \>
+            以及所有访问本网站的朋友们！
+        </div>
+
+        <div class="additional-information-subtitle" style="margin-top: 50px;">
+            测试（此模块不定时开放，用于整体效果的测试）
+        </div>
+
+        <div class="additional-information-text">
+            <a href="/http-status-code/404.html">404页面测试</a>
+        </div>
     </div>
 </body>
 </html>
