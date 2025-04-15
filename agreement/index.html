@@ -115,6 +115,14 @@
             font-size: 12px; /* 字体大小 12px */
             margin: 10px 0px 6px 0px;
         }
+
+        #positive {
+            font-size: medium;
+        }
+
+        #negative {
+            font-size: medium;
+        }
     }
 
     /* 中等屏幕(768px-1280px) */
@@ -148,6 +156,14 @@
             margin-bottom: 8px; /* 底部留白 8px */
             top: 12px; /* 上边距 12px */
         }
+
+        #positive {
+            font-size: large;
+        }
+
+        #negative {
+            font-size: large;
+        }
     }
     
     /* 超大屏幕(最窄1281px) */
@@ -180,6 +196,14 @@
        .text {
             font-size: 19px; /* 字体大小 19px */
             top: 24px; /* 上边距 24px */
+        }
+
+        #positive {
+            font-size: x-large;
+        }
+
+        #negative {
+            font-size: x-large;
         }
     }
     </style>
@@ -303,7 +327,7 @@
         </div>
 
         <div class="subtitle" style="margin-top: 10%;">
-            八、法律法规
+            八、相关法律法规
         </div>
 
         <div class="text">
@@ -363,10 +387,10 @@
             2025年4月2日
         </div>
 
-        <div class="subtitle" style="margin-top: 15%;">
-            <button type="button" 
-            onclick="alert('您确定您同意并理解《用户协议V1.0》')" style="font-size: xx-large; font-family: 'MaoKenZhuYuanTi-MaoKenZhuyuanTi-2';"><a href="/discussion/index.html">我同意并理解《用户协议V1.0》</a></button>
-            <button type="button" onclick="alert('因您不同意《用户协议V1.0》，您将在点击“确定”后返回首页。')" style="font-size: xx-large; font-family: MaoKenZhuYuanTi-MaoKenZhuyuanTi-2;"><a href="/index.html">我不同意《用户协议V1.0》</a></button>
+        <div class="subtitle" style="margin-top: 5%;">
+            <button id="positive" type="button" 
+            onclick="alert('您确定您同意并理解《用户协议V1.0》，当您点击“确定”后，您将直接跳转至讨论区。')" style="font-family: 'MaoKenZhuYuanTi-MaoKenZhuyuanTi-2';"><a href="/discussion/index.html">我同意并理解《用户协议V1.0》</a></button>
+            <button id="negative" type="button" onclick="alert('因您不同意《用户协议V1.0》，您将在点击“确定”后返回首页。')" style="font-family: MaoKenZhuYuanTi-MaoKenZhuyuanTi-2; margin-top: 5%;"><a href="/index.html">我不同意《用户协议V1.0》</a></button>
         </div>
 
     </div>
