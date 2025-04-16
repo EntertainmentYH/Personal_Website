@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点击按钮复制div内容</title>
+</head>
+<body>
+    <div id="copyText" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+        这是需要复制的文本内容
+    </div>
+    <button id="copyButton">点击复制</button>
+
+    <script>
+        document.getElementById('copyButton').addEventListener('click', function() {
+            // 获取div中的文本内容
+            var textToCopy = document.getElementById('copyText').innerText;
+
+            // 使用Clipboard API复制
+            navigator.clipboard.writeText(textToCopy).then(function() {
+                alert('内容已复制到剪贴板！');
+            }, function(err) {
+                console.error('复制失败:', err);
+            });
+        });
+    </script>
+</body>
+</html>

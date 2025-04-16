@@ -1,251 +1,320 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <!-- 这个文件是 根目录的index.html 文件，它是网站的入口文件，也是网站的主要页面。-->
+<!-- 这个文件是 根目录的index.html 文件，它是网站的入口文件，也是网站的主要页面。-->
 
 <!-- 头部信息 -->
+
 <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Entertainment_YH的个人网站" />
     <meta name="author" content="Entertainment_YH" />
-    <meta name="keywords" content="Entertainment_YH,YH,YH的网站,YH Community,娱乐之神,YH娱乐之神,娱乐,个人网站,网站,个人,Entertainment,_,Entertainment_YH,God of Entertainment,Entertainment_YH个人网站,娱乐之神的个人网站,娱乐之神的网站" />
+    <meta name="keywords"
+        content="Entertainment_YH,YH,YH的网站,YH Community,娱乐之神,YH娱乐之神,娱乐,个人网站,网站,个人,Entertainment,_,Entertainment_YH,God of Entertainment,Entertainment_YH个人网站,娱乐之神的个人网站,娱乐之神的网站" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Entertainment_YH的个人网站</title>
     <link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png">
     <link rel="android-touch-icon" href="/favicon_io/android-touch-icon.png">
     <link rel="icon" type="image/png" href="/favicon_io/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/favicon_io/favicon-16x16.png" sizes="16x16">
-    <link href="https://db.onlinewebfonts.com/c/0bca4c719879cdf5433599b8f7e93c82?family=Yuanti+SC+Regular" rel="stylesheet">
-    <style> 
+    <link href="https://db.onlinewebfonts.com/c/0bca4c719879cdf5433599b8f7e93c82?family=Yuanti+SC+Regular"
+        rel="stylesheet">
+    <style>
+        /* 全局样式 */
+        body {
+            background-color: #f3e5f5;
+            /* 我的背景是淡紫色！！！不是纯白！！！！！！！！！ */
+        }
 
-
-    /* 全局样式 */
-    body {
-        background-color: #f3e5f5; /* 我的背景是淡紫色！！！不是纯白！！！！！！！！！ */
-    }
-
-    div {
-        font-family: "MaoKenZhuYuanTi-MaokenZhuyuanTi-2", sans-serif;
-    }
-
-    #icon-img {
-        position: absolute;
-        top: 5%;
-        left: 4%;
-        border-radius: 50%;
-        border: 2px solid #000000;
-    }
-    
-    /* 标题背景 */
-    #title-background {
-        background: linear-gradient(90deg, rgba(191,182,236,1) 1%, rgba(230,221,214,1) 17%, rgba(230,207,153,1) 44%, rgba(91,200,210,1) 91%, rgba(0,212,255,1) 100%); /*渐变标题背景 */
-        width: 100%; /* 宽度 100% */
-        height: auto; /* 高度 auto */
-        border-radius: 20px; /* 圆角 20px */
-    }
-    
-    /* 主标题 */
-    #title {
-        text-align: center; /* 文字居中 */
-        padding-top: 2%; /* 顶部留白 2% */
-        background-color: rgba(0,0,0,0); /* 背景透明 */
-    }
-
-    /* 标题下方的描述 */
-    #title-description {
-        text-align: left; /* 文字居左 */
-        padding-top: 2%; /* 顶部留白 2% */
-        padding-bottom: 2%;
-        padding-left: 23%; /* 左侧留白 23% */
-        padding-right: 23%; /* 右侧留白 23% */
-        background-color: rgba(0,0,0,0); /* 背景透明 */
-    }
-
-    /* 内容 */
-    #content {
-        width: 67%; /* 宽度 67% */
-        margin: auto; /* 居中 */
-        background-color:   rgba(238, 197, 238, 0.781); /* 背景颜色 */
-        border-radius: 20px; /* 圆角 20px */
-    }
-
-    /* 子标题 */
-    .subtitle {
-        font-weight: bold; /* 字体加粗 */
-    }
-
-    /* 正文 */
-    .text {
-        position: relative; /* 相对定位 */
-    }
-
-    #additional-information-background {
-        width: auto;
-        margin: auto;
-        background-color: rgba(238, 197, 238, 0.781);
-        border-radius: 20px;
-        padding: 10px 20px;
-        margin-top: 60px;
-    }
-
-    @font-face {
-        font-family: "MaoKenZhuYuanTi-MaokenZhuyuanTi-2";
-        src: url("/fonts/MaoKenZhuYuanTi-MaokenZhuyuanTi-2.ttf");
-    }
-
-    /* 响应式设计 */
-
-    /* 小屏幕(0px-767px) */
-    @media screen and (max-width: 767px) {
+        div {
+            font-family: "MaoKenZhuYuanTi-MaokenZhuyuanTi-2", sans-serif;
+        }
 
         #icon-img {
-            width: 64px;
-            height: 64px;
+            position: absolute;
+            top: 5%;
+            left: 4%;
+            border-radius: 50%;
+            border: 2px solid #000000;
         }
 
+        /* 标题背景 */
+        #title-background {
+            background: linear-gradient(90deg, rgba(191, 182, 236, 1) 1%, rgba(230, 221, 214, 1) 17%, rgba(230, 207, 153, 1) 44%, rgba(91, 200, 210, 1) 91%, rgba(0, 212, 255, 1) 100%);
+            /*渐变标题背景 */
+            width: 100%;
+            /* 宽度 100% */
+            height: auto;
+            /* 高度 auto */
+            border-radius: 20px;
+            /* 圆角 20px */
+        }
+
+        /* 主标题 */
         #title {
-            font-size: 27px; /* 字体大小 27px */
-            font-weight: bold; /*字体加粗 */
+            text-align: center;
+            /* 文字居中 */
+            padding-top: 2%;
+            /* 顶部留白 2% */
+            background-color: rgba(0, 0, 0, 0);
+            /* 背景透明 */
         }
 
+        /* 标题下方的描述 */
         #title-description {
-            font-size: 14px; /* 字体大小 14px */
+            text-align: left;
+            /* 文字居左 */
+            padding-top: 2%;
+            /* 顶部留白 2% */
+            padding-bottom: 2%;
+            padding-left: 23%;
+            /* 左侧留白 23% */
+            padding-right: 23%;
+            /* 右侧留白 23% */
+            background-color: rgba(0, 0, 0, 0);
+            /* 背景透明 */
         }
 
+        /* 内容 */
         #content {
-            margin-top: -30px;
-            padding: 0 10px 10px 10px;
+            width: 67%;
+            /* 宽度 67% */
+            margin: auto;
+            /* 居中 */
+            background-color: rgba(238, 197, 238, 0.781);
+            /* 背景颜色 */
+            border-radius: 20px;
+            /* 圆角 20px */
         }
 
+        /* 子标题 */
         .subtitle {
-            font-size: 16px; /* 字体大小 16px */
-            margin-top: 35px; /* 上边距 35px */
-            padding-top: 10px;
+            font-weight: bold;
+            /* 字体加粗 */
         }
 
+        /* 正文 */
         .text {
-            font-size: 12px; /* 字体大小 12px */
-            margin: 10px 0px 6px 0px;
+            position: relative;
+            /* 相对定位 */
         }
 
-        .additional-information-subtitle {
-            font-size: 16px; /* 字体大小 16px */
-            margin-top: 35px; /* 上边距 35px */
-            padding-top: 10px; /* 上边距 10px */
-            text-align: center; /* 居中 */
-            font-weight: bold; /* 字体加粗 */
-        }
-        
-        .additional-information-text {
-            font-size: 12px; /* 字体大小 12px */
-            margin-top: 16px;
-            text-align: center; /* 居中 */
-        }
-    }
-
-    /* 中等屏幕(768px-1280px) */
-    @media screen and (min-width: 768px) and (max-width: 1280px) {
-
-        #icon-img {
-            width: 96px;
-            height: 96px;
+        #additional-information-background {
+            width: auto;
+            margin: auto;
+            background-color: rgba(238, 197, 238, 0.781);
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-top: 60px;
         }
 
-        #title {
-            font-size: 36px; /* 字体大小 36px */
-            font-weight: bold; /*字体加粗 */
+        .copyButton {
+            color: rgb(0, 0, 0);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: rgba(246, 189, 246, 0.853);
+            box-shadow: inset 0 1px 3px rgba(57, 57, 57, 0.2);
+            appearance: none;
+            outline: none;
+            /* 移除焦点时的轮廓 */
+            transition: box-shadow 0.3s ease;
+            /* 添加过渡效果 */
         }
 
-        #title-description {
-           font-size: 22px; /* 字体大小 22px */
+        @font-face {
+            font-family: "MaoKenZhuYuanTi-MaokenZhuyuanTi-2";
+            src: url("/fonts/MaoKenZhuYuanTi-MaokenZhuyuanTi-2.ttf");
         }
 
-        #content {
-            padding: 10px 20px 30px 20px;
-            margin-top: 10px;
+        /* 响应式设计 */
+
+        /* 小屏幕(0px-767px) */
+        @media screen and (max-width: 767px) {
+
+            #icon-img {
+                width: 64px;
+                height: 64px;
+            }
+
+            #title {
+                font-size: 27px;
+                /* 字体大小 27px */
+                font-weight: bold;
+                /*字体加粗 */
+            }
+
+            #title-description {
+                font-size: 14px;
+                /* 字体大小 14px */
+            }
+
+            #content {
+                margin-top: -30px;
+                padding: 0 10px 10px 10px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+                /* 字体大小 16px */
+                margin-top: 35px;
+                /* 上边距 35px */
+                padding-top: 10px;
+            }
+
+            .text {
+                font-size: 12px;
+                /* 字体大小 12px */
+                margin: 10px 0px 6px 0px;
+            }
+
+            .additional-information-subtitle {
+                font-size: 16px;
+                /* 字体大小 16px */
+                text-align: center;
+                /* 居中 */
+                font-weight: bold;
+                /* 字体加粗 */
+            }
+
+            .additional-information-text {
+                font-size: 12px;
+                /* 字体大小 12px */
+                margin-top: 16px;
+                text-align: center;
+                /* 居中 */
+            }
         }
 
-       .subtitle {
-            font-size: 28px; /* 字体大小 28px */
-            margin-top: 40px; /* 上边距 40px */
+        /* 中等屏幕(768px-1280px) */
+        @media screen and (min-width: 768px) and (max-width: 1280px) {
+
+            #icon-img {
+                width: 96px;
+                height: 96px;
+            }
+
+            #title {
+                font-size: 36px;
+                /* 字体大小 36px */
+                font-weight: bold;
+                /*字体加粗 */
+            }
+
+            #title-description {
+                font-size: 22px;
+                /* 字体大小 22px */
+            }
+
+            #content {
+                padding: 10px 20px 30px 20px;
+                margin-top: 10px;
+            }
+
+            .subtitle {
+                font-size: 28px;
+                /* 字体大小 28px */
+                margin-top: 40px;
+                /* 上边距 40px */
+            }
+
+            .text {
+                font-size: 18px;
+                /* 字体大小 18px */
+                margin-bottom: 8px;
+                /* 底部留白 8px */
+                top: 12px;
+                /* 上边距 12px */
+            }
+
+            .additional-information-subtitle {
+                font-size: 28px;
+                /* 字体大小 28px */
+                text-align: center;
+                /* 居中 */
+                font-weight: bold;
+                /* 字体加粗 */
+            }
+
+            .additional-information-text {
+                font-size: 18px;
+                /* 字体大小 18px */
+                margin-top: 20px;
+                /* 上边距 20px */
+                text-align: center;
+                /* 居中 */
+            }
+
         }
 
-        .text {
-            font-size: 18px; /* 字体大小 18px */
-            margin-bottom: 8px; /* 底部留白 8px */
-            top: 12px; /* 上边距 12px */
-        }
+        /* 超大屏幕(最窄1281px) */
+        @media screen and (min-width: 1281px) {
 
-        .additional-information-subtitle {
-            font-size: 28px; /* 字体大小 28px */
-            margin-top: 40px; /* 上边距 40px */
-            text-align: center; /* 居中 */
-            font-weight: bold; /* 字体加粗 */
-        }
+            #icon-img {
+                width: 114px;
+                height: 114px;
+            }
 
-        .additional-information-text {
-            font-size: 18px; /* 字体大小 18px */
-            margin-top: 20px; /* 上边距 20px */
-            text-align: center; /* 居中 */
-        }
+            #title {
+                font-size: 3rem;
+                /* 字体大小 48px */
+                font-weight: bold;
+                /*字体加粗 */
+            }
 
-    }
-    
-    /* 超大屏幕(最窄1281px) */
-    @media screen and (min-width: 1281px) {
+            #title-description {
+                font-size: 26px;
+                /* 字体大小 26px */
+            }
 
-        #icon-img {
-            width: 114px;
-            height: 114px;
-        }
+            #content {
+                padding: 10px 20px 60px 20px;
+                margin-top: 10px;
+            }
 
-        #title {
-            font-size: 3rem; /* 字体大小 48px */
-            font-weight: bold; /*字体加粗 */
-        }
+            .subtitle {
+                font-size: 32px;
+                /* 字体大小 32px */
+                margin-top: 20px;
+                /* 上边距 40px */
+            }
 
-        #title-description {
-            font-size: 26px; /* 字体大小 26px */
-        }
+            .text {
+                font-size: 19px;
+                /* 字体大小 19px */
+                top: 24px;
+                /* 上边距 24px */
+            }
 
-        #content {
-            padding: 10px 20px 60px 20px;
-            margin-top: 10px;
-        }
+            .additional-information-subtitle {
+                font-size: 32px;
+                /* 字体大小 32px */
+                text-align: center;
+                /* 居中 */
+                font-weight: bold;
+                /* 字体加粗 */
+            }
 
-        .subtitle {
-            font-size: 32px; /* 字体大小 32px */
-            margin-top: 20px; /* 上边距 40px */
-        }
+            .additional-information-text {
+                font-size: 19px;
+                /* 字体大小 19px */
+                margin-top: 24px;
+                /* 上边距 24px */
+                text-align: center;
+                /* 居中 */
+            }
 
-       .text {
-            font-size: 19px; /* 字体大小 19px */
-            top: 24px; /* 上边距 24px */
         }
-
-        .additional-information-subtitle {
-            font-size: 32px; /* 字体大小 32px */
-            margin-top: 20px; /* 上边距 20px */
-            text-align: center; /* 居中 */
-            font-weight: bold; /* 字体加粗 */
-        }
-
-        .additional-information-text {
-            font-size: 19px; /* 字体大小 19px */
-            margin-top: 24px; /* 上边距 24px */
-            text-align: center; /* 居中 */
-        }
-    }
     </style>
 </head>
 
 <!-- 主!体!内容 -->
+
 <body>
 
     <!-- 头像 -->
     <div>
         <img src="icons/icon.jpg" id="icon-img" alt="Entertainment_YH的头像">
     </div>
-    
+
     <!-- 标题 -->
     <div id="title-background">
 
@@ -254,7 +323,7 @@
         <div id="title-description">
             你好，我是Entertainment_YH，或称“恩特忒门特杠外诶吃”，亦或“YH”，此网站是YH的个人网站，用于更多人了解我，分享我，以及与我交流。欢迎来到我的网站！
         </div>
-    
+
     </div>
 
     <!-- 内容 -->
@@ -262,12 +331,12 @@
 
         <!-- 介绍 -->
         <div class="subtitle">
-               关于这个网站
+            关于这个网站
         </div>
 
         <!-- 正文 -->
-         <div class="text">
-             &emsp;&emsp;这个网站是我于2025年3月30日创建的，我希望它能成为一个有趣的地方，记录我生活中的点点滴滴，以及让更多人了解关于我的基本信息。同时，我随时欢迎各位的反馈，我会不断更新网站内容，让它越来越好，欢迎大家来访问！
+        <div class="text">
+            &emsp;&emsp;这个网站是我于2025年3月30日创建的，我希望它能成为一个有趣的地方，记录我生活中的点点滴滴，以及让更多人了解关于我的基本信息。同时，我随时欢迎各位的反馈，我会不断更新网站内容，让它越来越好，欢迎大家来访问！
         </div>
 
         <div class="subtitle" style="margin-top: 10%;">
@@ -278,13 +347,24 @@
             <a href="/announcements/index.html">此栏为公告栏，您可以在此处获得最新的公告、一些活动通知等等内容。</a>
         </div>
 
+        <!-- 讨论区 -->
+        <div class="subtitle" style="margin-top: 10%;">
+            讨论区
+        </div>
+
+        <div class="text">
+            <a href="/discussion/index.html">您是否想找一个托管文章的地方？或是发表自己的评论看法？欢迎加入讨论区！(点此前往讨论区)</a>
+        </div>
+
         <!-- 你知道吗？-->
         <div class="subtitle" style="margin-top: 10%;">
             你知道吗？
         </div>
 
         <div class="text">
-            &emsp;&emsp;<a href="index-zh-uy.html">这个网站其实支持维吾尔语的哦！！你可以点击这里来切换到维吾尔语哦！<br \>(بۇ تورە ئەمەلىيەتتە ئۇيغۇرچىنى قوللايدۇﯪ!! ئۇيغۇرچە نۇسخىسىغا ئالماشتۇرۇش ئۈچۈن مۇشۇ جەرياننى بېسىڭ)</a> <br \>作者做维吾尔语的初衷是想让新疆的朋友们也可以一起浏览哦！
+            &emsp;&emsp;<a href="index-zh-uy.html">这个网站其实支持维吾尔语的哦！！你可以点击这里来切换到维吾尔语哦！<br \>(بۇ تورە ئەمەلىيەتتە
+                ئۇيغۇرچىنى قوللايدۇﯪ!! ئۇيغۇرچە نۇسخىسىغا ئالماشتۇرۇش ئۈچۈن مۇشۇ جەرياننى بېسىڭ)</a> <br
+                \>作者做维吾尔语的初衷是想让新疆的朋友们也可以一起浏览哦！
         </div>
 
         <!-- 网站历史 -->
@@ -293,7 +373,8 @@
         </div>
 
         <div class="text">
-            &emsp;&emsp;上文提到，这个网站是与2025年3月30日创建的，但并不是Entertainment_YH的第一个网站哦！作者初次学习HTML是在2024年，那时候作者需要准备中考，所以网站初期学习并不多。而截至目前（即2025年3月31日），作者在读高中一年级，更新时间可能比较慢，但作者保证会随着时间的推移，网站内容会越来越丰富。（当然，如果你想看原网站，它暂时在../Personal Website/legacy/里躺着，以后可能会公开展览（当作反面教材），但现在来说算是一个废稿，究其原因，因为作者曾不断地尝试新的代码和功能，但并没有认真的学习底层基本代码，导致网站既不美观且BUG极多，所以才有了现在的这个版本。）
+            &emsp;&emsp;上文提到，这个网站是与2025年3月30日创建的，但并不是Entertainment_YH的第一个网站哦！作者初次学习HTML是在2024年，那时候作者需要准备中考，所以网站初期学习并不多。而截至目前（即2025年3月31日），作者在读高中一年级，更新时间可能比较慢，但作者保证会随着时间的推移，网站内容会越来越丰富。（当然，如果你想看原网站，它暂时在../Personal
+            Website/legacy/里躺着，以后可能会公开展览（当作反面教材），但现在来说算是一个废稿，究其原因，因为作者曾不断地尝试新的代码和功能，但并没有认真的学习底层基本代码，导致网站既不美观且BUG极多，所以才有了现在的这个版本。）
         </div>
 
         <!-- 网站更新 -->
@@ -313,15 +394,6 @@
             完善维吾尔语翻译及其本地化
         </li>
 
-        <!-- 讨论区 -->
-        <div class="subtitle" style="margin-top: 10%;">
-            讨论区
-        </div>
-
-        <div class="text">
-            <a href="/discussion/index.html">您是否想找一个托管文章的地方？或是发表自己的评论看法？欢迎加入讨论区！(点此前往讨论区)</a>
-        </div>
-
         <div class="subtitle" style="margin-top: 10%;">
             我常玩的一些在线游戏
         </div>
@@ -331,8 +403,10 @@
             <ul>
                 <li><a href="https://store.steampowered.com/about/">Steam官方网站</a></li>
                 <li><a href="https://store.steampowered.com/app/730/CounterStrike_2/">Counter Strike 2</a></li>
-                <li><a href="https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS/">PUBG:BATTLEGROUNDS（绝地求生）</a></li>
-                <li><a href="https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V/">Grand Theft Auto V（GTA5）</a></li>
+                <li><a href="https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS/">PUBG:BATTLEGROUNDS（绝地求生）</a>
+                </li>
+                <li><a href="https://store.steampowered.com/app/3240220/Grand_Theft_Auto_V/">Grand Theft Auto
+                        V（GTA5）</a></li>
                 <li><a href="https://www.minecraft.net/zh-hans">Minecraft</a></li>
             </ul>
         </div>
@@ -353,18 +427,87 @@
 
         <div class="additional-information-text">
             <br \>
-            我的QID: 123YHawa
+            我的QID:
+            <p class="copyTextWrapper">
+                <span class="copyText">123YHawa</span>
+                <button class="copyButton">
+                    点我复制QID
+                </button>
+            </p>
             <br \>
-            我的邮箱: 3329261270@qq.com 或 EntertainmentYH@outlook.com
+            我的邮箱:
+            <p class="copyTextWrapper">
+                <span class="copyText">3329261270@qq.com</span>
+                <button class="copyButton">
+                    点我复制QQ邮箱
+                </button>
+            </p>
+            或
+            <p class="copyTextWrapper">
+                <span class="copyText">EntertainmentYH@outlook.com</span>
+                <button class="copyButton">
+                    点我复制Outlook邮箱
+                </button>
+            </p>
             <br \>
             我的GitHub: <a href="https://github.com/EntertainmentYH/">点此前往GitHub仓库</a>
             <br \>
+            我的Steam主页：<a href="https://steamcommunity.com/id/Entertainment_YH/">点此前往steam主页</a>
+            <br \>
             我的bilibili: <a href="https://space.bilibili.com/1977333915?spm_id_from=333.1007.0.0">点此前往bilibili主页</a>
             <br \>
-            网站问题反馈: 发送至此邮箱3892136258@qq.com 或 在GitHub上提交Issue
+            <br \>
+            网站问题反馈: 发送至此邮箱
+            <p class="copyTextWrapper">
+                <span id="copyText">3892136258@qq.com</span>
+                <button class="copyButton">
+                    点我复制该邮箱
+                </button>
+            </p>
+            或 在GitHub上提交Issue
         </div>
 
-        <div class="additional-information-subtitle">
+        <script>
+            document.querySelectorAll('.copyButton').forEach(button => {
+                button.addEventListener('click', handleCopy);
+                button.addEventListener('touchstart', handleCopy); // 添加触摸事件
+            });
+
+            function handleCopy() {
+                const textToCopy = this.previousElementSibling.innerText.trim();
+                const originalText = this.innerText;
+
+                this.innerText = '已复制';
+
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        setTimeout(() => {
+                            this.innerText = originalText;
+                        }, 3000);
+                    }, (err) => {
+                        console.error('复制失败:', err);
+                        this.innerText = originalText;
+                    });
+                } else {
+                    // 回退到 document.execCommand
+                    const textarea = document.createElement('textarea');
+                    textarea.value = textToCopy;
+                    textarea.style.position = 'fixed';
+                    textarea.style.opacity = '0';
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+
+                    setTimeout(() => {
+                        this.innerText = originalText;
+                    }, 3000);
+                }
+            }
+
+        </script>
+
+        <div class="additional-information-subtitle" style="margin-top: 5%;">
             特别鸣谢及友情链接
         </div>
 
@@ -386,7 +529,7 @@
             所有访问本网站的朋友们！
         </div>
 
-        <div class="additional-information-subtitle" style="margin-top: 10%;">
+        <div class="additional-information-subtitle" style="margin-top: 5%;">
             测试（此模块不定时开放，用于整体效果的测试）
         </div>
 
@@ -397,4 +540,5 @@
         </div>
     </div>
 </body>
+
 </html>
