@@ -1,0 +1,8 @@
+            <p class="copyTextWrapper">
+                <span id="copyText">输入要复制的内容</span>
+                <button class="copyButton">
+                    输入按钮内显示的文本
+                </button>
+            </p>
+
+<script src="https://unpkg.com/vue@3.2.31/dist/vue.global.prod.js"></script>

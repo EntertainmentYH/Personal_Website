@@ -17,7 +17,6 @@
     <link href="https://db.onlinewebfonts.com/c/0bca4c719879cdf5433599b8f7e93c82?family=Yuanti+SC+Regular" rel="stylesheet">
     <style> 
 
-
     /* 全局样式 */
     body {
         background-color: #f3e5f5; /* 我的背景是淡紫色！！！不是纯白！！！！！！！！！ */
@@ -32,6 +31,7 @@
         top: 5%;
         left: 4%;
         border-radius: 50%;
+        border: 2px solid #000000;
     }
     
     /* 标题背景 */
@@ -76,6 +76,19 @@
     /* 正文 */
     .text {
         position: relative; /* 相对定位 */
+    }
+
+    .copyButton {
+            color: rgb(0, 0, 0);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: rgba(246, 189, 246, 0.853);
+            box-shadow: inset 0 1px 3px rgba(57, 57, 57, 0.2);
+            appearance: none;
+            outline: none;
+            /* 移除焦点时的轮廓 */
+            transition: box-shadow 0.3s ease;
+            /* 添加过渡效果 */
     }
 
     @font-face {
@@ -258,7 +271,13 @@
             3. 如您不希望您的信息被公开，请另加一行：我不希望我的个人信息被公开。 <br \>
             4. 非匿名请注明您的网名（如：创作者Entertainment_YH），否则创作者部分将呈现您所使用的邮箱。 <br \>
             如您除此以外无特殊要求，将以正常形式呈现您的文章。（即会正常显示您的网名、标题、正文等）。 <br \>
-            投稿请发送至此邮箱：3892136258@qq.com <br \>
+            <p class="copyTextWrapper">
+                请投稿至下述邮箱：
+                <span id="copyText">3892136258@qq.com</span>
+                <button class="copyButton">
+                    点我复制该邮箱
+                </button>
+            </p>
 
              <img id="submission" src="/images/PixPin_2025-04-01_22-26-56.png">
         </div>

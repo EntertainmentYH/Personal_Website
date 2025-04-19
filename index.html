@@ -322,6 +322,10 @@
 
         <div id="title-description">
             你好，我是Entertainment_YH，或称“恩特忒门特杠外诶吃”，亦或“YH”，此网站是YH的个人网站，用于更多人了解我，分享我，以及与我交流。欢迎来到我的网站！
+            <div id="app" style="text-align: center;">
+                <p>{{ time }}{{ currentTime }}</p>
+                <p>{{ greeting }}</p>
+            </div>
         </div>
 
     </div>
@@ -382,17 +386,21 @@
             暂定的未来更新计划
         </div>
 
-        <li class="text">
-            持续完善主页
-        </li>
+        <div class="text">
+            <ul>
+                <li>
+                    继续开发新的功能或模块
+                </li>
 
-        <li class="text">
-            增加更多页面
-        </li>
+                <li>
+                    优化用户体验
+                </li>
 
-        <li class="text">
-            完善维吾尔语翻译及其本地化
-        </li>
+                <li>
+                    整一些好玩的东西
+                </li>
+            </ul>
+        </div>
 
         <div class="subtitle" style="margin-top: 10%;">
             我常玩的一些在线游戏
@@ -459,7 +467,7 @@
             <br \>
             网站问题反馈: 发送至此邮箱
             <p class="copyTextWrapper">
-                <span id="copyText">3892136258@qq.com</span>
+                <span class="copyText">3892136858@qq.com</span>
                 <button class="copyButton">
                     点我复制该邮箱
                 </button>
@@ -467,45 +475,9 @@
             或 在GitHub上提交Issue
         </div>
 
-        <script>
-            document.querySelectorAll('.copyButton').forEach(button => {
-                button.addEventListener('click', handleCopy);
-                button.addEventListener('touchstart', handleCopy); // 添加触摸事件
-            });
-
-            function handleCopy() {
-                const textToCopy = this.previousElementSibling.innerText.trim();
-                const originalText = this.innerText;
-
-                this.innerText = '已复制';
-
-                if (navigator.clipboard && navigator.clipboard.writeText) {
-                    navigator.clipboard.writeText(textToCopy).then(() => {
-                        setTimeout(() => {
-                            this.innerText = originalText;
-                        }, 3000);
-                    }, (err) => {
-                        console.error('复制失败:', err);
-                        this.innerText = originalText;
-                    });
-                } else {
-                    // 回退到 document.execCommand
-                    const textarea = document.createElement('textarea');
-                    textarea.value = textToCopy;
-                    textarea.style.position = 'fixed';
-                    textarea.style.opacity = '0';
-                    document.body.appendChild(textarea);
-                    textarea.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(textarea);
-
-                    setTimeout(() => {
-                        this.innerText = originalText;
-                    }, 3000);
-                }
-            }
-
-        </script>
+        <script src="/scripts/copybutton.js"></script>
+        <script src="https://unpkg.com/vue@3.2.31/dist/vue.global.prod.js"></script>
+        <script src="/scripts/app.js"></script>
 
         <div class="additional-information-subtitle" style="margin-top: 5%;">
             特别鸣谢及友情链接
