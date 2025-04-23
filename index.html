@@ -120,6 +120,44 @@
             /* 添加过渡效果 */
         }
 
+        .vote-button {
+            background-color: #007bff;
+            /* 蓝色背景 */
+            color: white;
+            border: none;
+            border-radius: 20px;
+            /* 圆角 */
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            /* 平滑过渡效果 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            /* 阴影效果 */
+            outline: none;
+            /* 去掉焦点边框 */
+        }
+
+        .vote-button:hover {
+            background-color: #0056b3;
+            /* 悬停时更深的蓝色 */
+        }
+
+        .vote-button:disabled,
+        .vote-button.disabled {
+            background-color: #ccc;
+            /* 灰色背景 */
+            color: #666;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        /* 禁用状态样式 */
+        .disabled {
+            cursor: not-allowed;
+            color: gray;
+        }
+
         @font-face {
             font-family: "MaoKenZhuYuanTi-MaokenZhuyuanTi-2";
             src: url("/fonts/MaoKenZhuYuanTi-MaokenZhuyuanTi-2.ttf");
@@ -182,6 +220,10 @@
                 text-align: center;
                 /* 居中 */
             }
+
+            .option {
+                margin: 1% 0;
+            }
         }
 
         /* 中等屏幕(768px-1280px) */
@@ -243,6 +285,10 @@
                 /* 居中 */
             }
 
+            .option {
+                margin: 1.5% 0;
+            }
+
         }
 
         /* 超大屏幕(最窄1281px) */
@@ -302,6 +348,10 @@
                 /* 居中 */
             }
 
+            .option {
+                margin: 2% 0;
+            }
+
         }
     </style>
 </head>
@@ -333,8 +383,39 @@
     <!-- 内容 -->
     <div id="content">
 
-        <!-- 介绍 -->
         <div class="subtitle">
+            限时投票(2025年4月23日~2025年5月23日)
+        </div>
+
+        <h2>你希望这个网站在未来更新出什么东西？</h2>
+
+        <div class="option">
+            <button onclick="vote('实用小工具合集')" id="option1" class="vote-button" data-option="实用小工具合集">
+                实用小工具合集
+            </button>
+        </div>
+
+        <div class="option">
+            <button onclick="vote('更加精美的UI界面')" id="option2" class="vote-button">
+                更加精美的UI界面
+            </button>
+        </div>
+
+        <h2>已记录的投票</h2>
+
+        <div id="results"></div>
+
+        <!--<div class="reset-section">
+            <button onclick="resetVotes()" class="reset-button">
+                重置投票结果
+            </button>
+        </div>
+        -->
+
+        <script src="/scripts/vote.js"></script>
+
+        <!-- 介绍 -->
+        <div class="subtitle" style="margin-top: 10%;">
             关于这个网站
         </div>
 
