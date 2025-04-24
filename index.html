@@ -383,36 +383,250 @@
     <!-- 内容 -->
     <div id="content">
 
-        <div class="subtitle">
+        <!-- ====================== -->
+        <!-- 投票区块（修改后） -->
+        <!-- ====================== -->
+        <div class="subtitle" style="margin-top: 10%;">
             限时投票(2025年4月23日~2025年5月23日)
         </div>
 
-        <h2>你希望这个网站在未来更新出什么东西？</h2>
+        <div class="vote-container">
+            <h2>你希望这个网站在未来更新出什么东西？</h2>
 
-        <div class="option">
-            <button onclick="vote('实用小工具合集')" id="option1" class="vote-button" data-option="实用小工具合集">
-                实用小工具合集
-            </button>
+            <!-- 投票按钮 -->
+            <div class="vote-options">
+                <button class="vote-button" id="option-toolkit" data-option="toolkit" onclick="handleVote('toolkit')">
+                    实用小工具合集
+                </button>
+
+                <button class="vote-button" id="option-ui" data-option="ui" onclick="handleVote('ui')">
+                    更加精美的UI界面
+                </button>
+            </div>
+
+            <!-- 投票结果 -->
+            <div class="results-container">
+                <h3>实时投票结果</h3>
+                <div id="results">
+                    <div class="loading">加载中...</div>
+                </div>
+                <div class="vote-status" id="voteStatus"></div>
+            </div>
         </div>
 
-        <div class="option">
-            <button onclick="vote('更加精美的UI界面')" id="option2" class="vote-button">
-                更加精美的UI界面
-            </button>
+        <style>
+            /* ====================== */
+            /* 投票区块样式 */
+            /* ====================== */
+            .vote-container {
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 15px;
+                padding: 2rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                margin: 2rem 0;
+            }
+
+            .vote-options {
+                display: grid;
+                gap: 1rem;
+                margin: 2rem 0;
+            }
+
+            .vote-button {
+                padding: 1rem 2rem;
+                border: none;
+                border-radius: 25px;
+                font-size: 1.1rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                background: linear-gradient(145deg, #4facfe 0%, #00f2fe 100%);
+                color: white;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .vote-button:hover:not(:disabled) {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .vote-button:disabled {
+                background: #cccccc;
+                cursor: not-allowed;
+                opacity: 0.7;
+            }
+
+            .results-container {
+                margin-top: 2rem;
+            }
+
+            .progress-bar {
+                height: 25px;
+                background: #f0f0f0;
+                border-radius: 12px;
+                overflow: hidden;
+                margin: 1rem 0;
+            }
+
+            .progress {
+                height: 100%;
+                background: linear-gradient(90deg, #ff6b6b 0%, #ff8e8e 100%);
+                transition: width 0.5s ease;
+                display: flex;
+                align-items: center;
+                padding-left: 1rem;
+                color: white;
+                font-weight: bold;
+            }
+
+            .loading {
+                text-align: center;
+                padding: 1rem;
+                color: #666;
+            }
+
+            .vote-status {
+                margin-top: 1rem;
+                padding: 0.5rem;
+                border-radius: 5px;
+                text-align: center;
+            }
+
+            .error {
+                background: #ffebee;
+                color: #c62828;
+            }
+
+            .success {
+                background: #e8f5e9;
+                color: #2e7d32;
+            }
+
+            @media (max-width: 768px) {
+                .vote-button {
+                    font-size: 1rem;
+                    padding: 0.8rem 1.5rem;
+                }
+            }
+        </style>
+
+        <script>
+            // ====================== //
+            // 投票系统前端逻辑（修改版） //
+            // ====================== //
+            const API = {
+                VOTE: '/api/vote',
+                RESULTS: '/api/votes/results'
+            };
+
+            let userTag = localStorage.getItem('userTag') || null;
+
+            async function handleVote(option) {
+                try {
+                    // 禁用按钮
+                    disableButtons(true);
+
+                    // 发送投票请求
+                    const response = await fetch(API.VOTE, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-User-Tag': userTag || ''
+                        },
+                        body: JSON.stringify({ option })
+                    });
+
+                    const data = await response.json();
+
+                    if (!response.ok) {
+                        throw new Error(data.error || '投票失败');
+                    }
+
+                    // 更新用户标签
+                    if (data.userTag) {
+                        userTag = data.userTag;
+                        localStorage.setItem('userTag', userTag);
+                    }
+
+                    // 显示状态信息
+                    showStatus(`投票成功！剩余投票次数：${data.remaining}`, 'success');
+
+                    // 刷新结果
+                    await loadResults();
+
+                } catch (error) {
+                    showStatus(`错误：${error.message}`, 'error');
+                } finally {
+                    disableButtons(false);
+                }
+            }
+
+            async function loadResults() {
+                try {
+                    showLoading(true);
+
+                    const response = await fetch(API.RESULTS);
+                    const data = await response.json();
+
+                    if (!response.ok) throw new Error(data.error || '获取结果失败');
+
+                    renderResults(data);
+                } catch (error) {
+                    document.getElementById('results').innerHTML = `
+            <div class="error">${error.message}</div>
+        `;
+                } finally {
+                    showLoading(false);
+                }
+            }
+
+            function renderResults(data) {
+                const total = data.toolkit + data.ui;
+                const toolkitPercent = total > 0 ? (data.toolkit / total * 100).toFixed(1) : 0;
+                const uiPercent = total > 0 ? (data.ui / total * 100).toFixed(1) : 0;
+
+                const resultsHTML = `
+        <div class="result-item">
+            <div class="progress">
+                <div class="progress-bar" style="width: ${toolkitPercent}%">
+                    实用小工具合集 (${data.toolkit}票, ${toolkitPercent}%)
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width: ${uiPercent}%">
+                    更加精美的UI界面 (${data.ui}票, ${uiPercent}%)
+                </div>
+            </div>
         </div>
+    `;
 
-        <h2>已记录的投票</h2>
+                document.getElementById('results').innerHTML = resultsHTML;
+            }
 
-        <div id="results"></div>
+            function disableButtons(disabled) {
+                document.querySelectorAll('.vote-button').forEach(btn => {
+                    btn.disabled = disabled;
+                });
+            }
 
-        <!--<div class="reset-section">
-            <button onclick="resetVotes()" class="reset-button">
-                重置投票结果
-            </button>
-        </div>
-        -->
+            function showLoading(loading) {
+                document.querySelector('.loading').style.display =
+                    loading ? 'block' : 'none';
+            }
 
-        <script src="/scripts/vote.js"></script>
+            function showStatus(message, type) {
+                const statusDiv = document.getElementById('voteStatus');
+                statusDiv.className = `vote-status ${type}`;
+                statusDiv.textContent = message;
+                setTimeout(() => statusDiv.textContent = '', 3000);
+            }
+
+            // 初始化加载
+            document.addEventListener('DOMContentLoaded', () => {
+                loadResults();
+                setInterval(loadResults, 30000); // 每30秒自动刷新
+            });
+        </script>
+
 
         <!-- 介绍 -->
         <div class="subtitle" style="margin-top: 10%;">
