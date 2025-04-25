@@ -396,25 +396,22 @@
             <button onclick="vote('实用小工具合集')" id="option1" class="vote-button" data-option="实用小工具合集">
                 实用小工具合集
             </button>
-        </div>
 
-        <div class="option">
-            <button onclick="vote('更加精美的UI界面')" id="option2" class="vote-button">
+            <button onclick="vote('更加精美的UI界面')" id="option2" class="vote-button" style="margin-left: 2%;">
                 更加精美的UI界面
             </button>
         </div>
+
 
         <h2>已记录的投票</h2>
 
         <div id="results"></div>
 
-        <div class="reset-section" style="margin-top: 10%;">
+        <div class="reset-section" style="margin-top: 2%;">
             <button onclick="resetVotes()" class="reset-button">
                 重置投票结果
             </button>
         </div>
-
-        <script src="/scripts/vote.js"></script>
 
         <!-- 介绍 -->
         <div class="subtitle" style="margin-top: 10%;">
@@ -511,8 +508,22 @@
         </div>
     </div>
 
+    <!-- 此线以下区域为附加信息 ------------------------>
+    <!-- 此线以下区域为附加信息 ------------------------>
+    <!-- 此线以下区域为附加信息 ------------------------>
+    <!-- 此线以下区域为附加信息 ------------------------>
+    <!-- 此线以下区域为附加信息 ------------------------>
+    <!-- 此线以下区域为附加信息 ------------------------>
+    <!-- 此线以下区域为附加信息 ------------------------>
+    <!-- 此线以下区域为附加信息 ------------------------>
+    <!-- 此线以下区域为附加信息 ------------------------>
+
     <div id="additional-information-background">
         <div class="additional-information-subtitle">
+            附加信息
+        </div>
+
+        <div class="additional-information-subtitle" style="margin-top: 5%;">
             联系方式
         </div>
 
@@ -558,10 +569,6 @@
             或 在GitHub上提交Issue
         </div>
 
-        <script src="/scripts/copybutton.js"></script>
-        <script src="https://unpkg.com/vue@3.2.31/dist/vue.global.prod.js"></script>
-        <script src="/scripts/app.js"></script>
-
         <div class="additional-information-subtitle" style="margin-top: 5%;">
             特别鸣谢及友情链接
         </div>
@@ -594,6 +601,297 @@
             <a href="/templates/template-announcement.html">公告模版文件</a>
         </div>
     </div>
+
+    <!-- 此线以下区域为脚本区 --------------------------------->
+    <!-- 此线以下区域为脚本区 --------------------------------->
+    <!-- 此线以下区域为脚本区 --------------------------------->
+    <!-- 此线以下区域为脚本区 --------------------------------->
+    <!-- 此线以下区域为脚本区 --------------------------------->
+    <!-- 此线以下区域为脚本区 --------------------------------->
+    <!-- 此线以下区域为脚本区 --------------------------------->
+    <!-- 此线以下区域为脚本区 --------------------------------->
+
+    <script src="https://unpkg.com/vue@3.2.31/dist/vue.global.prod.js"></script>
+
+    <script>
+        //=======================
+        //实时时间及问候语
+        //=======================
+
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    currentTime: '',
+                    greetingKey: 'morning',
+                    messages: {
+                        'zh-CN': {
+                            time: "当前时间是：",
+                            greetings: {
+                                midnight: "早点睡吧~熬夜对身体不好！",
+                                morning: "早上好，祝你有美好的一天！",
+                                AM: "上午好，中午准备吃什么？",
+                                noon: "中午好，建议睡午觉来维持精力~",
+                                afternoon: "下午好，夜晚转凉，注意温度变化哦！",
+                                evening: "晚上好，早睡早起身体好~"
+                            }
+                        }
+                    }
+                };
+            },
+            computed: {
+                titleDescWithHtml() {
+                    const desc = this.messages['zh-CN'].titleDesc;
+                    const addi = this.messages['zh-CN'].titleDescAddi;
+                    return `${desc}<br /><em>${addi}</em>`;
+                },
+                time() {
+                    return this.messages['zh-CN'].time;
+                },
+                greeting() {
+                    return this.messages['zh-CN'].greetings[this.greetingKey];
+                }
+            },
+            methods: {
+                updateTime() {
+                    const now = new Date();
+                    const hours = now.getHours();
+                    const pad = (n) => (n < 10 ? '0' + n : n);
+
+                    this.currentTime = `${pad(hours)}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+
+                    if (hours < 5) this.greetingKey = 'midnight';
+                    else if (hours < 8) this.greetingKey = 'morning';
+                    else if (hours < 12) this.greetingKey = 'AM';
+                    else if (hours < 15) this.greetingKey = 'noon';
+                    else if (hours < 19) this.greetingKey = 'afternoon';
+                    else this.greetingKey = 'evening';
+                }
+            },
+            mounted() {
+                this.updateTime();
+                setInterval(this.updateTime, 1000);
+            }
+        }).mount('#app');
+
+    </script>
+
+    <script>
+        //========================
+        //网站的复制按钮
+        //========================
+
+        document.querySelectorAll('.copyButton').forEach(button => {
+            button.addEventListener('click', handleCopy);
+            button.addEventListener('touchstart', handleCopy); // 添加触摸事件
+        });
+
+        function handleCopy() {
+            const textToCopy = this.previousElementSibling.innerText.trim();
+            const originalText = this.innerText;
+
+            // 设置按钮文本为“已复制”
+            this.innerText = '已复制';
+
+            // 为每个按钮单独管理恢复逻辑
+            const button = this; // 保存当前按钮的引用
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    // 使用箭头函数确保this的上下文正确
+                    setTimeout(() => {
+                        button.innerText = originalText; // 恢复原始文本
+                    }, 1000);
+                }, (err) => {
+                    console.error('复制失败:', err);
+                    button.innerText = originalText; // 如果复制失败，立即恢复原始文本
+                });
+            } else {
+                // 回退到 document.execCommand
+                const textarea = document.createElement('textarea');
+                textarea.value = textToCopy;
+                textarea.style.position = 'fixed';
+                textarea.style.opacity = '0';
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+
+                // 使用箭头函数确保this的上下文正确
+                setTimeout(() => {
+                    button.innerText = originalText; // 恢复原始文本
+                }, 1000);
+            }
+        }
+    </script>
+
+    <script>
+        //=======================
+        // 投票系统核心逻辑
+        // ======================
+
+        // 初始化投票数据
+        let votes = JSON.parse(localStorage.getItem('votes')) || {
+            "实用小工具合集": 0,
+            "更加精美的UI界面": 0
+        };
+        let lastVoteTime = parseInt(localStorage.getItem('lastVoteTime')) || 0;
+
+        // ======================
+        // 数据迁移模块 (关键修正)
+        // ======================
+        function migrateData() {
+            // 深拷贝原始数据避免污染
+            const rawData = JSON.parse(JSON.stringify(votes));
+
+            // 重置投票数据保证结构正确
+            votes = {
+                "实用小工具合集": 0,
+                "更加精美的UI界面": 0
+            };
+
+            // 数据迁移 (兼容所有历史版本)
+            Object.entries(rawData).forEach(([key, value]) => {
+                // 处理带"的"字的旧数据
+                if (key.includes('实用') && key.includes('工具')) {
+                    votes['实用小工具合集'] += value;
+                    return;
+                }
+
+                // 处理UI选项的变体
+                if (key.includes('UI') || key.includes('界面')) {
+                    votes['更加精美的UI界面'] += value;
+                    return;
+                }
+
+                // 保留有效数据
+                if (['实用小工具合集', '更加精美的UI界面'].includes(key)) {
+                    votes[key] += value;
+                }
+            });
+
+            localStorage.setItem('votes', JSON.stringify(votes));
+        }
+
+        // ======================
+        // 投票核心功能
+        // ======================
+        function vote(option) {
+            const currentTime = Date.now();
+
+            // 有效性验证
+            if (!votes.hasOwnProperty(option)) {
+                alert(`无效选项: ${option}`);
+                return;
+            }
+
+            // 时间间隔验证 (5000ms = 1分钟)
+            if (currentTime - lastVoteTime < 5000) {
+                alert(`请等待 ${Math.ceil((5000 - (currentTime - lastVoteTime)) / 1000)} 秒后再次投票`);
+                return;
+            }
+
+            // 执行投票
+            votes[option]++;
+            lastVoteTime = currentTime;
+
+            // 持久化存储
+            localStorage.setItem('votes', JSON.stringify(votes));
+            localStorage.setItem('lastVoteTime', lastVoteTime);
+
+            // 更新UI
+            disableButtons();
+            displayResults();
+
+            // 自动恢复按钮 (精确到毫秒)
+            const remainTime = 5000 - (currentTime - lastVoteTime); // 修正时间计算
+            setTimeout(() => {
+                enableButtons();
+                alert("现在可以再次投票了！");
+            }, remainTime);
+        }
+
+        // ======================
+        // UI控制模块
+        // ======================
+        function disableButtons() {
+            document.querySelectorAll('.vote-button').forEach(btn => {
+                btn.disabled = true;
+                btn.style.transform = 'scale(0.95)';
+                btn.style.filter = 'grayscale(80%)';
+            });
+        }
+
+        function enableButtons() {
+            document.querySelectorAll('.vote-button').forEach(btn => {
+                btn.disabled = false;
+                btn.style.transform = 'scale(1)';
+                btn.style.filter = 'none';
+            });
+        }
+
+        // ======================
+        // 结果显示模块
+        // ======================
+        function displayResults() {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+
+            // 按票数排序
+            const sorted = Object.entries(votes)
+                .sort((a, b) => b[1] - a[1]);
+
+            // 生成结果条目（修正进度条计算）
+            sorted.forEach(([option, count]) => {
+                const total = Object.values(votes).reduce((a, b) => a + b, 0);
+                const percentage = (count / Math.max(1, total)) * 100;
+
+                const div = document.createElement('div');
+                div.className = 'result-item';
+                div.innerHTML = `
+                <div class="progress-bar">
+                <div class="progress" style="width: ${percentage}%"></div>
+                </div>
+                <span class="option">${option}</span>
+                <span class="count">${count} 票</span>
+                `;
+                resultsDiv.appendChild(div);
+            });
+        }
+
+        // ======================
+        // 初始化执行
+        // ======================
+        document.addEventListener('DOMContentLoaded', () => {
+            migrateData(); // 数据清洗
+
+            // 自动恢复按钮状态
+            const remainTime = 5000 - (Date.now() - lastVoteTime);
+            if (remainTime > 0) {
+                disableButtons();
+                setTimeout(enableButtons, remainTime);
+            }
+
+            displayResults();
+        });
+
+
+        function resetVotes() {
+            if (confirm('确定要重置所有投票数据吗？此操作不可撤销！')) {
+                votes = {
+                    "实用小工具合集": 0,
+                    "更加精美的UI界面": 0
+                };
+                localStorage.setItem('votes', JSON.stringify(votes));
+                lastVoteTime = 0;
+                localStorage.removeItem('lastVoteTime');
+                displayResults();
+                alert('已成功重置投票数据！');
+            }
+        }
+    </script>
+
 </body>
 
 </html>
