@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- 这个文件是 模板文件，所有页面将沿用此文件的设计风格 -->
+
+<!-- 头部信息 -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Entertainment_YH的个人网站" />
+    <meta name="author" content="Entertainment_YH" />
+    <!-- <meta name="keywords" content="Entertainment_YH,YH,YH的网站,YH Community,娱乐之神,YH娱乐之神,娱乐,个人网站,网站,个人,Entertainment,_,Entertainment_YH,God of Entertainment,Entertainment_YH个人网站,娱乐之神的个人网站,娱乐之神的网站" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>关于一些我自己推导的数学公式</title>
+    <link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png">
+    <link rel="android-touch-icon" href="/favicon_io/android-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon_io/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon_io/favicon-16x16.png" sizes="16x16">
+    <link href="https://db.onlinewebfonts.com/c/0bca4c719879cdf5433599b8f7e93c82?family=Yuanti+SC+Regular"
+        rel="stylesheet">
+    <style>
+        /* 全局样式 */
+        body {
+            background-color: #f3e5f5;
+            /* 我的背景是淡紫色！！！不是纯白！！！！！！！！！ */
+        }
+
+
+        div {
+            font-family: "MaoKenZhuYuanTi-MaokenZhuyuanTi-2";
+        }
+
+        #icon-img {
+            position: absolute;
+            top: 5%;
+            left: 4%;
+            border-radius: 50%;
+            border: 2px solid #000000;
+        }
+
+        /* 标题背景 */
+        #title-background {
+            background: linear-gradient(90deg, rgba(191, 182, 236, 1) 1%, rgba(230, 221, 214, 1) 17%, rgba(230, 207, 153, 1) 44%, rgba(91, 200, 210, 1) 91%, rgba(0, 212, 255, 1) 100%);
+            /*渐变标题背景 */
+            width: 100%;
+            /* 宽度 100% */
+            height: auto;
+            /* 高度 auto */
+            border-radius: 20px;
+            /* 圆角 20px */
+        }
+
+        /* 主标题 */
+        #title {
+            text-align: center;
+            /* 文字居中 */
+            padding-top: 2%;
+            /* 顶部留白 2% */
+            background-color: rgba(0, 0, 0, 0);
+            /* 背景透明 */
+        }
+
+        /* 标题下方的描述 */
+        #title-description {
+            text-align: left;
+            /* 文字居左 */
+            padding-top: 2%;
+            /* 顶部留白 2% */
+            padding-bottom: 2%;
+            padding-left: 23%;
+            /* 左侧留白 23% */
+            padding-right: 23%;
+            /* 右侧留白 23% */
+            background-color: rgba(0, 0, 0, 0);
+            /* 背景透明 */
+        }
+
+        /* 内容 */
+        #content {
+            width: 67%;
+            /* 宽度 67% */
+            margin: auto;
+            background-color: rgba(238, 197, 238, 0.781);
+            /* 背景颜色 */
+            border-radius: 20px;
+            /* 圆角 20px */
+        }
+
+        /* 子标题 */
+        .subtitle {
+            font-weight: bold;
+            /* 字体加粗 */
+            margin-top: 5px;
+        }
+
+        /* 正文 */
+        .text {
+            position: relative;
+            /* 相对定位 */
+        }
+
+        @font-face {
+            font-family: "MaoKenZhuYuanTi-MaokenZhuyuanTi-2";
+            src: url("/fonts/MaoKenZhuYuanTi-MaokenZhuyuanTi-2.ttf");
+        }
+
+        /* 响应式设计 */
+
+        /* 小屏幕(0px-767px) */
+        @media screen and (max-width: 767px) {
+
+            #icon-img {
+                width: 64px;
+                height: 64px;
+            }
+
+            #title {
+                font-size: 27px;
+                /* 字体大小 27px */
+                font-weight: bold;
+                /*字体加粗 */
+            }
+
+            #title-description {
+                font-size: 14px;
+                /* 字体大小 14px */
+            }
+
+            #content {
+                margin-top: -30px;
+                padding: 0 10px 10px 10px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+                /* 字体大小 16px */
+                margin-top: 35px;
+                /* 上边距 35px */
+                padding-top: 10px;
+            }
+
+            .text {
+                font-size: 12px;
+                /* 字体大小 12px */
+                margin: 10px 0px 6px 0px;
+            }
+        }
+
+        /* 中等屏幕(768px-1280px) */
+        @media screen and (min-width: 768px) and (max-width: 1280px) {
+
+            #icon-img {
+                width: 96px;
+                height: 96px;
+            }
+
+            #title {
+                font-size: 36px;
+                /* 字体大小 36px */
+                font-weight: bold;
+                /*字体加粗 */
+            }
+
+            #title-description {
+                font-size: 22px;
+                /* 字体大小 22px */
+            }
+
+            #content {
+                padding: 10px 20px 30px 20px;
+                margin-top: 10px;
+            }
+
+            .subtitle {
+                font-size: 28px;
+                /* 字体大小 28px */
+            }
+
+            .text {
+                font-size: 18px;
+                /* 字体大小 18px */
+                margin-bottom: 8px;
+                /* 底部留白 8px */
+                top: 12px;
+                /* 上边距 12px */
+            }
+        }
+
+        /* 超大屏幕(最窄1281px) */
+        @media screen and (min-width: 1281px) {
+
+            #icon-img {
+                width: 114px;
+                height: 114px;
+            }
+
+            #title {
+                font-size: 3rem;
+                /* 字体大小 48px */
+                font-weight: bold;
+                /*字体加粗 */
+            }
+
+            #title-description {
+                font-size: 26px;
+                /* 字体大小 26px */
+            }
+
+            #content {
+                padding: 10px 20px 60px 20px;
+                margin-top: 10px;
+            }
+
+            .subtitle {
+                font-size: 32px;
+                /* 字体大小 32px */
+                margin-top: 20px;
+                /* 上边距 40px */
+            }
+
+            .text {
+                font-size: 19px;
+                /* 字体大小 19px */
+                top: 24px;
+                /* 上边距 24px */
+            }
+
+        }
+    </style>
+</head>
+
+<!-- 主!体!内容 -->
+
+<body>
+
+    <!--
+    <div>
+        <img src="/icons/icon.jpg" id="icon-img" alt="Entertainment_YH的头像">
+    </div>
+    -->
+
+    <!-- 标题 -->
+    <div id="title-background">
+
+        <div id="title">关于一些我自己推导的数学公式</div>
+
+        <div id="title-description" style="text-align: center;">
+            投稿者：Entertainment_YH <br \>
+            <a href="/discussion/index.html" style="text-align: center;">点我返回讨论区</a>
+        </div>
+
+    </div>
+
+    <!-- 内容 -->
+    <div id="content">
+
+        <!-- 介绍 -->
+        <div class="subtitle">
+            公式
+        </div>
+
+        <!-- 正文 -->
+        <div class="text">
+            令：<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mrow>
+                    <mover>
+                        <mi>a</mi>
+                        <mo stretchy="false">→</mo>
+                    </mover>
+                </mrow>
+                <mo>=</mo>
+                <mo stretchy="false">(</mo>
+                <msub>
+                    <mi>a</mi>
+                    <mrow>
+                        <mn>1</mn>
+                    </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                    <mi>a</mi>
+                    <mrow>
+                        <mn>2</mn>
+                    </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                    <mi>a</mi>
+                    <mrow>
+                        <mn>3</mn>
+                    </mrow>
+                </msub>
+                <mo>,</mo>
+                <mo>⋯</mo>
+                <mo>,</mo>
+                <msub>
+                    <mi>a</mi>
+                    <mrow>
+                        <mi>n</mi>
+                    </mrow>
+                </msub>
+                <mo stretchy="false">)</mo>
+                <mo>,</mo>
+                <mrow>
+                    <mover>
+                        <mi>b</mi>
+                        <mo stretchy="false">→</mo>
+                    </mover>
+                </mrow>
+                <mo>=</mo>
+                <mo stretchy="false">(</mo>
+                <msub>
+                    <mi>b</mi>
+                    <mrow>
+                        <mn>1</mn>
+                    </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                    <mi>b</mi>
+                    <mrow>
+                        <mn>2</mn>
+                    </mrow>
+                </msub>
+                <mo>,</mo>
+                <msub>
+                    <mi>b</mi>
+                    <mrow>
+                        <mn>3</mn>
+                    </mrow>
+                </msub>
+                <mo>,</mo>
+                <mo>⋯</mo>
+                <mo>,</mo>
+                <msub>
+                    <mi>b</mi>
+                    <mrow>
+                        <mi>n</mi>
+                    </mrow>
+                </msub>
+                <mo stretchy="false">)</mo>
+            </math><br \>
+            且 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mtable displaystyle="true"
+                    columnalign="right left right left right left right left right left right left"
+                    columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+                    <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                            <mrow>
+                                <mover>
+                                    <mi>a</mi>
+                                    <mo stretchy="false">→</mo>
+                                </mover>
+                            </mrow>
+                            <mo>,</mo>
+                            <mrow>
+                                <mover>
+                                    <mi>b</mi>
+                                    <mo stretchy="false">→</mo>
+                                </mover>
+                            </mrow>
+                            <mo>∈</mo>
+                            <mi>V</mi>
+                            <mo stretchy="false">(</mo>
+                            <mi>n</mi>
+                            <mo stretchy="false">)</mo>
+                            <mo>,</mo>
+                            <mi>V</mi>
+                            <mo stretchy="false">(</mo>
+                            <mi>n</mi>
+                            <mo stretchy="false">)</mo>
+                            <mo>是向量集合，</mo>
+                            <mi>V</mi>
+                            <mo stretchy="false">(</mo>
+                            <mi>V</mi>
+                            <mi>i</mi>
+                            <mi>c</mi>
+                            <mi>t</mi>
+                            <mi>o</mi>
+                            <mi>r</mi>
+                            <mo>向量</mo>
+                            <mo stretchy="false">)</mo>
+                            <mo>,</mo>
+                            <mi>n</mi>
+                            <mo stretchy="false">(</mo>
+                            <mi>d</mi>
+                            <mi>i</mi>
+                            <mi>m</mi>
+                            <mi>e</mi>
+                            <mi>n</mi>
+                            <mi>s</mi>
+                            <mi>i</mi>
+                            <mi>o</mi>
+                            <mi>n</mi>
+                            <mo>维度）</mo>
+                        </mtd>
+                    </mtr>
+                </mtable>
+            </math><br \>则有如下公式：<br \>
+            向量的模:<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mo stretchy="false">∣</mo>
+                <mrow>
+                    <mover>
+                        <mi>a</mi>
+                        <mo stretchy="false">→</mo>
+                    </mover>
+                </mrow>
+                <mo>∣=</mo>
+                <msqrt>
+                    <munderover>
+                        <mo data-mjx-texclass="OP">∑</mo>
+                        <mrow>
+                            <mi>i</mi>
+                            <mo>=</mo>
+                            <mn>1</mn>
+                        </mrow>
+                        <mrow>
+                            <mi>n</mi>
+                        </mrow>
+                    </munderover>
+                    <msubsup>
+                        <mi>a</mi>
+                        <mrow>
+                            <mi>i</mi>
+                        </mrow>
+                        <mrow>
+                            <mn>2</mn>
+                        </mrow>
+                    </msubsup>
+                </msqrt>
+                <mo>=</mo>
+                <msqrt>
+                    <msubsup>
+                        <mi>a</mi>
+                        <mrow>
+                            <mn>1</mn>
+                        </mrow>
+                        <mrow>
+                            <mn>2</mn>
+                        </mrow>
+                    </msubsup>
+                    <mo>+</mo>
+                    <msubsup>
+                        <mi>a</mi>
+                        <mrow>
+                            <mn>2</mn>
+                        </mrow>
+                        <mrow>
+                            <mn>2</mn>
+                        </mrow>
+                    </msubsup>
+                    <msubsup>
+                        <mo>+</mo>
+                        <mrow>
+                            <mn>3</mn>
+                        </mrow>
+                        <mrow>
+                            <mn>2</mn>
+                        </mrow>
+                    </msubsup>
+                    <mo>+</mo>
+                    <mo>⋯</mo>
+                    <mo>+</mo>
+                    <msubsup>
+                        <mi>a</mi>
+                        <mrow>
+                            <mi>n</mi>
+                        </mrow>
+                        <mrow>
+                            <mn>2</mn>
+                        </mrow>
+                    </msubsup>
+                </msqrt>
+            </math>
+
+            向量数量积:<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mrow>
+                    <mover>
+                        <mi>a</mi>
+                        <mo stretchy="false">→</mo>
+                    </mover>
+                </mrow>
+                <mo>⋅</mo>
+                <mrow>
+                    <mover>
+                        <mi>b</mi>
+                        <mo stretchy="false">→</mo>
+                    </mover>
+                </mrow>
+                <mo>=</mo>
+                <munderover>
+                    <mo data-mjx-texclass="OP">∑</mo>
+                    <mrow>
+                        <mi>i</mi>
+                        <mo>=</mo>
+                        <mn>1</mn>
+                    </mrow>
+                    <mrow>
+                        <mi>n</mi>
+                    </mrow>
+                </munderover>
+                <msub>
+                    <mi>a</mi>
+                    <mrow>
+                        <msub>
+                            <mi></mi>
+                            <mrow>
+                                <mi>i</mi>
+                            </mrow>
+                        </msub>
+                    </mrow>
+                </msub>
+                <msub>
+                    <mi>b</mi>
+                    <mrow>
+                        <msub>
+                            <mi></mi>
+                            <mrow>
+                                <mi>i</mi>
+                            </mrow>
+                        </msub>
+                    </mrow>
+                </msub>
+                <mo>=</mo>
+                <msub>
+                    <mi>a</mi>
+                    <mrow>
+                        <msub>
+                            <mi></mi>
+                            <mrow>
+                                <mn>1</mn>
+                            </mrow>
+                        </msub>
+                    </mrow>
+                </msub>
+                <msub>
+                    <mi>b</mi>
+                    <mrow>
+                        <msub>
+                            <mi></mi>
+                            <mrow>
+                                <mn>1</mn>
+                            </mrow>
+                        </msub>
+                    </mrow>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                    <mi>a</mi>
+                    <mrow>
+                        <msub>
+                            <mi></mi>
+                            <mrow>
+                                <mn>2</mn>
+                            </mrow>
+                        </msub>
+                    </mrow>
+                </msub>
+                <msub>
+                    <mi>b</mi>
+                    <mrow>
+                        <msub>
+                            <mi></mi>
+                            <mrow>
+                                <mn>2</mn>
+                            </mrow>
+                        </msub>
+                    </mrow>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                    <mi>a</mi>
+                    <mrow>
+                        <msub>
+                            <mi></mi>
+                            <mrow>
+                                <mn>3</mn>
+                            </mrow>
+                        </msub>
+                    </mrow>
+                </msub>
+                <msub>
+                    <mi>b</mi>
+                    <mrow>
+                        <msub>
+                            <mi></mi>
+                            <mrow>
+                                <mn>3</mn>
+                            </mrow>
+                        </msub>
+                    </mrow>
+                </msub>
+                <mo>+</mo>
+                <mo>⋯</mo>
+                <mo>+</mo>
+                <msub>
+                    <mi>a</mi>
+                    <mrow>
+                        <msub>
+                            <mi></mi>
+                            <mrow>
+                                <mi>n</mi>
+                            </mrow>
+                        </msub>
+                    </mrow>
+                </msub>
+                <msub>
+                    <mi>b</mi>
+                    <mrow>
+                        <msub>
+                            <mi></mi>
+                            <mrow>
+                                <mi>n</mi>
+                            </mrow>
+                        </msub>
+                    </mrow>
+                </msub>
+            </math>
+            或
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mtable displaystyle="true"
+                    columnalign="right left right left right left right left right left right left"
+                    columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+                    <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                            <mrow>
+                                <mover>
+                                    <mi>a</mi>
+                                    <mo stretchy="false">→</mo>
+                                </mover>
+                            </mrow>
+                            <mo>⋅</mo>
+                            <mrow>
+                                <mover>
+                                    <mi>b</mi>
+                                    <mo stretchy="false">→</mo>
+                                </mover>
+                            </mrow>
+                            <mo>=</mo>
+                            <msqrt>
+                                <munderover>
+                                    <mo data-mjx-texclass="OP">∑</mo>
+                                    <mrow>
+                                        <mi>i</mi>
+                                        <mo>=</mo>
+                                        <mn>1</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mi>n</mi>
+                                    </mrow>
+                                </munderover>
+                                <msubsup>
+                                    <mi>a</mi>
+                                    <mrow>
+                                        <mi>i</mi>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                            </msqrt>
+                            <msqrt>
+                                <munderover>
+                                    <mo data-mjx-texclass="OP">∑</mo>
+                                    <mrow>
+                                        <mi>i</mi>
+                                        <mo>=</mo>
+                                        <mn>1</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mi>n</mi>
+                                    </mrow>
+                                </munderover>
+                                <msubsup>
+                                    <mi>b</mi>
+                                    <mrow>
+                                        <mi>i</mi>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                            </msqrt>
+                            <mrow data-mjx-texclass="INNER">
+                                <mo data-mjx-texclass="OPEN">(</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <munderover>
+                                            <mo data-mjx-texclass="OP">∑</mo>
+                                            <mrow>
+                                                <mi>i</mi>
+                                                <mo>=</mo>
+                                                <mn>1</mn>
+                                            </mrow>
+                                            <mrow>
+                                                <mi>n</mi>
+                                            </mrow>
+                                        </munderover>
+                                        <msub>
+                                            <mi>a</mi>
+                                            <mrow>
+                                                <mi>i</mi>
+                                            </mrow>
+                                        </msub>
+                                        <msub>
+                                            <mi>b</mi>
+                                            <mrow>
+                                                <mi>i</mi>
+                                            </mrow>
+                                        </msub>
+                                    </mrow>
+                                    <mrow>
+                                        <msqrt>
+                                            <munderover>
+                                                <mo data-mjx-texclass="OP">∑</mo>
+                                                <mrow>
+                                                    <mi>i</mi>
+                                                    <mo>=</mo>
+                                                    <mn>1</mn>
+                                                </mrow>
+                                                <mrow>
+                                                    <mi>n</mi>
+                                                </mrow>
+                                            </munderover>
+                                            <msubsup>
+                                                <mi>a</mi>
+                                                <mrow>
+                                                    <mi>i</mi>
+                                                </mrow>
+                                                <mrow>
+                                                    <mn>2</mn>
+                                                </mrow>
+                                            </msubsup>
+                                        </msqrt>
+                                        <msqrt>
+                                            <munderover>
+                                                <mo data-mjx-texclass="OP">∑</mo>
+                                                <mrow>
+                                                    <mi>i</mi>
+                                                    <mo>=</mo>
+                                                    <mn>1</mn>
+                                                </mrow>
+                                                <mrow>
+                                                    <mi>n</mi>
+                                                </mrow>
+                                            </munderover>
+                                            <msubsup>
+                                                <mi>b</mi>
+                                                <mrow>
+                                                    <mi>i</mi>
+                                                </mrow>
+                                                <mrow>
+                                                    <mn>2</mn>
+                                                </mrow>
+                                            </msubsup>
+                                        </msqrt>
+                                    </mrow>
+                                </mfrac>
+                                <mo data-mjx-texclass="CLOSE">)</mo>
+                            </mrow>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                            <mi></mi>
+                            <mo>=</mo>
+                            <mrow>
+                                <msqrt>
+                                    <msubsup>
+                                        <mi>a</mi>
+                                        <mrow>
+                                            <mn>1</mn>
+                                        </mrow>
+                                        <mrow>
+                                            <mn>2</mn>
+                                        </mrow>
+                                    </msubsup>
+                                    <mo>+</mo>
+                                    <msubsup>
+                                        <mi>a</mi>
+                                        <mrow>
+                                            <mn>2</mn>
+                                        </mrow>
+                                        <mrow>
+                                            <mn>2</mn>
+                                        </mrow>
+                                    </msubsup>
+                                    <mo>+</mo>
+                                    <msubsup>
+                                        <mi>a</mi>
+                                        <mrow>
+                                            <mn>3</mn>
+                                        </mrow>
+                                        <mrow>
+                                            <mn>2</mn>
+                                        </mrow>
+                                    </msubsup>
+                                    <mo>+</mo>
+                                    <mo>⋯</mo>
+                                    <mo>+</mo>
+                                    <msubsup>
+                                        <mi>a</mi>
+                                        <mrow>
+                                            <mi>n</mi>
+                                        </mrow>
+                                        <mrow>
+                                            <mn>2</mn>
+                                        </mrow>
+                                    </msubsup>
+                                </msqrt>
+                                <msqrt>
+                                    <msubsup>
+                                        <mi>b</mi>
+                                        <mrow>
+                                            <mn>1</mn>
+                                        </mrow>
+                                        <mrow>
+                                            <mn>2</mn>
+                                        </mrow>
+                                    </msubsup>
+                                    <mo>+</mo>
+                                    <msubsup>
+                                        <mi>b</mi>
+                                        <mrow>
+                                            <mn>2</mn>
+                                        </mrow>
+                                        <mrow>
+                                            <mn>2</mn>
+                                        </mrow>
+                                    </msubsup>
+                                    <mo>+</mo>
+                                    <msubsup>
+                                        <mi>b</mi>
+                                        <mrow>
+                                            <mn>3</mn>
+                                        </mrow>
+                                        <mrow>
+                                            <mn>2</mn>
+                                        </mrow>
+                                    </msubsup>
+                                    <mo>+</mo>
+                                    <mo>⋯</mo>
+                                    <mo>+</mo>
+                                    <msubsup>
+                                        <mi>b</mi>
+                                        <mrow>
+                                            <mi>n</mi>
+                                        </mrow>
+                                        <mrow>
+                                            <mn>2</mn>
+                                        </mrow>
+                                    </msubsup>
+                                </msqrt>
+                            </mrow>
+                            <mrow data-mjx-texclass="INNER">
+                                <mo data-mjx-texclass="OPEN">(</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <msub>
+                                            <mi>a</mi>
+                                            <mrow>
+                                                <mn>1</mn>
+                                            </mrow>
+                                        </msub>
+                                        <msub>
+                                            <mi>b</mi>
+                                            <mrow>
+                                                <mn>1</mn>
+                                            </mrow>
+                                        </msub>
+                                        <mo>+</mo>
+                                        <msub>
+                                            <mi>a</mi>
+                                            <mrow>
+                                                <mn>2</mn>
+                                            </mrow>
+                                        </msub>
+                                        <msub>
+                                            <mi>b</mi>
+                                            <mrow>
+                                                <mn>2</mn>
+                                            </mrow>
+                                        </msub>
+                                        <mo>+</mo>
+                                        <msub>
+                                            <mi>a</mi>
+                                            <mrow>
+                                                <mn>3</mn>
+                                            </mrow>
+                                        </msub>
+                                        <msub>
+                                            <mi>b</mi>
+                                            <mrow>
+                                                <mn>3</mn>
+                                            </mrow>
+                                        </msub>
+                                        <mo>+</mo>
+                                        <mo>⋯</mo>
+                                        <mo>+</mo>
+                                        <msub>
+                                            <mi>a</mi>
+                                            <mrow>
+                                                <mi>n</mi>
+                                            </mrow>
+                                        </msub>
+                                        <msub>
+                                            <mi>b</mi>
+                                            <mrow>
+                                                <mi>n</mi>
+                                            </mrow>
+                                        </msub>
+                                    </mrow>
+                                    <mrow>
+                                        <msqrt>
+                                            <msubsup>
+                                                <mi>a</mi>
+                                                <mrow>
+                                                    <mn>1</mn>
+                                                </mrow>
+                                                <mrow>
+                                                    <mn>2</mn>
+                                                </mrow>
+                                            </msubsup>
+                                            <mo>+</mo>
+                                            <msubsup>
+                                                <mi>a</mi>
+                                                <mrow>
+                                                    <mn>2</mn>
+                                                </mrow>
+                                                <mrow>
+                                                    <mn>2</mn>
+                                                </mrow>
+                                            </msubsup>
+                                            <mo>+</mo>
+                                            <msubsup>
+                                                <mi>a</mi>
+                                                <mrow>
+                                                    <mn>3</mn>
+                                                </mrow>
+                                                <mrow>
+                                                    <mn>2</mn>
+                                                </mrow>
+                                            </msubsup>
+                                            <mo>+</mo>
+                                            <mo>⋯</mo>
+                                            <mo>+</mo>
+                                            <msubsup>
+                                                <mi>a</mi>
+                                                <mrow>
+                                                    <mi>n</mi>
+                                                </mrow>
+                                                <mrow>
+                                                    <mn>2</mn>
+                                                </mrow>
+                                            </msubsup>
+                                        </msqrt>
+                                        <msqrt>
+                                            <msubsup>
+                                                <mi>b</mi>
+                                                <mrow>
+                                                    <mn>1</mn>
+                                                </mrow>
+                                                <mrow>
+                                                    <mn>2</mn>
+                                                </mrow>
+                                            </msubsup>
+                                            <mo>+</mo>
+                                            <msubsup>
+                                                <mi>b</mi>
+                                                <mrow>
+                                                    <mn>2</mn>
+                                                </mrow>
+                                                <mrow>
+                                                    <mn>2</mn>
+                                                </mrow>
+                                            </msubsup>
+                                            <mo>+</mo>
+                                            <msubsup>
+                                                <mi>b</mi>
+                                                <mrow>
+                                                    <mn>3</mn>
+                                                </mrow>
+                                                <mrow>
+                                                    <mn>2</mn>
+                                                </mrow>
+                                            </msubsup>
+                                            <mo>+</mo>
+                                            <mo>⋯</mo>
+                                            <mo>+</mo>
+                                            <msubsup>
+                                                <mi>b</mi>
+                                                <mrow>
+                                                    <mi>n</mi>
+                                                </mrow>
+                                                <mrow>
+                                                    <mn>2</mn>
+                                                </mrow>
+                                            </msubsup>
+                                        </msqrt>
+                                    </mrow>
+                                </mfrac>
+                                <mo data-mjx-texclass="CLOSE">)</mo>
+                            </mrow>
+                        </mtd>
+                    </mtr>
+                </mtable>
+            </math>
+
+            向量的夹角余弦值:
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mi>cos</mi>
+                <mo>&lt;</mo>
+                <mrow>
+                    <mover>
+                        <mi>a</mi>
+                        <mo stretchy="false">→</mo>
+                    </mover>
+                </mrow>
+                <mo>,</mo>
+                <mrow>
+                    <mover>
+                        <mi>b</mi>
+                        <mo stretchy="false">→</mo>
+                    </mover>
+                </mrow>
+                <mo>&gt;=</mo>
+                <mfrac>
+                    <mrow>
+                        <munderover>
+                            <mo data-mjx-texclass="OP">∑</mo>
+                            <mrow>
+                                <mi>i</mi>
+                                <mo>=</mo>
+                                <mn>1</mn>
+                            </mrow>
+                            <mrow>
+                                <mi>n</mi>
+                            </mrow>
+                        </munderover>
+                        <msub>
+                            <mi>a</mi>
+                            <mrow>
+                                <mi>i</mi>
+                            </mrow>
+                        </msub>
+                        <msub>
+                            <mi>b</mi>
+                            <mrow>
+                                <mi>i</mi>
+                            </mrow>
+                        </msub>
+                    </mrow>
+                    <mrow>
+                        <msqrt>
+                            <munderover>
+                                <mo data-mjx-texclass="OP">∑</mo>
+                                <mrow>
+                                    <mi>i</mi>
+                                    <mo>=</mo>
+                                    <mn>1</mn>
+                                </mrow>
+                                <mrow>
+                                    <mi>n</mi>
+                                </mrow>
+                            </munderover>
+                            <msubsup>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mi>i</mi>
+                                </mrow>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                            </msubsup>
+                        </msqrt>
+                        <msqrt>
+                            <munderover>
+                                <mo data-mjx-texclass="OP">∑</mo>
+                                <mrow>
+                                    <mi>i</mi>
+                                    <mo>=</mo>
+                                    <mn>1</mn>
+                                </mrow>
+                                <mrow>
+                                    <mi>n</mi>
+                                </mrow>
+                            </munderover>
+                            <msubsup>
+                                <mi>b</mi>
+                                <mrow>
+                                    <mi>i</mi>
+                                </mrow>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                            </msubsup>
+                        </msqrt>
+                    </mrow>
+                </mfrac>
+                <mo>=</mo>
+                <mfrac>
+                    <mrow>
+                        <msub>
+                            <mi>a</mi>
+                            <mrow>
+                                <mn>1</mn>
+                            </mrow>
+                        </msub>
+                        <msub>
+                            <mi>b</mi>
+                            <mrow>
+                                <mn>1</mn>
+                            </mrow>
+                        </msub>
+                        <mo>+</mo>
+                        <msub>
+                            <mi>a</mi>
+                            <mrow>
+                                <mn>2</mn>
+                            </mrow>
+                        </msub>
+                        <msub>
+                            <mi>b</mi>
+                            <mrow>
+                                <mn>2</mn>
+                            </mrow>
+                        </msub>
+                        <mo>+</mo>
+                        <msub>
+                            <mi>a</mi>
+                            <mrow>
+                                <mn>3</mn>
+                            </mrow>
+                        </msub>
+                        <msub>
+                            <mi>b</mi>
+                            <mrow>
+                                <mn>3</mn>
+                            </mrow>
+                        </msub>
+                        <mo>+</mo>
+                        <mo>⋯</mo>
+                        <mo>+</mo>
+                        <msub>
+                            <mi>a</mi>
+                            <mrow>
+                                <mi>n</mi>
+                            </mrow>
+                        </msub>
+                        <msub>
+                            <mi>b</mi>
+                            <mrow>
+                                <mi>n</mi>
+                            </mrow>
+                        </msub>
+                    </mrow>
+                    <mrow>
+                        <msqrt>
+                            <msubsup>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mn>1</mn>
+                                </mrow>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                            </msubsup>
+                            <mo>+</mo>
+                            <msubsup>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                            </msubsup>
+                            <mo>+</mo>
+                            <msubsup>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mn>3</mn>
+                                </mrow>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                            </msubsup>
+                            <mo>+</mo>
+                            <mo>⋯</mo>
+                            <mo>+</mo>
+                            <msubsup>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mi>n</mi>
+                                </mrow>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                            </msubsup>
+                        </msqrt>
+                        <msqrt>
+                            <msubsup>
+                                <mi>b</mi>
+                                <mrow>
+                                    <mn>1</mn>
+                                </mrow>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                            </msubsup>
+                            <mo>+</mo>
+                            <msubsup>
+                                <mi>b</mi>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                            </msubsup>
+                            <mo>+</mo>
+                            <msubsup>
+                                <mi>b</mi>
+                                <mrow>
+                                    <mn>3</mn>
+                                </mrow>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                            </msubsup>
+                            <mo>+</mo>
+                            <mo>⋯</mo>
+                            <mo>+</mo>
+                            <msubsup>
+                                <mi>b</mi>
+                                <mrow>
+                                    <mi>n</mi>
+                                </mrow>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                            </msubsup>
+                        </msqrt>
+                    </mrow>
+                </mfrac>
+            </math>
+            不等式:
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mtable displaystyle="true"
+                    columnalign="right left right left right left right left right left right left"
+                    columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" rowspacing="3pt">
+                    <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                            <mi></mi>
+                            <mo>∣</mo>
+                            <mrow>
+                                <mover>
+                                    <mi>a</mi>
+                                    <mo stretchy="false">→</mo>
+                                </mover>
+                            </mrow>
+                            <mo>⋅</mo>
+                            <mrow>
+                                <mover>
+                                    <mi>b</mi>
+                                    <mo stretchy="false">→</mo>
+                                </mover>
+                            </mrow>
+                            <mo>∣≤∣</mo>
+                            <mrow>
+                                <mover>
+                                    <mi>a</mi>
+                                    <mo stretchy="false">→</mo>
+                                </mover>
+                            </mrow>
+                            <mo>∣∣</mo>
+                            <mrow>
+                                <mover>
+                                    <mi>b</mi>
+                                    <mo stretchy="false">→</mo>
+                                </mover>
+                            </mrow>
+                            <mo stretchy="false">∣</mo>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                            <mi></mi>
+                            <munderover>
+                                <mo data-mjx-texclass="OP">∑</mo>
+                                <mrow>
+                                    <mi>i</mi>
+                                    <mo>=</mo>
+                                    <mn>1</mn>
+                                </mrow>
+                                <mrow>
+                                    <mi>n</mi>
+                                </mrow>
+                            </munderover>
+                            <msub>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mi>i</mi>
+                                </mrow>
+                            </msub>
+                            <msub>
+                                <mi>b</mi>
+                                <mrow>
+                                    <mi>i</mi>
+                                </mrow>
+                            </msub>
+                            <mo>≤</mo>
+                            <msqrt>
+                                <munderover>
+                                    <mo data-mjx-texclass="OP">∑</mo>
+                                    <mrow>
+                                        <mi>i</mi>
+                                        <mo>=</mo>
+                                        <mn>1</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mi>n</mi>
+                                    </mrow>
+                                </munderover>
+                                <mrow>
+                                    <msubsup>
+                                        <mi>a</mi>
+                                        <mrow>
+                                            <mi>i</mi>
+                                        </mrow>
+                                        <mrow>
+                                            <mn>2</mn>
+                                        </mrow>
+                                    </msubsup>
+                                </mrow>
+                            </msqrt>
+                            <msqrt>
+                                <munderover>
+                                    <mo data-mjx-texclass="OP">∑</mo>
+                                    <mrow>
+                                        <mi>i</mi>
+                                        <mo>=</mo>
+                                        <mn>1</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mi>n</mi>
+                                    </mrow>
+                                </munderover>
+                                <mrow>
+                                    <msubsup>
+                                        <mi>b</mi>
+                                        <mrow>
+                                            <mi>i</mi>
+                                        </mrow>
+                                        <mrow>
+                                            <mn>2</mn>
+                                        </mrow>
+                                    </msubsup>
+                                </mrow>
+                            </msqrt>
+                        </mtd>
+                    </mtr>
+                    <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                            <msub>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mn>1</mn>
+                                </mrow>
+                            </msub>
+                            <msub>
+                                <mi>b</mi>
+                                <mrow>
+                                    <mn>1</mn>
+                                </mrow>
+                            </msub>
+                            <mo>+</mo>
+                            <msub>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                            </msub>
+                            <msub>
+                                <mi>b</mi>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                            </msub>
+                            <mo>+</mo>
+                            <msub>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mn>3</mn>
+                                </mrow>
+                            </msub>
+                            <msub>
+                                <mi>b</mi>
+                                <mrow>
+                                    <mn>3</mn>
+                                </mrow>
+                            </msub>
+                            <mo>+</mo>
+                            <mo>⋯</mo>
+                            <mo>+</mo>
+                            <msub>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mi>n</mi>
+                                </mrow>
+                            </msub>
+                            <msub>
+                                <mi>b</mi>
+                                <mrow>
+                                    <mi>n</mi>
+                                </mrow>
+                            </msub>
+                            <mo>≤</mo>
+                            <msqrt>
+                                <msubsup>
+                                    <mi>a</mi>
+                                    <mrow>
+                                        <mn>1</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                                <mo>+</mo>
+                                <msubsup>
+                                    <mi>a</mi>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                                <mo>+</mo>
+                                <msubsup>
+                                    <mi>a</mi>
+                                    <mrow>
+                                        <mn>3</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                                <mo>+</mo>
+                                <mo>⋯</mo>
+                                <mo>+</mo>
+                                <msubsup>
+                                    <mi>a</mi>
+                                    <mrow>
+                                        <mi>n</mi>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                            </msqrt>
+                            <msqrt>
+                                <msubsup>
+                                    <mi>b</mi>
+                                    <mrow>
+                                        <mn>1</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                                <mo>+</mo>
+                                <msubsup>
+                                    <mi>b</mi>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                                <mo>+</mo>
+                                <msubsup>
+                                    <mi>b</mi>
+                                    <mrow>
+                                        <mn>3</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                                <mo>+</mo>
+                                <mo>⋯</mo>
+                                <mo>+</mo>
+                                <msubsup>
+                                    <mi>b</mi>
+                                    <mrow>
+                                        <mi>n</mi>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                            </msqrt>
+                        </mtd>
+                    </mtr>
+                </mtable>
+            </math>
+
+
+        </div>
+
+        <div class="subtitle" style="margin-top: 10%;">
+            描述
+
+            <div class="text">
+                这些公式为任何维度的向量定义了运算等式，如
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                    <mrow>
+                        <mover>
+                            <mi>a</mi>
+                            <mo stretchy="false">→</mo>
+                        </mover>
+                    </mrow>
+                    <mo>,</mo>
+                    <mrow>
+                        <mover>
+                            <mi>b</mi>
+                            <mo stretchy="false">→</mo>
+                        </mover>
+                    </mrow>
+                    <mo>∈</mo>
+                    <mi>V</mi>
+                    <mo stretchy="false">(</mo>
+                    <mn>7</mn>
+                    <mo stretchy="false">)</mo>
+                    <mo>,</mo>
+                    <mrow>
+                        <mover>
+                            <mi>a</mi>
+                            <mo stretchy="false">→</mo>
+                        </mover>
+                    </mrow>
+                    <mo>=</mo>
+                    <mo stretchy="false">(</mo>
+                    <mn>1</mn>
+                    <mo>,</mo>
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>1</mn>
+                    <mo>,</mo>
+                    <mn>9</mn>
+                    <mo>,</mo>
+                    <mn>8</mn>
+                    <mo>,</mo>
+                    <mn>1</mn>
+                    <mo>,</mo>
+                    <mn>0</mn>
+                    <mo stretchy="false">)</mo>
+                    <mo>,</mo>
+                    <mrow>
+                        <mover>
+                            <mi>b</mi>
+                            <mo stretchy="false">→</mo>
+                        </mover>
+                    </mrow>
+                    <mo>=</mo>
+                    <mo stretchy="false">(</mo>
+                    <mn>5</mn>
+                    <mo>,</mo>
+                    <mn>2</mn>
+                    <mo>,</mo>
+                    <mn>0</mn>
+                    <mo>,</mo>
+                    <mn>1</mn>
+                    <mo>,</mo>
+                    <mn>3</mn>
+                    <mo>,</mo>
+                    <mn>1</mn>
+                    <mo>,</mo>
+                    <mn>4</mn>
+                    <mo stretchy="false">)</mo>
+                    <mo>时</mo>
+                </math>
+                <br \>
+                求
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mi>cos</mi>
+                    <mo>&lt;</mo>
+                    <mrow>
+                        <mover>
+                            <mi>a</mi>
+                            <mo stretchy="false">→</mo>
+                        </mover>
+                    </mrow>
+                    <mo>,</mo>
+                    <mrow>
+                        <mover>
+                            <mi>b</mi>
+                            <mo stretchy="false">→</mo>
+                        </mover>
+                    </mrow>
+                    <mo>&gt;</mo>
+                </math>
+                <br \>
+                可直接代入公式
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                    <mi>cos</mi>
+                    <mo>&lt;</mo>
+                    <mrow>
+                        <mover>
+                            <mi>a</mi>
+                            <mo stretchy="false">→</mo>
+                        </mover>
+                    </mrow>
+                    <mo>,</mo>
+                    <mrow>
+                        <mover>
+                            <mi>b</mi>
+                            <mo stretchy="false">→</mo>
+                        </mover>
+                    </mrow>
+                    <mo>&gt;=</mo>
+                    <mfrac>
+                        <mrow>
+                            <munderover>
+                                <mo data-mjx-texclass="OP">∑</mo>
+                                <mrow>
+                                    <mi>i</mi>
+                                    <mo>=</mo>
+                                    <mn>1</mn>
+                                </mrow>
+                                <mrow>
+                                    <mi>n</mi>
+                                </mrow>
+                            </munderover>
+                            <msub>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mi>i</mi>
+                                </mrow>
+                            </msub>
+                            <msub>
+                                <mi>b</mi>
+                                <mrow>
+                                    <mi>i</mi>
+                                </mrow>
+                            </msub>
+                        </mrow>
+                        <mrow>
+                            <msqrt>
+                                <munderover>
+                                    <mo data-mjx-texclass="OP">∑</mo>
+                                    <mrow>
+                                        <mi>i</mi>
+                                        <mo>=</mo>
+                                        <mn>1</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mi>n</mi>
+                                    </mrow>
+                                </munderover>
+                                <msubsup>
+                                    <mi>a</mi>
+                                    <mrow>
+                                        <mi>i</mi>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                            </msqrt>
+                            <msqrt>
+                                <munderover>
+                                    <mo data-mjx-texclass="OP">∑</mo>
+                                    <mrow>
+                                        <mi>i</mi>
+                                        <mo>=</mo>
+                                        <mn>1</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mi>n</mi>
+                                    </mrow>
+                                </munderover>
+                                <msubsup>
+                                    <mi>b</mi>
+                                    <mrow>
+                                        <mi>i</mi>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                            </msqrt>
+                        </mrow>
+                    </mfrac>
+                    <mo>=</mo>
+                    <mfrac>
+                        <mrow>
+                            <msub>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mn>1</mn>
+                                </mrow>
+                            </msub>
+                            <msub>
+                                <mi>b</mi>
+                                <mrow>
+                                    <mn>1</mn>
+                                </mrow>
+                            </msub>
+                            <mo>+</mo>
+                            <msub>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                            </msub>
+                            <msub>
+                                <mi>b</mi>
+                                <mrow>
+                                    <mn>2</mn>
+                                </mrow>
+                            </msub>
+                            <mo>+</mo>
+                            <msub>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mn>3</mn>
+                                </mrow>
+                            </msub>
+                            <msub>
+                                <mi>b</mi>
+                                <mrow>
+                                    <mn>3</mn>
+                                </mrow>
+                            </msub>
+                            <mo>+</mo>
+                            <mo>⋯</mo>
+                            <mo>+</mo>
+                            <msub>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mi>n</mi>
+                                </mrow>
+                            </msub>
+                            <msub>
+                                <mi>b</mi>
+                                <mrow>
+                                    <mi>n</mi>
+                                </mrow>
+                            </msub>
+                        </mrow>
+                        <mrow>
+                            <msqrt>
+                                <msubsup>
+                                    <mi>a</mi>
+                                    <mrow>
+                                        <mn>1</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                                <mo>+</mo>
+                                <msubsup>
+                                    <mi>a</mi>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                                <mo>+</mo>
+                                <msubsup>
+                                    <mi>a</mi>
+                                    <mrow>
+                                        <mn>3</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                                <mo>+</mo>
+                                <mo>⋯</mo>
+                                <mo>+</mo>
+                                <msubsup>
+                                    <mi>a</mi>
+                                    <mrow>
+                                        <mi>n</mi>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                            </msqrt>
+                            <msqrt>
+                                <msubsup>
+                                    <mi>b</mi>
+                                    <mrow>
+                                        <mn>1</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                                <mo>+</mo>
+                                <msubsup>
+                                    <mi>b</mi>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                                <mo>+</mo>
+                                <msubsup>
+                                    <mi>b</mi>
+                                    <mrow>
+                                        <mn>3</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                                <mo>+</mo>
+                                <mo>⋯</mo>
+                                <mo>+</mo>
+                                <msubsup>
+                                    <mi>b</mi>
+                                    <mrow>
+                                        <mi>n</mi>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                            </msqrt>
+                        </mrow>
+                    </mfrac>
+                </math>
+                此时，n=7
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                    <mi>cos</mi>
+                    <mo>&lt;</mo>
+                    <mrow>
+                        <mover>
+                            <mi>a</mi>
+                            <mo stretchy="false">→</mo>
+                        </mover>
+                    </mrow>
+                    <mo>,</mo>
+                    <mrow>
+                        <mover>
+                            <mi>b</mi>
+                            <mo stretchy="false">→</mo>
+                        </mover>
+                    </mrow>
+                    <mo>&gt;=</mo>
+                    <mfrac>
+                        <mrow>
+                            <munderover>
+                                <mo data-mjx-texclass="OP">∑</mo>
+                                <mrow>
+                                    <mi>i</mi>
+                                    <mo>=</mo>
+                                    <mn>1</mn>
+                                </mrow>
+                                <mrow>
+                                    <mi>7</mi>
+                                </mrow>
+                            </munderover>
+                            <msub>
+                                <mi>a</mi>
+                                <mrow>
+                                    <mi>i</mi>
+                                </mrow>
+                            </msub>
+                            <msub>
+                                <mi>b</mi>
+                                <mrow>
+                                    <mi>i</mi>
+                                </mrow>
+                            </msub>
+                        </mrow>
+                        <mrow>
+                            <msqrt>
+                                <munderover>
+                                    <mo data-mjx-texclass="OP">∑</mo>
+                                    <mrow>
+                                        <mi>i</mi>
+                                        <mo>=</mo>
+                                        <mn>1</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mi>7</mi>
+                                    </mrow>
+                                </munderover>
+                                <msubsup>
+                                    <mi>a</mi>
+                                    <mrow>
+                                        <mi>i</mi>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                            </msqrt>
+                            <msqrt>
+                                <munderover>
+                                    <mo data-mjx-texclass="OP">∑</mo>
+                                    <mrow>
+                                        <mi>i</mi>
+                                        <mo>=</mo>
+                                        <mn>1</mn>
+                                    </mrow>
+                                    <mrow>
+                                        <mi>7</mi>
+                                    </mrow>
+                                </munderover>
+                                <msubsup>
+                                    <mi>b</mi>
+                                    <mrow>
+                                        <mi>i</mi>
+                                    </mrow>
+                                    <mrow>
+                                        <mn>2</mn>
+                                    </mrow>
+                                </msubsup>
+                            </msqrt>
+                        </mrow>
+                    </mfrac>
+                </math>
+                解得
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mi>cos</mi>
+                    <mo>&lt;</mo>
+                    <mrow>
+                        <mover>
+                            <mi>a</mi>
+                            <mo stretchy="false">→</mo>
+                        </mover>
+                    </mrow>
+                    <mo>,</mo>
+                    <mrow>
+                        <mover>
+                            <mi>b</mi>
+                            <mo stretchy="false">→</mo>
+                        </mover>
+                    </mrow>
+                    <mo>&gt;≈</mo>
+                    <mn>0.503</mn>
+                </math>
+            </div>
+        </div>
+</body>
+
+</html>
