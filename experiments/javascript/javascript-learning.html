@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>JavaScript学习文档</title>
+</head>
+
+<body>
+    <p>123</p>
+    <script>
+        function myfunction() {
+            document.write("你怎么把文档点没了？？快点回去,");
+        }
+        document.write("<h1>这是一个标题</h1>");
+    </script>
+    <button onclick="myfunction()" id="button">点击这里</button>
+
+    <script>
+        function button() {
+            document.getElementById("button").innerHTML="那你再看看你后面呢"
+        }
+    </script>
+
+    <button id="button" onclick="button()">你再看看你的后面呢</button>
+</body>
+</html>
